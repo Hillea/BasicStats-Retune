@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Basic Statistics Workshop"
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - 1. Why statistics?
+      - 2. Probability & statistical modelling
+      - 3. Hypothesis testing
+      - 4. Getting started with Jamovi
+      - 5. Conducting different analyses
+      - 6. Statistics done wrong
+
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
