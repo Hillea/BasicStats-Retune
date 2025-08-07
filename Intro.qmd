@@ -1,10 +1,10 @@
 ---
-title: "01a Introduction to Biostatistics"
+title: "Why Statistics?"
 subtitle: |
-   | Julius-Maximilians-University Würzburg 
-   | Course: "Biostatistics"    
-   | Translational Neuroscience
-author: "Dr. Mario Reutter (slides adapted from Dr. Lea Hildebrandt)"
+   | Basic Statistics Workship 
+   | ReTune Fall School   
+   | 17th of October, 2025
+author: "Dr. Lea Hildebrandt"
 format: 
   revealjs:
     smaller: true

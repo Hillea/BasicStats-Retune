@@ -1,0 +1,18 @@
+---
+title: "Probability & Statistical Modelling"
+subtitle: |
+   | Basic Statistics Workship 
+   | ReTune Fall School   
+   | 17th of October, 2025
+author: "Dr. Lea Hildebrandt"
+format: 
+  revealjs:
+    smaller: true
+    scrollable: true
+    slide-number: true
+    theme: serif
+    chalkboard: true
+    width: 1280
+    height: 720
+from: markdown+emoji
+---
