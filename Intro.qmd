@@ -14,6 +14,8 @@ format:
     chalkboard: true
     width: 1280
     height: 720
+execute:
+  engine: knitr
 from: markdown+emoji
 ---
 
