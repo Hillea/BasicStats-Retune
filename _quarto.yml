@@ -7,7 +7,7 @@ website:
     style: "floating"
     search: true
     contents:
-      - 1. Why statistics?
+      - W1_Intro.qmd
       - 2. Probability & statistical modelling
       - 3. Hypothesis testing
       - 4. Getting started with Jamovi
