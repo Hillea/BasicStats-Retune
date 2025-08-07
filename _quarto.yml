@@ -8,11 +8,9 @@ website:
     search: true
     contents:
       - Intro.qmd
-      - 2. Probability & statistical modelling
-      - 3. Hypothesis testing
-      - 4. Getting started with Jamovi
-      - 5. Conducting different analyses
-      - 6. Statistics done wrong
+      - Jamovi.qmd
+      - Probability.qmd
+
 
 
 

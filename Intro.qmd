@@ -41,7 +41,7 @@ Who are you?
 
 -   Do you have experience with data analysis?
 
--   What's your attitude towards statistics?
+-   What's your attitude towards statistics? Statistical confessions?
 
 ```{=html}
 <!-- . . .
@@ -50,126 +50,30 @@ Today, I'm feeling...
 
 ![](images/moodmeter_en.jpg){fig-alt="Moodmeter"} -->
 ```
-## Using the Slides
+## What to expect today?
 
--   These slides are created directly in R with the quarto extension.
--   You can jump to a slide by clicking the three dashes in the bottom left.
--   You can conveniently copy R code from the slides with one click and paste it into your RStudio.
+-   Slides can be found here: <https://hillea.github.io/BasicStats-Retune/>
 
-```{r}
-#| echo: true
+-   Textbooks this workshop is based on/that can be used to read up:
 
-print("Hello World")
+    -   [Learning Statistics with Jamovi](https://davidfoxcroft.github.io/lsj-book/01-Why-do-we-learn-statistics.html)
 
-```
+    -   [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/)
 
-## Organizational Issues
-
-. . .
-
-```{=html}
-<!-- -   *Warning*: The course only lasts until mid-December - but we have to squeeze the content of the full semester in these 8 weeks!
-
-    -   This means, we'll have two sessions per week, Statistics (Input) on Tuesdays and R Programming (Hands-on) on Wednesdays -->
-```
--   Attendance is mandatory! (I don't make the rules :) )
-
-    -   You may miss one session without giving reasons (recommendation: don't waste it early!)
-
-    -   If you miss additional sessions, please write an email with an explanation (further proof may be required, e.g. doctor's certificate)
-
-. . .
-
--   The course will take place in person
-
-    -   Only for students who are not in Würzburg yet, there is an option via Zoom
-
-. . .
-
--   We will use these textbooks (Open Educational Resources - freely available online, also linked in WueCampus):
-
-    -   [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html)
-
-    -   For the R part: [Fundamentals of Quantitative Analysis](https://psyteachr.github.io/quant-fun-v2/)
-
-    -   (Additional Resource: [R for Data Science](https://r4ds.hadley.nz/))
-
-## Contents
-
-::: incremental
--   From basic probability to (Generalized) Linear Mixed Models
-    -   Some things may be repetitive for you but this course aims to provide a common starting position for your next semesters
--   Input (lecture style) with hands-on R sessions <!-- -   Input could be video based that you should watch before the (R) session -->
--   In addition, you should read a few pages in the text books\
-    (<a href="https://statsthinking21.github.io/statsthinking21-core-site/">Statistical Thinking for the 21st Century</a>, and possibly <a href="https://psyteachr.github.io/quant-fun-v2/">Fundamentals of Quantitative Analysis</a>)
--   Project: Independently analyze a dataset (exam with pass or fail grading)
-:::
-
-::: notes
-For some, e.g. the psychologists, it will be more of a repetition - but you will also learn R.
-
-Slides might be text heavy → so that you can go through the slides afterwards again (but textbook might also be helpful)
-:::
-
-## Project
-
-. . .
-
--   Find a dataset that can answer a question you are interested in
-
-    -   <https://ourworldindata.org/>
-    -   <a href="https://www.destatis.de/">Statistisches Bundesamt</a>
-    -   Your own, e.g., from an internship
-
-. . .
-
--   preprocess/wrangle it,
-
--   analyze the data,
-
--   and write a short (min. 2-page) report!
-
-    -   short intro incl. research question and hypothesis
-    -   methods (both how the data were acquired and how they are analyzed)
-    -   results (incl. at least one plot)
-    -   and a short discussion.
-        -   *All* these parts should be *at least half a page* long.
+    -   [Statistics Done Wrong](https://www.statisticsdonewrong.com/data-analysis.html)
 
 ## Schedule {.scrollable .smaller}
 
-The up-to-date version can be found at <https://spressi.github.io/biostats/>
-
-| Date            | Topic                        | Reading            | Lecturer        | Project Deadlines              |
-|-----------------|------------------------------|--------------------|-----------------|--------------------------------|
-| 16.10.          | General & R Intro            | ST21: 1-3, QF: 1-3 | Reutter         | R & RStudio installed          |
-| 23.10.          | Probability                  | ST21: 4, QF: 4-6   | Hildebrandt     |                                |
-| 30.10.          | Data Wrangling               | ST21: 4, QF: 4-6   | Reutter         |                                |
-| 06.11.          | Data Visualization           | QF: 7              | Reutter         |                                |
-| 13.11.          | Sampling                     | ST21: 7-8, QF: 8   | Hildebrandt     | Dataset                        |
-| 20.11.          | *Penance Day*                |                    |                 |                                |
-| 27.11.          | Probability & Sampling in R  | ST21: 7-8, QF: 8   | Hildebrandt     |                                |
-| 04.12.          | Hypothesis Testing           | ST21: 9-10         | Reutter         |                                |
-| 11.12.          | Comparing Means & Categories | ST21: 12, 15       | Reutter         | Research Question & Hypotheses |
-| 18.12.          | Exercises (t-Tests, Chi²)    | ST21: 12, 15       | Reutter         |                                |
-| 25.12. & 01.01. | *Christmas & New Year's*     |                    |                 |                                |
-| 08.01.          | (General) Linear Models      | ST21: 12-13        | Hildebrandt     | First Analysis Ideas           |
-| 15.01.          | Exercises (GLM)              | ST21: 12-13        | Hildebrandt     |                                |
-| 22.01.          | Linear Mixed Models          | ST21: 14           | Hildebrandt     | Analysis (with R scripts)      |
-| 29.01.          | R Markdown for Reports       |                    | Reutter         |                                |
-| 05.02.          | Troubleshooting Your Report  |                    | both            | Send Questions via Email       |
-| 12.02.          | ~~Reproducible Research~~    | ~~ST21: 18~~       | ~~Hildebrandt~~ | Report (with R Markdown)       |
-
-::: aside
-ST21: Statistical Thinking for the 21st Century\
-QF: Fundamentals of Quantitative Analysis (QuantFun)
-:::
+| Time | Topic |
+|------|-------|
+|      |       |
 
 # Why Statistics?
 
 ## Why is it important that YOU know statistics?
 
 ::: {.incremental .smaller}
--   You're doing a *research* master!
+-   You're doing a *PhD*!
 
     -   Research = Reading & understanding papers (esp. the analyses)
     -   Designing your own experiments, analyze data, interpret results
@@ -188,6 +92,16 @@ QF: Fundamentals of Quantitative Analysis (QuantFun)
 
     -   However: "It is easy to lie with statistics, but easier to lie without them" ― Frederick Mosteller
 :::
+
+![](images/clipboard-3793899018.png){width="163"}
+
+![](images/clipboard-1641481056.png){width="429"}
+
+![[https://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21](https://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21/?utm_source=chatgpt.com)](images/clipboard-8509855.png)
+
+![](images/clipboard-461873537.png)
+
+<https://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study>
 
 ## What is Statistical Thinking?
 
@@ -429,9 +343,9 @@ Are we measuring the construct we're interested in?
 -   Counts, frequencies, percentages, averages
 :::
 
-# Thanks! {.scrollable}
+# End of 1st part {.scrollable}
 
-Learning objective today:
+Learning objectives:
 
 -   Why is statistics important?
 
@@ -443,11 +357,4 @@ Learning objective today:
 
 Next:
 
--   R session: "Intro to R"
-
-    -   please <a href="https://www.r-project.org/">install R</a> & <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>!
-        -   Installation tutorial: <https://learningstatisticswithr-bookdown.netlify.app/intror>
-
-        -   You can also already install Rtools, which will be needed later: <https://cran.r-project.org/bin/windows/Rtools/>
-
--   Theory: Models
+-   Getting started with Jamovi
