@@ -29,71 +29,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -431,7 +366,7 @@ div.cell-output-stdout {
 <ul>
 <li><p>What is your background?</p></li>
 <li><p>Do you have experience with data analysis?</p></li>
-<li><p>What’s your attitude towards statistics?</p></li>
+<li><p>What’s your attitude towards statistics? Statistical confessions?</p></li>
 </ul>
 <!-- . . .
 
@@ -440,258 +375,35 @@ Today, I'm feeling...
 ![](images/moodmeter_en.jpg){fig-alt="Moodmeter"} -->
 </div>
 </section>
-<section id="using-the-slides" class="slide level2">
-<h2>Using the Slides</h2>
+<section id="what-to-expect-today" class="slide level2">
+<h2>What to expect today?</h2>
 <ul>
-<li>These slides are created directly in R with the quarto extension.</li>
-<li>You can jump to a slide by clicking the three dashes in the bottom left.</li>
-<li>You can conveniently copy R code from the slides with one click and paste it into your RStudio.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">print</span>(<span class="st">"Hello World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hello World"</code></pre>
-</div>
-</div>
-</section>
-<section id="organizational-issues" class="slide level2">
-<h2>Organizational Issues</h2>
-<div class="fragment">
-<!-- -   *Warning*: The course only lasts until mid-December - but we have to squeeze the content of the full semester in these 8 weeks!
-
-    -   This means, we'll have two sessions per week, Statistics (Input) on Tuesdays and R Programming (Hands-on) on Wednesdays -->
+<li><p>Slides can be found here: <a href="https://hillea.github.io/BasicStats-Retune/" class="uri">https://hillea.github.io/BasicStats-Retune/</a></p></li>
+<li><p>Textbooks this workshop is based on/that can be used to read up:</p>
 <ul>
-<li><p>Attendance is mandatory! (I don’t make the rules :) )</p>
-<ul>
-<li><p>You may miss one session without giving reasons (recommendation: don’t waste it early!)</p></li>
-<li><p>If you miss additional sessions, please write an email with an explanation (further proof may be required, e.g.&nbsp;doctor’s certificate)</p></li>
+<li><p><a href="https://davidfoxcroft.github.io/lsj-book/01-Why-do-we-learn-statistics.html">Learning Statistics with Jamovi</a></p></li>
+<li><p><a href="https://statsthinking21.github.io/statsthinking21-core-site/">Statistical Thinking for the 21st Century</a></p></li>
+<li><p><a href="https://www.statisticsdonewrong.com/data-analysis.html">Statistics Done Wrong</a></p></li>
 </ul></li>
 </ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p>The course will take place in person</p>
-<ul>
-<li>Only for students who are not in Würzburg yet, there is an option via Zoom</li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p>We will use these textbooks (Open Educational Resources - freely available online, also linked in WueCampus):</p>
-<ul>
-<li><p><a href="https://statsthinking21.github.io/statsthinking21-core-site/index.html">Statistical Thinking for the 21st Century</a></p></li>
-<li><p>For the R part: <a href="https://psyteachr.github.io/quant-fun-v2/">Fundamentals of Quantitative Analysis</a></p></li>
-<li><p>(Additional Resource: <a href="https://r4ds.hadley.nz/">R for Data Science</a>)</p></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="contents" class="slide level2">
-<h2>Contents</h2>
-<div>
-<ul>
-<li class="fragment">From basic probability to (Generalized) Linear Mixed Models
-<ul>
-<li class="fragment">Some things may be repetitive for you but this course aims to provide a common starting position for your next semesters</li>
-</ul></li>
-<li class="fragment">Input (lecture style) with hands-on R sessions <!-- -   Input could be video based that you should watch before the (R) session --></li>
-<li class="fragment">In addition, you should read a few pages in the text books<br>
-(<a href="https://statsthinking21.github.io/statsthinking21-core-site/">Statistical Thinking for the 21st Century</a>, and possibly <a href="https://psyteachr.github.io/quant-fun-v2/">Fundamentals of Quantitative Analysis</a>)</li>
-<li class="fragment">Project: Independently analyze a dataset (exam with pass or fail grading)</li>
-</ul>
-</div>
-<aside class="notes">
-<p>For some, e.g.&nbsp;the psychologists, it will be more of a repetition - but you will also learn R.</p>
-<p>Slides might be text heavy → so that you can go through the slides afterwards again (but textbook might also be helpful)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="project" class="slide level2">
-<h2>Project</h2>
-<div class="fragment">
-<ul>
-<li><p>Find a dataset that can answer a question you are interested in</p>
-<ul>
-<li><a href="https://ourworldindata.org/" class="uri">https://ourworldindata.org/</a></li>
-<li><a href="https://www.destatis.de/">Statistisches Bundesamt</a></li>
-<li>Your own, e.g., from an internship</li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><p>preprocess/wrangle it,</p></li>
-<li><p>analyze the data,</p></li>
-<li><p>and write a short (min. 2-page) report!</p>
-<ul>
-<li>short intro incl.&nbsp;research question and hypothesis</li>
-<li>methods (both how the data were acquired and how they are analyzed)</li>
-<li>results (incl.&nbsp;at least one plot)</li>
-<li>and a short discussion.
-<ul>
-<li><em>All</em> these parts should be <em>at least half a page</em> long.</li>
-</ul></li>
-</ul></li>
-</ul>
-</div>
 </section>
 <section id="schedule" class="slide level2 scrollable smaller">
 <h2>Schedule</h2>
-<p>The up-to-date version can be found at <a href="https://spressi.github.io/biostats/" class="uri">https://spressi.github.io/biostats/</a></p>
 <table>
-<colgroup>
-<col style="width: 14%">
-<col style="width: 25%">
-<col style="width: 17%">
-<col style="width: 14%">
-<col style="width: 27%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Date</th>
+<th>Time</th>
 <th>Topic</th>
-<th>Reading</th>
-<th>Lecturer</th>
-<th>Project Deadlines</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>16.10.</td>
-<td>General &amp; R Intro</td>
-<td>ST21: 1-3, QF: 1-3</td>
-<td>Reutter</td>
-<td>R &amp; RStudio installed</td>
-</tr>
-<tr class="even">
-<td>23.10.</td>
-<td>Probability</td>
-<td>ST21: 4, QF: 4-6</td>
-<td>Hildebrandt</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>30.10.</td>
-<td>Data Wrangling</td>
-<td>ST21: 4, QF: 4-6</td>
-<td>Reutter</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>06.11.</td>
-<td>Data Visualization</td>
-<td>QF: 7</td>
-<td>Reutter</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>13.11.</td>
-<td>Sampling</td>
-<td>ST21: 7-8, QF: 8</td>
-<td>Hildebrandt</td>
-<td>Dataset</td>
-</tr>
-<tr class="even">
-<td>20.11.</td>
-<td><em>Penance Day</em></td>
 <td></td>
 <td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>27.11.</td>
-<td>Probability &amp; Sampling in R</td>
-<td>ST21: 7-8, QF: 8</td>
-<td>Hildebrandt</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>04.12.</td>
-<td>Hypothesis Testing</td>
-<td>ST21: 9-10</td>
-<td>Reutter</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>11.12.</td>
-<td>Comparing Means &amp; Categories</td>
-<td>ST21: 12, 15</td>
-<td>Reutter</td>
-<td>Research Question &amp; Hypotheses</td>
-</tr>
-<tr class="even">
-<td>18.12.</td>
-<td>Exercises (t-Tests, Chi²)</td>
-<td>ST21: 12, 15</td>
-<td>Reutter</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>25.12. &amp; 01.01.</td>
-<td><em>Christmas &amp; New Year’s</em></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>08.01.</td>
-<td>(General) Linear Models</td>
-<td>ST21: 12-13</td>
-<td>Hildebrandt</td>
-<td>First Analysis Ideas</td>
-</tr>
-<tr class="odd">
-<td>15.01.</td>
-<td>Exercises (GLM)</td>
-<td>ST21: 12-13</td>
-<td>Hildebrandt</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>22.01.</td>
-<td>Linear Mixed Models</td>
-<td>ST21: 14</td>
-<td>Hildebrandt</td>
-<td>Analysis (with R scripts)</td>
-</tr>
-<tr class="odd">
-<td>29.01.</td>
-<td>R Markdown for Reports</td>
-<td></td>
-<td>Reutter</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>05.02.</td>
-<td>Troubleshooting Your Report</td>
-<td></td>
-<td>both</td>
-<td>Send Questions via Email</td>
-</tr>
-<tr class="odd">
-<td>12.02.</td>
-<td><del>Reproducible Research</del></td>
-<td><del>ST21: 18</del></td>
-<td><del>Hildebrandt</del></td>
-<td>Report (with R Markdown)</td>
 </tr>
 </tbody>
 </table>
-
-<aside><div>
-<p>ST21: Statistical Thinking for the 21st Century<br>
-QF: Fundamentals of Quantitative Analysis (QuantFun)</p>
-</div></aside></section></section>
+</section></section>
 <section>
 <section id="why-statistics" class="title-slide slide level1 center">
 <h1>Why Statistics?</h1>
@@ -701,7 +413,7 @@ QF: Fundamentals of Quantitative Analysis (QuantFun)</p>
 <h2>Why is it important that YOU know statistics?</h2>
 <div class="smaller">
 <ul>
-<li class="fragment"><p>You’re doing a <em>research</em> master!</p>
+<li class="fragment"><p>You’re doing a <em>PhD</em>!</p>
 <ul>
 <li class="fragment">Research = Reading &amp; understanding papers (esp.&nbsp;the analyses)</li>
 <li class="fragment">Designing your own experiments, analyze data, interpret results</li>
@@ -721,6 +433,16 @@ QF: Fundamentals of Quantitative Analysis (QuantFun)</p>
 </ul></li>
 </ul>
 </div>
+<p><img data-src="images/clipboard-3793899018.png" width="163"></p>
+<p><img data-src="images/clipboard-1641481056.png" width="429"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clipboard-8509855.png"></p>
+<figcaption><a href="https://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21/?utm_source=chatgpt.com">https://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21</a></figcaption>
+</figure>
+</div>
+<p><img data-src="images/clipboard-461873537.png"></p>
+<p><a href="https://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study" class="uri">https://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study</a></p>
 </section>
 <section id="what-is-statistical-thinking" class="slide level2">
 <h2>What is Statistical Thinking?</h2>
@@ -1044,9 +766,9 @@ At least some more causal evidence!</p>
 </ul>
 </div>
 </section></section>
-<section id="thanks" class="title-slide slide level1 scrollable center">
-<h1>Thanks!</h1>
-<p>Learning objective today:</p>
+<section id="end-of-1st-part" class="title-slide slide level1 scrollable center">
+<h1>End of 1st part</h1>
+<p>Learning objectives:</p>
 <ul>
 <li><p>Why is statistics important?</p></li>
 <li><p>What are data?</p></li>
@@ -1055,15 +777,7 @@ At least some more causal evidence!</p>
 <div class="fragment">
 <p>Next:</p>
 <ul>
-<li><p>R session: “Intro to R”</p>
-<ul>
-<li>please <a href="https://www.r-project.org/">install R</a> &amp; <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>!
-<ul>
-<li><p>Installation tutorial: <a href="https://learningstatisticswithr-bookdown.netlify.app/intror" class="uri">https://learningstatisticswithr-bookdown.netlify.app/intror</a></p></li>
-<li><p>You can also already install Rtools, which will be needed later: <a href="https://cran.r-project.org/bin/windows/Rtools/" class="uri">https://cran.r-project.org/bin/windows/Rtools/</a></p></li>
-</ul></li>
-</ul></li>
-<li><p>Theory: Models</p></li>
+<li>Getting started with Jamovi</li>
 </ul>
 
 <div class="quarto-auto-generated-content">

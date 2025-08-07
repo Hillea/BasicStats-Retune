@@ -4,47 +4,17 @@
     "href": "Intro.html#hello",
     "title": "Why Statistics?",
     "section": "Hello!",
-    "text": "Hello!\nWho am I?\n\nWho are you?\n\nWhat is your background?\nDo you have experience with data analysis?\nWhat’s your attitude towards statistics?",
+    "text": "Hello!\nWho am I?\n\nWho are you?\n\nWhat is your background?\nDo you have experience with data analysis?\nWhat’s your attitude towards statistics? Statistical confessions?",
     "crumbs": [
       "Why Statistics?"
     ]
   },
   {
-    "objectID": "Intro.html#using-the-slides",
-    "href": "Intro.html#using-the-slides",
+    "objectID": "Intro.html#what-to-expect-today",
+    "href": "Intro.html#what-to-expect-today",
     "title": "Why Statistics?",
-    "section": "Using the Slides",
-    "text": "Using the Slides\n\nThese slides are created directly in R with the quarto extension.\nYou can jump to a slide by clicking the three dashes in the bottom left.\nYou can conveniently copy R code from the slides with one click and paste it into your RStudio.\n\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#organizational-issues",
-    "href": "Intro.html#organizational-issues",
-    "title": "Why Statistics?",
-    "section": "Organizational Issues",
-    "text": "Organizational Issues\n\n\n\nAttendance is mandatory! (I don’t make the rules :) )\n\nYou may miss one session without giving reasons (recommendation: don’t waste it early!)\nIf you miss additional sessions, please write an email with an explanation (further proof may be required, e.g. doctor’s certificate)\n\n\n\n\n\nThe course will take place in person\n\nOnly for students who are not in Würzburg yet, there is an option via Zoom\n\n\n\n\n\nWe will use these textbooks (Open Educational Resources - freely available online, also linked in WueCampus):\n\nStatistical Thinking for the 21st Century\nFor the R part: Fundamentals of Quantitative Analysis\n(Additional Resource: R for Data Science)",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#contents",
-    "href": "Intro.html#contents",
-    "title": "Why Statistics?",
-    "section": "Contents",
-    "text": "Contents\n\n\nFrom basic probability to (Generalized) Linear Mixed Models\n\nSome things may be repetitive for you but this course aims to provide a common starting position for your next semesters\n\nInput (lecture style) with hands-on R sessions \nIn addition, you should read a few pages in the text books\n(Statistical Thinking for the 21st Century, and possibly Fundamentals of Quantitative Analysis)\nProject: Independently analyze a dataset (exam with pass or fail grading)\n\n\n\nFor some, e.g. the psychologists, it will be more of a repetition - but you will also learn R.\nSlides might be text heavy → so that you can go through the slides afterwards again (but textbook might also be helpful)",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#project",
-    "href": "Intro.html#project",
-    "title": "Why Statistics?",
-    "section": "Project",
-    "text": "Project\n\n\nFind a dataset that can answer a question you are interested in\n\nhttps://ourworldindata.org/\nStatistisches Bundesamt\nYour own, e.g., from an internship\n\n\n\n\n\npreprocess/wrangle it,\nanalyze the data,\nand write a short (min. 2-page) report!\n\nshort intro incl. research question and hypothesis\nmethods (both how the data were acquired and how they are analyzed)\nresults (incl. at least one plot)\nand a short discussion.\n\nAll these parts should be at least half a page long.",
+    "section": "What to expect today?",
+    "text": "What to expect today?\n\nSlides can be found here: https://hillea.github.io/BasicStats-Retune/\nTextbooks this workshop is based on/that can be used to read up:\n\nLearning Statistics with Jamovi\nStatistical Thinking for the 21st Century\nStatistics Done Wrong",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -54,7 +24,7 @@
     "href": "Intro.html#schedule",
     "title": "Why Statistics?",
     "section": "Schedule",
-    "text": "Schedule\nThe up-to-date version can be found at https://spressi.github.io/biostats/\n\n\n\n\n\n\n\n\n\n\nDate\nTopic\nReading\nLecturer\nProject Deadlines\n\n\n\n\n16.10.\nGeneral & R Intro\nST21: 1-3, QF: 1-3\nReutter\nR & RStudio installed\n\n\n23.10.\nProbability\nST21: 4, QF: 4-6\nHildebrandt\n\n\n\n30.10.\nData Wrangling\nST21: 4, QF: 4-6\nReutter\n\n\n\n06.11.\nData Visualization\nQF: 7\nReutter\n\n\n\n13.11.\nSampling\nST21: 7-8, QF: 8\nHildebrandt\nDataset\n\n\n20.11.\nPenance Day\n\n\n\n\n\n27.11.\nProbability & Sampling in R\nST21: 7-8, QF: 8\nHildebrandt\n\n\n\n04.12.\nHypothesis Testing\nST21: 9-10\nReutter\n\n\n\n11.12.\nComparing Means & Categories\nST21: 12, 15\nReutter\nResearch Question & Hypotheses\n\n\n18.12.\nExercises (t-Tests, Chi²)\nST21: 12, 15\nReutter\n\n\n\n25.12. & 01.01.\nChristmas & New Year’s\n\n\n\n\n\n08.01.\n(General) Linear Models\nST21: 12-13\nHildebrandt\nFirst Analysis Ideas\n\n\n15.01.\nExercises (GLM)\nST21: 12-13\nHildebrandt\n\n\n\n22.01.\nLinear Mixed Models\nST21: 14\nHildebrandt\nAnalysis (with R scripts)\n\n\n29.01.\nR Markdown for Reports\n\nReutter\n\n\n\n05.02.\nTroubleshooting Your Report\n\nboth\nSend Questions via Email\n\n\n12.02.\nReproducible Research\nST21: 18\nHildebrandt\nReport (with R Markdown)\n\n\n\n\n\nST21: Statistical Thinking for the 21st Century\nQF: Fundamentals of Quantitative Analysis (QuantFun)",
+    "text": "Schedule\n\n\n\nTime\nTopic",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -64,7 +34,7 @@
     "href": "Intro.html#why-is-it-important-that-you-know-statistics",
     "title": "Why Statistics?",
     "section": "Why is it important that YOU know statistics?",
-    "text": "Why is it important that YOU know statistics?\n\n\nYou’re doing a research master!\n\nResearch = Reading & understanding papers (esp. the analyses)\nDesigning your own experiments, analyze data, interpret results\n\nWe live in an increasingly data-centric world\n\nKnowing how to wrangle and analyze data is a valuable skill\n\nFacts & data literacy matter more than ever!\n\nFake News, “Lying with stats”, Reproducibility Crisis\nBeing able to call bullshit (https://www.callingbullshit.org/)\n\n“I only believe in statistics that I doctored myself” ― Winston S. Churchill\n\nHowever: “It is easy to lie with statistics, but easier to lie without them” ― Frederick Mosteller",
+    "text": "Why is it important that YOU know statistics?\n\n\nYou’re doing a PhD!\n\nResearch = Reading & understanding papers (esp. the analyses)\nDesigning your own experiments, analyze data, interpret results\n\nWe live in an increasingly data-centric world\n\nKnowing how to wrangle and analyze data is a valuable skill\n\nFacts & data literacy matter more than ever!\n\nFake News, “Lying with stats”, Reproducibility Crisis\nBeing able to call bullshit (https://www.callingbullshit.org/)\n\n“I only believe in statistics that I doctored myself” ― Winston S. Churchill\n\nHowever: “It is easy to lie with statistics, but easier to lie without them” ― Frederick Mosteller\n\n\n\n\n\n\n\n\nhttps://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21\n\n\n\nhttps://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study",
     "crumbs": [
       "Why Statistics?"
     ]
