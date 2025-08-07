@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Hillea.github.io/BasicStats-Retune/W1_Intro.html</loc>
-    <lastmod>2025-08-07T08:03:38.675Z</lastmod>
+    <loc>https://Hillea.github.io/BasicStats-Retune/Probability.html</loc>
+    <lastmod>2025-08-07T08:14:34.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Hillea.github.io/BasicStats-Retune/Intro.html</loc>
+    <lastmod>2025-08-07T08:07:42.555Z</lastmod>
   </url>
   <url>
     <loc>https://Hillea.github.io/BasicStats-Retune/about.html</loc>
@@ -11,5 +15,9 @@
   <url>
     <loc>https://Hillea.github.io/BasicStats-Retune/index.html</loc>
     <lastmod>2025-08-04T13:49:13.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Hillea.github.io/BasicStats-Retune/Jamovi.html</loc>
+    <lastmod>2025-08-07T08:13:52.941Z</lastmod>
   </url>
 </urlset>
