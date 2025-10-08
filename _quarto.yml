@@ -9,7 +9,9 @@ website:
     contents:
       - Intro.qmd
       - Jamovi.qmd
+      - DescViz.qmd
       - Probability.qmd
+      - StatsTestJamovi.qmd
 
 
 
