@@ -140,91 +140,130 @@
     "href": "DescViz.html#mean-median-mode",
     "title": "Describing and Visualizing Data",
     "section": "Mean, Median, Mode",
-    "text": "Mean, Median, Mode\n\nMean: Add up all values and divide by number of values:\n\\[\n(10+2+3+4+5)/5 = 4.8\n\\]\n\n\nMedian: The middle value of all sorted values, e.g 4:\n\\[\n2,3,4,5,10\n\\]\n\n\nMode: The most common value in the dataset, e.g. 2 in this example:\n\\[\n2,5,3,4,2,10\n\\]\n\n\n\n\n\nnominal data = mode (not meaningful values)\nordinal = rather use median than mean\ninterval/ratio = both mean and median are fine, mean uses all the information but is sensitive to extreme outliers"
+    "text": "Mean, Median, Mode\n\nMean: Add up all values and divide by number of values:\n\\[\n(10+2+3+4+5)/5 = 4.8\n\\]\n\n\nMedian: The middle value of all sorted values, e.g 4:\n\\[\n2,3,4,5,10\n\\]\n\n\nMode: The most common value in the dataset, e.g. 2 in this example:\n\\[\n2,5,3,4,2,10\n\\]\n\n\n\n\n\nnominal data = mode (not meaningful values)\nordinal = rather use median than mean\ninterval/ratio = both mean and median are fine, mean uses all the information but is sensitive to extreme outliers",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#descriptive-statistics-in-jamovi",
     "href": "DescViz.html#descriptive-statistics-in-jamovi",
     "title": "Describing and Visualizing Data",
     "section": "Descriptive Statistics in Jamovi",
-    "text": "Descriptive Statistics in Jamovi\nExercise: Try to figure out the mean, median, and mode of age and score, as well as the mode of coffee_intake.\n\nExercise 2: Get the mean age for each gender separately."
+    "text": "Descriptive Statistics in Jamovi\nExercise: Try to figure out the mean, median, and mode of age and score, as well as the mode of coffee_intake.\n\nExercise 2: Get the mean age for each gender separately.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#variability",
     "href": "DescViz.html#variability",
     "title": "Describing and Visualizing Data",
     "section": "Variability",
-    "text": "Variability\nIn addition to a value for “the middle of the data”, another measure of central tendency would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Quartiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median."
+    "text": "Variability\nIn addition to a value for “the middle of the data”, another measure of central tendency would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Quartiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#variability-2",
     "href": "DescViz.html#variability-2",
     "title": "Describing and Visualizing Data",
     "section": "Variability 2",
-    "text": "Variability 2\nMean absolute value: the “typical deviation from the mean (or median):\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = -2.8 = 2.8;\\] \\[\n3 - 4.8 = -1.8 = 1.8;\\] \\[\n4 - 4.8 = -0.8 = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]"
+    "text": "Variability 2\nMean absolute value: the “typical deviation from the mean (or median):\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = -2.8 = 2.8;\\] \\[\n3 - 4.8 = -1.8 = 1.8;\\] \\[\n4 - 4.8 = -0.8 = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#variability-3",
     "href": "DescViz.html#variability-3",
     "title": "Describing and Visualizing Data",
     "section": "Variability 3",
-    "text": "Variability 3\nIt is often better (for mathematical reasons) to use the squared deviation instead of the absolute deviation from the mean.\nThis is called the variance:\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each squared deviation from each data point to this mean:\n\\[ (10 - 4.8)^2 = 27.04;\\] \\[ (2 - 4.8)^2 = 7.84;\\] \\[ (3 - 4.8)^2 = 3.24;\\] \\[ (4 - 4.8)^2 = 0.64;\\] \\[ (5 - 4.8)^2 = 0.04 \\]\nCalculate the mean of these deviation, but use N-1 as the denominator:\n\\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/5 = 7.756 \\]\nOr, in mathematical formulation:\n\\[\nVAR(X) = \\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2\n\\]"
+    "text": "Variability 3\nIt is often better (for mathematical reasons) to use the squared deviation instead of the absolute deviation from the mean.\nThis is called the variance:\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each squared deviation from each data point to this mean:\n\\[ (10 - 4.8)^2 = 27.04;\\] \\[ (2 - 4.8)^2 = 7.84;\\] \\[ (3 - 4.8)^2 = 3.24;\\] \\[ (4 - 4.8)^2 = 0.64;\\] \\[ (5 - 4.8)^2 = 0.04 \\]\nCalculate the mean of these deviation, but use N-1 as the denominator:\n\\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/5 = 7.756 \\]\nOr, in mathematical formulation:\n\\[\nVAR(X) = \\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2\n\\]",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#variability-4",
     "href": "DescViz.html#variability-4",
     "title": "Describing and Visualizing Data",
     "section": "Variability 4",
-    "text": "Variability 4\nThe problem with the variance is: It is completely uninterpretable as it is in the original unit squared.\nSolution: Take the square root of the variance to bring it back to the original units!\nThis is called the standard deviation or root mean squared deviation (RMSD):\n\\[\nSD(X) = \\sqrt{\\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2}\n\\]\n\nRule of thumb: 68% of the data fall within 1 SD of the mean, 95% within 2 SD, 99,7% within 3 SD.\nThe SD is often used, especially in combination with the mean."
+    "text": "Variability 4\nThe problem with the variance is: It is completely uninterpretable as it is in the original unit squared.\nSolution: Take the square root of the variance to bring it back to the original units!\nThis is called the standard deviation or root mean squared deviation (RMSD):\n\\[\nSD(X) = \\sqrt{\\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2}\n\\]\n\nRule of thumb: 68% of the data fall within 1 SD of the mean, 95% within 2 SD, 99,7% within 3 SD.\nThe SD is often used, especially in combination with the mean.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#standard-scores",
     "href": "DescViz.html#standard-scores",
     "title": "Describing and Visualizing Data",
     "section": "Standard Scores",
-    "text": "Standard Scores\nOften, it is helpful to standardize scores to make them comparable e.g. across samples and test/measurement methods or even different variables. It transforms the data to state where an observation falls relative to its own population.\n\\[ score_{standardized} = \\frac{score - mean}{SD}\\]"
+    "text": "Standard Scores\nOften, it is helpful to standardize scores to make them comparable e.g. across samples and test/measurement methods or even different variables. It transforms the data to state where an observation falls relative to its own population.\n\\[ score_{standardized} = \\frac{score - mean}{SD}\\]",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#principles-of-plotting",
     "href": "DescViz.html#principles-of-plotting",
     "title": "Describing and Visualizing Data",
     "section": "Principles of Plotting",
-    "text": "Principles of Plotting\n\nAnatomy of a plot: We have an x-axis (horizontal) and a y-axis (vertical).\nIt’s always a good idea to show the data.\nAvoid clutter.\nDon’t distort the data.\nAccount for perceptual limitations (e.g. color blindness, pie charts…)"
+    "text": "Principles of Plotting\n\nAnatomy of a plot: We have an x-axis (horizontal) and a y-axis (vertical).\nIt’s always a good idea to show the data.\nAvoid clutter.\nDon’t distort the data.\nAccount for perceptual limitations (e.g. color blindness, pie charts…)",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#histograms",
     "href": "DescViz.html#histograms",
     "title": "Describing and Visualizing Data",
     "section": "Histograms",
-    "text": "Histograms\nHistograms help you to get an impression of how your data of a variable is distributed. They are used for continuous data (interval or ratio scale).\n\nAll values are divided into bins (choice of bins happens automatically in stats software),\nThe number of observations that fall in each bin are counted (frequency). This is the height of each vertical bar.\n\n\n\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “histogram” check box."
+    "text": "Histograms\nHistograms help you to get an impression of how your data of a variable is distributed. They are used for continuous data (interval or ratio scale).\n\nAll values are divided into bins (choice of bins happens automatically in stats software),\nThe number of observations that fall in each bin are counted (frequency). This is the height of each vertical bar.\n\n\n\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “histogram” check box.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#boxplots",
     "href": "DescViz.html#boxplots",
     "title": "Describing and Visualizing Data",
     "section": "Boxplots",
-    "text": "Boxplots\nAlso suited for continuous data, they deptic the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).\n\nThick line in the middle of the box is the median, the upper and lower sides of the box are the IQR and the end of the vertical line is the range - but max 1.5 IQR. Every data point outside of this range is shown as dot (here labelled) and may be considered an outlier.\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “Box plot” check box."
+    "text": "Boxplots\nAlso suited for continuous data, they deptic the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).\n\nThick line in the middle of the box is the median, the upper and lower sides of the box are the IQR and the end of the vertical line is the range - but max 1.5 IQR. Every data point outside of this range is shown as dot (here labelled) and may be considered an outlier.\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “Box plot” check box.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#violin-plots",
     "href": "DescViz.html#violin-plots",
     "title": "Describing and Visualizing Data",
     "section": "Violin Plots",
-    "text": "Violin Plots\nA violin plot is similar to a boxplot but also shows the density (as a mirrored vertical curve). You may also add the raw data as well as a boxplot points to the plot, which increases transparency."
+    "text": "Violin Plots\nA violin plot is similar to a boxplot but also shows the density (as a mirrored vertical curve). You may also add the raw data as well as a boxplot points to the plot, which increases transparency.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#multiple-box-plots",
     "href": "DescViz.html#multiple-box-plots",
     "title": "Describing and Visualizing Data",
     "section": "Multiple (Box) Plots",
-    "text": "Multiple (Box) Plots\nAs mentioned, it can make sense to visualize several variables - or the same variable for different groups - next to each other. This is called a grouped or dodged plot.\n\nYou can easily achieve this in Jamovi, if you use a grouping variable such as gender in the “split by” box."
+    "text": "Multiple (Box) Plots\nAs mentioned, it can make sense to visualize several variables - or the same variable for different groups - next to each other. This is called a grouped or dodged plot.\n\nYou can easily achieve this in Jamovi, if you use a grouping variable such as gender in the “split by” box.",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "DescViz.html#bar-graphs",
     "href": "DescViz.html#bar-graphs",
     "title": "Describing and Visualizing Data",
     "section": "Bar Graphs",
-    "text": "Bar Graphs\nA bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually count) for different groups.\n\nYou can also generate bar charts for continuous data that are not counts - but this is not advised. in this case, it will display the mean and the error bars will be the standard error (another measure of variability)."
+    "text": "Bar Graphs\nA bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually count) for different groups.\n\nYou can also generate bar charts for continuous data that are not counts - but this is not advised. in this case, it will display the mean and the error bars will be the standard error (another measure of variability).",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
   },
   {
     "objectID": "Intro.html#hello",
