@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Hillea.github.io/BasicStats-Retune/Probability.html</loc>
-    <lastmod>2025-08-07T08:14:34.713Z</lastmod>
+    <loc>https://Hillea.github.io/BasicStats-Retune/StatsTestsJamovi.html</loc>
+    <lastmod>2025-10-08T14:34:36.266Z</lastmod>
   </url>
   <url>
-    <loc>https://Hillea.github.io/BasicStats-Retune/Intro.html</loc>
-    <lastmod>2025-08-07T15:55:54.369Z</lastmod>
+    <loc>https://Hillea.github.io/BasicStats-Retune/Jamovi.html</loc>
+    <lastmod>2025-10-05T06:26:06.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Hillea.github.io/BasicStats-Retune/index.html</loc>
+    <lastmod>2025-10-03T07:46:29.979Z</lastmod>
   </url>
   <url>
     <loc>https://Hillea.github.io/BasicStats-Retune/about.html</loc>
     <lastmod>2025-08-04T13:43:55.143Z</lastmod>
   </url>
   <url>
-    <loc>https://Hillea.github.io/BasicStats-Retune/index.html</loc>
-    <lastmod>2025-08-04T13:49:13.542Z</lastmod>
+    <loc>https://Hillea.github.io/BasicStats-Retune/DescViz.html</loc>
+    <lastmod>2025-10-05T06:25:56.454Z</lastmod>
   </url>
   <url>
-    <loc>https://Hillea.github.io/BasicStats-Retune/Jamovi.html</loc>
-    <lastmod>2025-08-07T08:13:52.941Z</lastmod>
+    <loc>https://Hillea.github.io/BasicStats-Retune/Intro.html</loc>
+    <lastmod>2025-10-05T05:34:05.499Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Hillea.github.io/BasicStats-Retune/Probability.html</loc>
+    <lastmod>2025-10-07T18:57:08.232Z</lastmod>
   </url>
 </urlset>

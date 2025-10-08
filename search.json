@@ -1,10 +1,237 @@
 [
   {
+    "objectID": "StatsTestsJamovi.html#correlation",
+    "href": "StatsTestsJamovi.html#correlation",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Correlation",
+    "text": "Correlation\nCorrelations are used if you have two continuous variables and you want to check whether they have a relationship (regardless of whether one might have caused the other).\n\nRunning a correlation analysis, we test whether two variables co-vary,1 i.e. if one is high, the other variable also tends to be high (or, the opposite, low).\nThe correlation coefficient r can be between -1 (perfect negative correlation) and 1 (perfect positive correlation).\n\n\n\\[\nr = \\frac{covariance}{s_xs_y} = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{(N - 1)s_x s_y}\n\\]\nThe numerator represents the covariance between x and y, the denominator is for standardizing the measure by both SDs."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#correlations-in-jamovi",
+    "href": "StatsTestsJamovi.html#correlations-in-jamovi",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Correlations in Jamovi",
+    "text": "Correlations in Jamovi\nLet’s have a look at how to calculate correlation analyses in Jamovi.\nClick on the Analyses tab “Regression” and then “Correlation Matrix”. You can now select two variables by adding them to the right box.\nYou can also select whether you want to include a visualization of the correlation."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#interpreting-correlations",
+    "href": "StatsTestsJamovi.html#interpreting-correlations",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Interpreting Correlations",
+    "text": "Interpreting Correlations\nInterpreting the r statistic is a bit difficult and it depends on the field and context whether a certain correlation is strong or not. One rule of thumb is the following:"
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#spearmans-rank-correlation",
+    "href": "StatsTestsJamovi.html#spearmans-rank-correlation",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Spearman’s Rank Correlation",
+    "text": "Spearman’s Rank Correlation\nSo far, we have used the Pearson’s correlation coefficient, which is by far the most used one. However, we can only use this correlation if the relationship between variables is expected to be linear!\n\nStudy hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. In such a case (or with ordinal data), we would rather use the Spearman Rank Correlation.\n\n\nFor this analysis, Jamovi doesn’t use the raw data but ranks them in order and uses these ranks. If participant 1 was the person with the most study hours and the best exam score, they would be rank 1 for both variables. Subsequently, the ranks are correlated."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#reporting-correlations",
+    "href": "StatsTestsJamovi.html#reporting-correlations",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Reporting Correlations",
+    "text": "Reporting Correlations\nWe usually report the correlation coefficient (e.g. r) with the degrees of freedom and the p-value:\nr(98) = .673, p &lt; .001"
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#t-tests",
+    "href": "StatsTestsJamovi.html#t-tests",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "T-Tests",
+    "text": "T-Tests\ncode.sourceCode {\n  font-size: 1.4em;\n}\n\ndiv.cell-output-stdout {\n  font-size: 1.4em;\n}\nOften, we want to know whether two groups (treatment vs. control, men vs. women…) differ on some measure.\nIn other words, our outcome variables are continuous (e.g. exam scores) and we’re interested in the effect of a categorical predictor.\nIn this case, a t-test would be our statistical analysis of choice.\n\nThere are different kinds of t-tests, depending on the relationship between the two groups:\n\nIf the two groups are unrelated, e.g. men and women, we would run an independent samples t-test.\nIf the two groups are related, e.g. first and second measurement of the same participants, we would run a paired-samples t-test.\n(Sometimes we just want to compare one group to some specific value, then we’d use the one-sample t-test.)"
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#independent-samples-t-test",
+    "href": "StatsTestsJamovi.html#independent-samples-t-test",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Independent Samples t-Test",
+    "text": "Independent Samples t-Test\nLet’s first look at the common situation where we want to compare two groups. We often have two independent groups if participants are randomly assigned to one of two conditions.\nExample Research Question: Do people who drink a lot of coffee score better on an exam than those who drink less coffee?\n\nHypotheses:\n\\(H_0\\) = High caffeine intake is related to equal or lower exam scores than low caffeine intake.\n\\(H_A\\) = High caffeine intake is related to higher exam scores than low caffeine intake."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#computing-a-2-level-factor-grouping-variable",
+    "href": "StatsTestsJamovi.html#computing-a-2-level-factor-grouping-variable",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Computing a 2-Level Factor (Grouping Variable)",
+    "text": "Computing a 2-Level Factor (Grouping Variable)\nIf we want to run a t-Test, we first need to define a variable with two levels. Caffeine intake, our grouping variable, has three levels. However, we could argue that “no coffee” could also fall in the “low caffeine intake” group. We thus first have to compute a new variable with only two levels, “low” (including no and low coffee intake) and “high”.\nExercise: Try to compute a new variable, recoding values to “low” if they are non-high."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#independent-samples-t-test-in-jamovi",
+    "href": "StatsTestsJamovi.html#independent-samples-t-test-in-jamovi",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Independent Samples t-Test in Jamovi",
+    "text": "Independent Samples t-Test in Jamovi\nExercise: Try to figure out how to run an Independent Samples t-Test to test the influence of caffeine intake on exam scores!\n\nAnalysis -&gt; T-Tests -&gt; Independent Samples -&gt; exam_scores as Dependent Variable -&gt; new caffeine variable as Grouping Variable.\nIt is good practice to choose Welch’s test (because it allows for the SDs of the groups to vary), as well as selecting a directed/one-sided hypothesis if possible.\nAlso, you should test your assumptions, which is really easy in Jamovi.\nFinally, it is a good idea to report the descriptives, mean difference with CI, and effect size as well."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#reporting-an-independent-samples-t-test",
+    "href": "StatsTestsJamovi.html#reporting-an-independent-samples-t-test",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Reporting an Independent Samples t-Test",
+    "text": "Reporting an Independent Samples t-Test\n\nA one-sided Welch’s t-Test, testing whether high caffeine intake leads to better exam scores than low caffeine intake, revealed a significant difference (M_diff = 5.42, SE_diff = 2.31) between the two groups (t(78.0) = 2.35; p = .011, Cohen’s d = .485). High caffeine intake leads to higher exam scores (M = 70.7, SD = 11.2) than low caffeine intake (M = 65.3, SD = 11.2). All assumptions of the t-Test were met."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#paired-samples-t-tests",
+    "href": "StatsTestsJamovi.html#paired-samples-t-tests",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Paired-Samples t-Tests",
+    "text": "Paired-Samples t-Tests\nOften, we measure the same participants twice: E.g. once in the treatment manipulation, once in the control condition (and the order would hopefully be counterbalanced) - or before and intervention and after.\nIf each participant appears in both groups, we have to use the paired-samples t-test.\n\nExample Research Question: Do exam scores decline over time? (This could be due to e.g. a manipulation in between.)\nHypotheses:\n\\(H_0\\) = Exam scores stay the same or improve in a re-test.\n\\(H_A\\) = Exam scores are lower in a re-test than in the first exam."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#paired-samples-t-tests-in-jamovi",
+    "href": "StatsTestsJamovi.html#paired-samples-t-tests-in-jamovi",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Paired-Samples t-Tests in Jamovi",
+    "text": "Paired-Samples t-Tests in Jamovi\nObviously, we need to collect data with repeated measures for a paired-samples t-test. Please open the file WorkshopData_Wide in Jamovi.\nYou can now see that there are three columns for the exam scores: pre, mid, and post.\n\n\nExercise: Try to run a paired-samples t-test comparing pre and post exam scores. We expected post scores to be lower.\n\n\nAnalyses -&gt; T-Tests -&gt; Paired Samples T-Test -&gt; add Exam_Pre and Exam_Post to the “Paired Variables” Box.\nAlso select the assumption checks, the correct directed hypothesis, and mean difference, effect size and descriptives. What do you notice?\n\n\nThe assumption of normality seems to be violated - however, the QQ-plot looks okayish (dots fall on line).\nInstead of the Student’s t-test, you could run the non-parametric alternative, which is the Wilcoxon rank test and is independent of the assumption of normality.\nThis tests whether the median (ranked) difference between paired observations is zero.\n\n\nNote on Long vs. wide data: For a lot of analyses, you’d need the data in long format, with several rows per participant. For this t-test in Jamovi, however, you’d need it in wide format, which means one row per participant and separate columns for exam scores pre, mid, and post measurements."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#reporting-a-paired-samples-t-test",
+    "href": "StatsTestsJamovi.html#reporting-a-paired-samples-t-test",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Reporting a Paired-Samples t-Test",
+    "text": "Reporting a Paired-Samples t-Test\nExercise: How would you report the result?\n\n\nIn contrast to what we expected, post exam scores were not lower than pre exam scores but rather higher (M_post = 73.8, SD_post = 11.7; M_pre = 67.1, SD_pre = 11.4). The one-sided paired-samples t-test was not significant (t(99) = -16.1; p = .999; M_diff = -6.66; SE_diff = 0.41, Cohen’s d = -1.61).\n\nAlternatively:\n\nIn contrast to what we expected, post exam scores were not lower than pre exam scores but rather higher (Median_post = 73.0; Median_pre = 67.7). The assumption of normality was violated, which is why a Wilcoxon rank test was conducted. This one-sided t-test was not significant (W = 25.0; p = .999; r = -.99)."
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#one-way-analysis-of-variance",
+    "href": "StatsTestsJamovi.html#one-way-analysis-of-variance",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "One-Way Analysis of Variance",
+    "text": "One-Way Analysis of Variance\nWith ANOVAs, we generally test whether there are differences between the groups, but not directly which groups differ from each other. (Spoiler: To do so, we need to run follow-up (t-)tests.)\nIn other words, our null hypothesis would be that e.g. caffeine has no effect on scores and all groups score the same:\n$ H_0 = mean_a == mean_b == mean_c $\nIn contrast, the alternative hypothesis would be:\n$ H_a = $not all means are equal"
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#analysis-of-variance",
+    "href": "StatsTestsJamovi.html#analysis-of-variance",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Analysis of Variance?",
+    "text": "Analysis of Variance?\nAlthough we want to compare means of the groups to test the hypothesis, the variance is important for this (slightly more complex) statistical test.\nThere are different relevant variences, between-group and within-group:\n\n\n[variance –&gt; sum of squares –&gt; F]"
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#one-way-anova-in-jamovi",
+    "href": "StatsTestsJamovi.html#one-way-anova-in-jamovi",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "One-Way ANOVA in Jamovi",
+    "text": "One-Way ANOVA in Jamovi"
+  },
+  {
+    "objectID": "Jamovi.html#adding-variables",
+    "href": "Jamovi.html#adding-variables",
+    "title": "Getting Started with Jamovi",
+    "section": "Adding Variables",
+    "text": "Adding Variables\nYou can also add a new variable by either clicking on the header of an empty column or by clicking “add” in the Variables or Data menu. You then have the choice between adding a new variable, compute a variable using existing variables, or transforming an existing variable. The latter can also be achieved by clicking “Compute” or “Transform” in the Variables or Data menu.\n\nComputing or transforming a variable can be helpful to get a different version or e.g. a difference or average between variables.\nExercise: Check out the different functions available for computing or transforming a variable by clicking on the little fx.\n\n\nExercise 2: Make a new variable which is the centered version of Score by subtracting the average score across all participants from each individual score. You may use compute or transform.",
+    "crumbs": [
+      "Getting Started with Jamovi"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Basic Statistics Workshop Fall 2025",
+    "section": "",
+    "text": "Welcome to the website of the workshop “Basic statistics” conducted during the Fall School 2025 of the TRR ReTune.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\nBefore the day of the workshop, please download and install Jamovi: https://www.jamovi.org/."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "DescViz.html#mean-median-mode",
+    "href": "DescViz.html#mean-median-mode",
+    "title": "Describing and Visualizing Data",
+    "section": "Mean, Median, Mode",
+    "text": "Mean, Median, Mode\n\nMean: Add up all values and divide by number of values:\n\\[\n(10+2+3+4+5)/5 = 4.8\n\\]\n\n\nMedian: The middle value of all sorted values, e.g 4:\n\\[\n2,3,4,5,10\n\\]\n\n\nMode: The most common value in the dataset, e.g. 2 in this example:\n\\[\n2,5,3,4,2,10\n\\]\n\n\n\n\n\nnominal data = mode (not meaningful values)\nordinal = rather use median than mean\ninterval/ratio = both mean and median are fine, mean uses all the information but is sensitive to extreme outliers"
+  },
+  {
+    "objectID": "DescViz.html#descriptive-statistics-in-jamovi",
+    "href": "DescViz.html#descriptive-statistics-in-jamovi",
+    "title": "Describing and Visualizing Data",
+    "section": "Descriptive Statistics in Jamovi",
+    "text": "Descriptive Statistics in Jamovi\nExercise: Try to figure out the mean, median, and mode of age and score, as well as the mode of coffee_intake.\n\nExercise 2: Get the mean age for each gender separately."
+  },
+  {
+    "objectID": "DescViz.html#variability",
+    "href": "DescViz.html#variability",
+    "title": "Describing and Visualizing Data",
+    "section": "Variability",
+    "text": "Variability\nIn addition to a value for “the middle of the data”, another measure of central tendency would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Quartiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median."
+  },
+  {
+    "objectID": "DescViz.html#variability-2",
+    "href": "DescViz.html#variability-2",
+    "title": "Describing and Visualizing Data",
+    "section": "Variability 2",
+    "text": "Variability 2\nMean absolute value: the “typical deviation from the mean (or median):\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = -2.8 = 2.8;\\] \\[\n3 - 4.8 = -1.8 = 1.8;\\] \\[\n4 - 4.8 = -0.8 = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]"
+  },
+  {
+    "objectID": "DescViz.html#variability-3",
+    "href": "DescViz.html#variability-3",
+    "title": "Describing and Visualizing Data",
+    "section": "Variability 3",
+    "text": "Variability 3\nIt is often better (for mathematical reasons) to use the squared deviation instead of the absolute deviation from the mean.\nThis is called the variance:\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each squared deviation from each data point to this mean:\n\\[ (10 - 4.8)^2 = 27.04;\\] \\[ (2 - 4.8)^2 = 7.84;\\] \\[ (3 - 4.8)^2 = 3.24;\\] \\[ (4 - 4.8)^2 = 0.64;\\] \\[ (5 - 4.8)^2 = 0.04 \\]\nCalculate the mean of these deviation, but use N-1 as the denominator:\n\\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/5 = 7.756 \\]\nOr, in mathematical formulation:\n\\[\nVAR(X) = \\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2\n\\]"
+  },
+  {
+    "objectID": "DescViz.html#variability-4",
+    "href": "DescViz.html#variability-4",
+    "title": "Describing and Visualizing Data",
+    "section": "Variability 4",
+    "text": "Variability 4\nThe problem with the variance is: It is completely uninterpretable as it is in the original unit squared.\nSolution: Take the square root of the variance to bring it back to the original units!\nThis is called the standard deviation or root mean squared deviation (RMSD):\n\\[\nSD(X) = \\sqrt{\\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2}\n\\]\n\nRule of thumb: 68% of the data fall within 1 SD of the mean, 95% within 2 SD, 99,7% within 3 SD.\nThe SD is often used, especially in combination with the mean."
+  },
+  {
+    "objectID": "DescViz.html#standard-scores",
+    "href": "DescViz.html#standard-scores",
+    "title": "Describing and Visualizing Data",
+    "section": "Standard Scores",
+    "text": "Standard Scores\nOften, it is helpful to standardize scores to make them comparable e.g. across samples and test/measurement methods or even different variables. It transforms the data to state where an observation falls relative to its own population.\n\\[ score_{standardized} = \\frac{score - mean}{SD}\\]"
+  },
+  {
+    "objectID": "DescViz.html#principles-of-plotting",
+    "href": "DescViz.html#principles-of-plotting",
+    "title": "Describing and Visualizing Data",
+    "section": "Principles of Plotting",
+    "text": "Principles of Plotting\n\nAnatomy of a plot: We have an x-axis (horizontal) and a y-axis (vertical).\nIt’s always a good idea to show the data.\nAvoid clutter.\nDon’t distort the data.\nAccount for perceptual limitations (e.g. color blindness, pie charts…)"
+  },
+  {
+    "objectID": "DescViz.html#histograms",
+    "href": "DescViz.html#histograms",
+    "title": "Describing and Visualizing Data",
+    "section": "Histograms",
+    "text": "Histograms\nHistograms help you to get an impression of how your data of a variable is distributed. They are used for continuous data (interval or ratio scale).\n\nAll values are divided into bins (choice of bins happens automatically in stats software),\nThe number of observations that fall in each bin are counted (frequency). This is the height of each vertical bar.\n\n\n\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “histogram” check box."
+  },
+  {
+    "objectID": "DescViz.html#boxplots",
+    "href": "DescViz.html#boxplots",
+    "title": "Describing and Visualizing Data",
+    "section": "Boxplots",
+    "text": "Boxplots\nAlso suited for continuous data, they deptic the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).\n\nThick line in the middle of the box is the median, the upper and lower sides of the box are the IQR and the end of the vertical line is the range - but max 1.5 IQR. Every data point outside of this range is shown as dot (here labelled) and may be considered an outlier.\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “Box plot” check box."
+  },
+  {
+    "objectID": "DescViz.html#violin-plots",
+    "href": "DescViz.html#violin-plots",
+    "title": "Describing and Visualizing Data",
+    "section": "Violin Plots",
+    "text": "Violin Plots\nA violin plot is similar to a boxplot but also shows the density (as a mirrored vertical curve). You may also add the raw data as well as a boxplot points to the plot, which increases transparency."
+  },
+  {
+    "objectID": "DescViz.html#multiple-box-plots",
+    "href": "DescViz.html#multiple-box-plots",
+    "title": "Describing and Visualizing Data",
+    "section": "Multiple (Box) Plots",
+    "text": "Multiple (Box) Plots\nAs mentioned, it can make sense to visualize several variables - or the same variable for different groups - next to each other. This is called a grouped or dodged plot.\n\nYou can easily achieve this in Jamovi, if you use a grouping variable such as gender in the “split by” box."
+  },
+  {
+    "objectID": "DescViz.html#bar-graphs",
+    "href": "DescViz.html#bar-graphs",
+    "title": "Describing and Visualizing Data",
+    "section": "Bar Graphs",
+    "text": "Bar Graphs\nA bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually count) for different groups.\n\nYou can also generate bar charts for continuous data that are not counts - but this is not advised. in this case, it will display the mean and the error bars will be the standard error (another measure of variability)."
+  },
+  {
     "objectID": "Intro.html#hello",
     "href": "Intro.html#hello",
     "title": "Why Statistics?",
     "section": "Hello!",
-    "text": "Hello!\nWho am I?\n\nWho are you?\n\nWhat is your background?\nDo you have experience with data analysis?\nWhat’s your attitude towards statistics? Statistical confessions?",
+    "text": "Hello!\n\n\nWho are you?\n\nWhat is your background?\nDo you have experience with data analysis?\nWhat’s your attitude towards statistics? Statistical confessions?",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -24,7 +251,7 @@
     "href": "Intro.html#schedule",
     "title": "Why Statistics?",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nTopic",
+    "text": "Schedule\n\n\n\nTime\nTopic\n\n\n\n\n9:00 - 9:20\nIntro: Why Statistics?\n\n\n9:20 - 9:40\nGetting started with Jamovi\n\n\n10\nDescriptive Statistics & Data Visualization\n\n\n\nProbability & Sampling\n\n\n\nHypothesis Testing",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -34,27 +261,7 @@
     "href": "Intro.html#why-is-it-important-that-you-know-statistics",
     "title": "Why Statistics?",
     "section": "Why is it important that YOU know statistics?",
-    "text": "Why is it important that YOU know statistics?\n\n\nYou’re doing a PhD!\n\nResearch = Reading & understanding papers (esp. the analyses)\nDesigning your own experiments, analyze data, interpret results\n\nWe live in an increasingly data-centric world\n\nKnowing how to wrangle and analyze data is a valuable skill\n\nFacts & data literacy matter more than ever!\n\nFake News, “Lying with stats”, Reproducibility Crisis\nBeing able to call bullshit (https://www.callingbullshit.org/)\n\n“I only believe in statistics that I doctored myself” ― Winston S. Churchill\n\nHowever: “It is easy to lie with statistics, but easier to lie without them” ― Frederick Mosteller\n\n\n\n\n\n\n\n\nhttps://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21\n\n\n\nhttps://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#what-is-statistical-thinking",
-    "href": "Intro.html#what-is-statistical-thinking",
-    "title": "Why Statistics?",
-    "section": "What is Statistical Thinking?",
-    "text": "What is Statistical Thinking?\n\n\n“a systematic way of thinking about how we describe the world and use data [to] make decisions and predictions, all in the context of the inherent uncertainty that exists in the real world.” (Poldrack, Preface of ST21)\n“Statistical thinking is a way of understanding a complex world by describing it in relatively simple terms that nonetheless capture essential aspects of its structure or function, and that also provide us some idea of how uncertain we are about that knowledge.” (Poldrack, Chapter 1)\n\n\n\nbreak down complexity, include uncertainty",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#why-is-statistical-thinking-important",
-    "href": "Intro.html#why-is-statistical-thinking-important",
-    "title": "Why Statistics?",
-    "section": "Why is Statistical Thinking Important?",
-    "text": "Why is Statistical Thinking Important?\n\n\ndata literacy vs. intuition/heuristics/anecdotal evidence\n\nPublic discourse about Covid-19, migration, etc. (e.g., “50% of people in intensive care are vaccinated”)\n\n\n\n\n\n\n\n\n\n\n\nBase Rate Fallacy\n\n\n\nexample availability heuristic from book (or any other example where intuition is wrong, i.e. vaccinations/covid…)",
+    "text": "Why is it important that YOU know statistics?\n\n\nYou’re doing a PhD!\nWe live in an increasingly data-centric world\nFacts & data literacy matter more than ever!\n\nYou should be able to call bullshit (https://www.callingbullshit.org/)\n\n\n\n\n\nYou’re doing a PhD!\n\nResearch = Reading & understanding papers (esp. the analyses)\nDesigning your own experiments, analyze data, interpret results\n\nWe live in an increasingly data-centric world\n\nKnowing how to wrangle and analyze data is a valuable skill\n\nFacts & data literacy matter more than ever!\n\nFake News, “Lying with stats”, Reproducibility Crisis\nBeing able to call bullshit (https://www.callingbullshit.org/)\n\n“I only believe in statistics that I doctored myself” ― Winston S. Churchill\n\nHowever: “It is easy to lie with statistics, but easier to lie without them” ― Frederick Mosteller\n\n\n\n\n\n\n\n\n\nhttps://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21\n\n\n\nhttps://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -65,26 +272,6 @@
     "title": "Why Statistics?",
     "section": "What can Statistics Do For Us?",
     "text": "What can Statistics Do For Us?\n\nDescribe patterns by summarizing/breaking down data (“descriptive statistics”)\nDecide whether one thing is better than another, given the uncertainty (“inferential statistics”)\nPredict how other people would “behave” (generalize to new observations)\n\n\ndescribe: not useful to look at every single data point/person, but we need s.th. like tendencies/trends…",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#the-big-ideas",
-    "href": "Intro.html#the-big-ideas",
-    "title": "Why Statistics?",
-    "section": "The Big Ideas",
-    "text": "The Big Ideas\n\n\nLearning from data: Update our beliefs\nAggregation: How to summarize the data to draw meaningful conclusions?\nUncertainty: Probabilistic evidence\nSampling from the population: Which people etc. do we select?\n\n\n\nask for every point what I could mean w/ it?\nLearning from data: gather new knowledge or even just hypotheses\nAggregation: Can’t look at all ind data points, need to find trends etc. (should not go too far! throwing out data)\nUncertainty: stats = tools for making decisions under uncertainty, we can never prove anything but provide evidence, there is no 100% certainty for an outcome\nsampling: how do we represent the population? What is the population? how much data do we need? More is better, but payoff decreases…",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#causality",
-    "href": "Intro.html#causality",
-    "title": "Why Statistics?",
-    "section": "Causality",
-    "text": "Causality\nCorrelation does not imply causation… but is a hint!\n\nExample: Smoking = less risk for Parkinson’s disease? (Godwin-Austen et al., 1982; Chen et al., 2010)\n\n\n→ confounding factors?\n\n\ne.g., individual dopaminergic activity ⇒ addiction & motor function\n\n\nRandomized Controlled Trials (RCT) as the solution?\n\nRCT: exp control and manipulation, removes confounds if done well\nAt least some more causal evidence!\nQUESTIONS so far?",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -130,31 +317,11 @@
     ]
   },
   {
-    "objectID": "Intro.html#reliability",
-    "href": "Intro.html#reliability",
+    "objectID": "Intro.html#reliability-validity",
+    "href": "Intro.html#reliability-validity",
     "title": "Why Statistics?",
-    "section": "Reliability",
-    "text": "Reliability\nCorrelation of a measurement with “itself”\n\n\nInternal reliability (consistency)\nTest-retest reliability (stability)\nInter-rater reliability (agreement)\n\n\n\nCorrelation with other variables can’t be higher than reliability (cf., Wilmer et al., 2012, Table 1)!",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#validity",
-    "href": "Intro.html#validity",
-    "title": "Why Statistics?",
-    "section": "Validity",
-    "text": "Validity\nAre we measuring the construct we’re interested in?\n\n\nFace validity: Does it intuitively make sense? First reality check!\nConstruct validity\n\nconvergent validity: Related to similar measures that should measure the same construct\ndivergent validity: Is it unrelated to other measures?\n\nPredictive validity: Is it predictive of other outcomes? (e.g., intelligence & job success)",
-    "crumbs": [
-      "Why Statistics?"
-    ]
-  },
-  {
-    "objectID": "Intro.html#validity-reliability",
-    "href": "Intro.html#validity-reliability",
-    "title": "Why Statistics?",
-    "section": "Validity & Reliability",
-    "text": "Validity & Reliability\n\nReliability & Validity",
+    "section": "Reliability & Validity",
+    "text": "Reliability & Validity\nData that we collected should be both:\n\nreliable: stable and consistent over time\nvalid: measuring the construct we’re interested in\n\n\nReliability & Validity",
     "crumbs": [
       "Why Statistics?"
     ]
@@ -170,17 +337,213 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "objectID": "Probability.html#frequentist-vs.-bayesian-view",
+    "href": "Probability.html#frequentist-vs.-bayesian-view",
+    "title": "Statistical Theory",
+    "section": "Frequentist vs. Bayesian View",
+    "text": "Frequentist vs. Bayesian View\nFrequentist: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain (The probability gets closer to it’s real value over time).\nBayesian: The weather forecast predicts 60% rain for the next 100 days, which means that I expect it to rain tomorrow with 60% chance (degree of belief).",
+    "crumbs": [
+      "Statistical Theory"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Basic Statistics Workshop Fall 2025",
-    "section": "",
-    "text": "Welcome to the website of the workshop “Basic statistics” conducted during the Fall School 2025 of the TRR ReTune.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab)."
+    "objectID": "Probability.html#probability-theory",
+    "href": "Probability.html#probability-theory",
+    "title": "Statistical Theory",
+    "section": "Probability Theory",
+    "text": "Probability Theory\nDefinitions:\n\nExperiment: Activity that produces outcome\nSample space: Set of possible outcomes for an experiment\nEvent: Subset of the sample space, an outcome\n\n\n\nExperiment: e.g. roll a die\nSample space: six-sided die: {1,2,3,4,5,6}\nEvent: e.g. 3",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#probability-theory-2",
+    "href": "Probability.html#probability-theory-2",
+    "title": "Statistical Theory",
+    "section": "Probability Theory 2",
+    "text": "Probability Theory 2\nLet’s say we have a variable \\(X\\) that contains \\(N\\) independent events:\n\\[ X = E_1, E_2, …, E_n \\]\nThe probability of a certain event (event \\(i\\)) is then formally written as:\n\\[ P(X = E_i) \\]\n\nFormal features of probability theory:\n\nProbability can’t be negative.\nThe total probability of outcomes in the sample space is 1.\nThe probability of any individual event can’t be greater than 1.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#probability-distributions",
+    "href": "Probability.html#probability-distributions",
+    "title": "Statistical Theory",
+    "section": "Probability Distributions",
+    "text": "Probability Distributions\nIf we assign a certain probability to each event, we have a probability distribution!\n\n\nProbability distributions are central to determine how likely an observed outcome is given a certain model (i.e. that specific probability distribution).\nThere are different probability distributions that are often used.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-binomial-distribution",
+    "href": "Probability.html#the-binomial-distribution",
+    "title": "Statistical Theory",
+    "section": "The Binomial Distribution",
+    "text": "The Binomial Distribution\nThe binomial (“two categories”) distribution is used for discrete data with two possible outcomes (e.g., flipping a coin). It models the number of successes being observed (e.g., heads), given the probability of success (0.5 for fair coins) and the number of observations (flips of a coin, e.g., 10).\n\nHow many heads (successes) should we expect and with what probability?\nWe can simulate 10 coin flips (or dice) each 10.000 times and count the number of heads (out of the 10). We can use this distribution to work out the probability of different outcomes, e.g., getting at least 3 heads (or 6s) out of 10 tosses (dice rolls).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsuccess: whatever you want, also an “artificial” dichotomization like “roll a 6” vs. “roll no 6”\nadd up probabilities &gt;=3 or 1 - P(X &lt;= 2)",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-normal-distribution",
+    "href": "Probability.html#the-normal-distribution",
+    "title": "Statistical Theory",
+    "section": "The Normal Distribution",
+    "text": "The Normal Distribution\nThe normal distribution is very common in statistics (i.e., in the real world). It (roughly) reflects the probability of any value occurring for a continuous variable, such as height.\n\n\n\nNormal distribution of height\n\n\n\nThe normal distribution is always symmetrical\n=&gt; equal probability of observations above and below the mean.\n=&gt; the mean, median, and mode are all equal!\n\n\n\n\n\n\n\nDifferent means shift the normal\ndistribution along the x-axis.\n\n\n\n\n\n\nDifferent SDs lead to wider (lower SD)\nor narrower (higher SD) distributions.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-normal-distribution-1",
+    "href": "Probability.html#the-normal-distribution-1",
+    "title": "Statistical Theory",
+    "section": "The Normal Distribution",
+    "text": "The Normal Distribution",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#how-do-we-sample",
+    "href": "Probability.html#how-do-we-sample",
+    "title": "Statistical Theory",
+    "section": "How Do We Sample?",
+    "text": "How Do We Sample?\nThe sample needs to be representative of the entire population, that’s why it’s critical how we select the individuals.\nThink about examples of non-representative samples!\n\nRepresentative: Every member of the population has an equal chance of being selected.\nIf non-representative: sample statistic is biased, its value is (systematically) different from the true population value (parameter).\n(But talking about bias is mostly a theoretical discussion: Usually we of course don’t know the population parameter and thus cannot compare our estimate with it! Otherwise we wouldn’t need to sample.)\n\nNon-representative: pollster calls people from list of Democratic party, or from rich neighborhood, or only uses psychology students :D\nThink about “your” sample, how could this be non-representative?",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#different-ways-of-sampling",
+    "href": "Probability.html#different-ways-of-sampling",
+    "title": "Statistical Theory",
+    "section": "Different Ways of Sampling",
+    "text": "Different Ways of Sampling\n\nwithout replacement: Once a member of the population is sampled, they are not eligible to be sampled again. This is the most common variant of sampling.\nwith replacement: After a member of the population has been sampled, they are put back into the pool and could potentially be sampled again. This usually happens out of accident or by necessity (cf. Bootstrapping)\n\n\nBut we also have:\n\nstratified sampling, snowball sampling, convenience sampling…",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#population-parameters-and-sample-statistics",
+    "href": "Probability.html#population-parameters-and-sample-statistics",
+    "title": "Statistical Theory",
+    "section": "Population Parameters and Sample Statistics",
+    "text": "Population Parameters and Sample Statistics\nThe population parameter is the actual (e.g.) mean and SD in the whole population. It also refers to the parameters of our underlying probability distribution. For example, it is widely accepted that the average IQ is 100 with a SD of 15. The population parameter is usually the “thing of interest” you want to gain information about. It is also a parameter you make assumptions about (more on that later).\nThe sample statistics are (e.g.) the mean and SD of our actual data. If we measured IQ scores of 100 participants, the mean might be 98.5 and the SD 15.9.\n\nIt is likely that our sample statistic differs slightly from the population parameter. This is called the sampling error.\nIf we collect multiple samples, the sample statistic will always differ slightly. If we combine all those sample statistics, we can approximate the sampling distribution.\nOf course, we want to minimize the sampling error and get a good estimate of the population parameter!\n\n\nDiscuss: What do you think, how can we get a good estimate/minimize sampling error?",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-law-of-large-numbers",
+    "href": "Probability.html#the-law-of-large-numbers",
+    "title": "Statistical Theory",
+    "section": "The Law of Large Numbers",
+    "text": "The Law of Large Numbers\nIf you measure the IQ of 1 person, you might get an score of 120.\nIf you collect IQ scores of 10 participants, the mean might be 95 and the SD 11.\nIf you collected data of 10.000 individuals, the mean will be very close to 100 and the SD very close to 15.\n\nThe more observations, the better the descriptive statistics describe the underlying population parameter.\n\n\nBUT: While it would of course be nice to have giant samples (i.e. the population) to know the exact parameters, it is usually impossible to collect that much data. However, it is also not necessary, because even with smaller samples, we can estimate the population parameters.\n\nExample with different subsets of participants?",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-central-limit-theorem",
+    "href": "Probability.html#the-central-limit-theorem",
+    "title": "Statistical Theory",
+    "section": "The Central Limit Theorem",
+    "text": "The Central Limit Theorem\nIf we repeated an experiment with a (largish but limited) sample size, the means of these repeated samples would together form a new distribution where the mean of that distribution is close to the population mean.\n\nThis is called the Central Limit Theorem (CLT), a fundamental (and often misunderstood) concept of statistics.\nCLT: With larger sample sizes, the sampling distribution of sample means will become more and more normally distributed, even if the population distribution is not!\nNormal distributions form the basis of many statistical tests!",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#confidence-intervals",
+    "href": "Probability.html#confidence-intervals",
+    "title": "Statistical Theory",
+    "section": "Confidence Intervals",
+    "text": "Confidence Intervals\nAs we use our sample mean (and adjusted SD) as our best estimates for the population mean (and SD), it is a good idea to indicate how confident we are in these estimates.\nFor this we calculate the confidence interval, which denotes the e.g. 95% probability that the sample mean lies within 1.96 standard errors of the population mean.\n\n\n\n. . .\n\n\nIt does not mean, that the true population mean lies with 95% probability within the sample’s confidence interval!\n\nIf we replicated the experiment with a different sample, 95% of CIs would contain the true population mean. (Still, it is a good indicator of our uncertainty around an estimate!)",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#errors-in-decision-making",
+    "href": "Probability.html#errors-in-decision-making",
+    "title": "Statistical Theory",
+    "section": "Errors in Decision Making",
+    "text": "Errors in Decision Making\nStatistical testing means making decisions under uncertainty in a messy world –&gt; mistakes can happen.\nThe goal is to minimize these errors.\n\n\nType I error: incorrectly rejecting the null hypothesis.\nWe want to minimize this error to be below a probability of ⍺ = 0.05.\nThis means that we accept up to 5% wrong decisions if we have extreme test statistics (e.g. a huge difference in exam scores between high and low caffeine intake groups).\n. . .\nType II error: incorrectly accepting the null hypothesis to be true when it is, in fact, wrong.\nWe also want to control this, although it is often secondary. This error rate (𝛽) is related to the power (1 - 𝛽) of the test, which can be increased with e.g. higher sample size.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#test-statistic",
+    "href": "Probability.html#test-statistic",
+    "title": "Statistical Theory",
+    "section": "Test Statistic",
+    "text": "Test Statistic\nIn general, we want to relate an effect (e.g., a mean or a difference of means) to the amount of uncertainty in the data.\n\nWe fit a model (e.g. a t-test) to the data which provides a test statistic (e.g. a t-value) as the amount of evidence in favor of our alternative hypothesis \\(H_a\\) relative to the variability in the data.\n\n\nWe can then compare our test statistic to the probability distribution if the null hypothesis was true and determine how likely this test statistic is.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#fit-a-model",
+    "href": "Probability.html#fit-a-model",
+    "title": "Statistical Theory",
+    "section": "Fit a Model",
+    "text": "Fit a Model\nIn this example, we need a test statistic that tests the difference between two (independent) means (we have one exam score mean for each group): The t statistic.\n\\[t = \\frac{\\bar{X_1} - \\bar{X_2}}{\\sqrt{\\frac{S_1^2}{n_1} + \\frac{S_2^2}{n_2}}}\\]\n\\(\\bar{X_1}\\) and \\(\\bar{X_2}\\) are the means of the two group, \\(S_1^2\\) and \\(S_2^2\\) are the estimated variances of the groups,\n\\(n_1\\) and \\(n_2\\) are the sizes of the two groups.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-t-distribution-degrees-of-freedom",
+    "href": "Probability.html#the-t-distribution-degrees-of-freedom",
+    "title": "Statistical Theory",
+    "section": "The t Distribution & Degrees of Freedom",
+    "text": "The t Distribution & Degrees of Freedom\nThe shape of the distribution used to compare the test-statistic with depends on the degrees of freedom.\nIt basically indicates how many values are free to vary, once you know e.g. the mean. If you have three exam scores (70, 80, 90), and you know the mean (80) and two scores (70 and 80), then the third score is already fixed to be 90.\nIn this case, there would be n-1 = 2 df.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#determine-the-probability-of-the-observed-result-under-the-null-hypothesis",
+    "href": "Probability.html#determine-the-probability-of-the-observed-result-under-the-null-hypothesis",
+    "title": "Statistical Theory",
+    "section": "Determine the Probability of the Observed Result under the Null Hypothesis",
+    "text": "Determine the Probability of the Observed Result under the Null Hypothesis\nWe do not check likelihood of the alternative distribution or likelihood that the null hypothesis is true, but rather:\nHow likely is it, given that we assume \\(H_0\\) is true, to observe a statistic at least as extreme as the one we observed.\n⇒ We need to know the distribution of the expected statistic, assuming \\(H_0\\) is true. Then we can calculate how (un-)likely it is to find the statistic (or a more extreme value) we found in our data.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#the-p-value",
+    "href": "Probability.html#the-p-value",
+    "title": "Statistical Theory",
+    "section": "The P-Value",
+    "text": "The P-Value\nIn Jamovi, we get a p-value, which is the probability under the curve to the right of the red line on the previous slide (as or more extreme than test statistic).\nIf this p-value is smaller than the ⍺ = 0.05 defined above, we usually reject the null hypothesis.\nIt tells us that it is relatively unlikely to find a difference between caffeine intake groups that big, if caffeine actually had no impact on cognitive performance/exam scores.",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#what-does-a-significant-result-not-mean",
+    "href": "Probability.html#what-does-a-significant-result-not-mean",
+    "title": "Statistical Theory",
+    "section": "What does a significant result (not) mean?",
+    "text": "What does a significant result (not) mean?\nThere is a lot of discussion about the usefulness of using \\(\\alpha = .05\\) as well as about the interpretation of a significant result/certain p-value!\n\nA p-value of .01 does….\n\nNOT mean that the probability that \\(H_0\\) is true is 1%!\n\nWe tested \\(P(data|H_0)\\) not \\(P(H_0|data)\\)!\n\nNOT mean that the probability that you’re making a wrong decision is 1%!\n\nThis would also be \\(P(H_0|data)\\)! p-values are probabilities of data (under \\(H_0\\)), not probabilities of hypotheses! And we cannot easily use Bayes to turn the condition because we would need additional information like the prior probability of an alternative hypothesis being true.\n\nNOT mean that you would get the same significance 99% of the time if you repeated the study.\n\nThe p-value is a statement about the likelihood of one particular dataset under the null.\n\nNOT mean that you found a practically important effect.\n\nDifference between statistical significance and practical significance! Effect sizes are important here. (Statistical significance depends on sample size!)",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#effect-sizes-power",
+    "href": "Probability.html#effect-sizes-power",
+    "title": "Statistical Theory",
+    "section": "Effect Sizes & Power",
+    "text": "Effect Sizes & Power",
+    "crumbs": [
+      "Statistical Theory"
+    ]
   }
 ]
