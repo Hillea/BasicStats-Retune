@@ -1,7 +1,7 @@
 ---
 title: "Why Statistics?"
 subtitle: |
-   | Basic Statistics Workship 
+   | Basic Statistics Workshop 
    | ReTune Fall School   
    | 17th of October, 2025
 author: "Dr. Lea Hildebrandt"
@@ -33,10 +33,8 @@ div.cell-output-stdout {
 
 ## Hello!
 
-Who am I?
-
-. . .
-
+::::: columns
+::: {.column width="50%"}
 Who are you?
 
 -   What is your background?
@@ -44,6 +42,12 @@ Who are you?
 -   Do you have experience with data analysis?
 
 -   What's your attitude towards statistics? Statistical confessions?
+:::
+
+::: {.column width="50%"}
+![](images/Hello.jpg){fig-alt="Hello, my name is Lea" width="278"}
+:::
+:::::
 
 ```{=html}
 <!-- . . .
@@ -52,6 +56,7 @@ Today, I'm feeling...
 
 ![](images/moodmeter_en.jpg){fig-alt="Moodmeter"} -->
 ```
+
 ## What to expect today?
 
 -   Slides can be found here: <https://hillea.github.io/BasicStats-Retune/>
@@ -66,15 +71,45 @@ Today, I'm feeling...
 
 ## Schedule {.scrollable .smaller}
 
-| Time | Topic |
-|------|-------|
-|      |       |
+| Time        | Topic                                       |
+|-------------|---------------------------------------------|
+| 9:00 - 9:20 | Intro: Why Statistics?                      |
+| 9:20 - 9:40 | Getting started with Jamovi                 |
+| 10          | Descriptive Statistics & Data Visualization |
+|             | Probability & Sampling                      |
+|             | Hypothesis Testing                          |
+
+# True or False?
+
+::: {.incremental .smaller}
+-   "People who write with their left hand live on average 9 years less than right-handers."
+
+    -   False!
+
+-   “Shark attacks kill more people each year than lightning strikes.”
+
+    -   False
+
+-   "Chocolate accelerates weight loss"
+
+    -   Well... false
+:::
 
 # Why Statistics?
 
 ## Why is it important that YOU know statistics?
 
 ::: {.incremental .smaller}
+-   You're doing a *PhD*!
+
+-   We live in an increasingly data-centric world
+
+-   Facts & data literacy matter more than ever!
+
+    -   You should be able to call bullshit (<https://www.callingbullshit.org/>)
+:::
+
+::: notes
 -   You're doing a *PhD*!
 
     -   Research = Reading & understanding papers (esp. the analyses)
@@ -95,6 +130,8 @@ Today, I'm feeling...
     -   However: "It is easy to lie with statistics, but easier to lie without them" ― Frederick Mosteller
 :::
 
+. . .
+
 ![](images/clipboard-3793899018.png){width="163"}
 
 ![](images/clipboard-1641481056.png){width="429"}
@@ -104,33 +141,6 @@ Today, I'm feeling...
 ![](images/clipboard-461873537.png)
 
 <https://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study>
-
-## What is Statistical Thinking?
-
-::: incremental
--   "a systematic way of thinking about how we describe the world and **use data \[to\] make decisions and predictions**, all in the context of the inherent **uncertainty** that exists in the real world." (Poldrack, Preface of ST21)
-
--   "Statistical thinking is a way of **understanding** a complex world by describing it in relatively **simple terms** that nonetheless capture **essential aspects** of its structure or function, and that also provide us some idea of how **uncertain** we are about that knowledge." (Poldrack, Chapter 1)
-:::
-
-::: notes
-break down complexity, include uncertainty
-:::
-
-## Why is Statistical Thinking Important?
-
-::: incremental
--   data literacy vs. intuition/heuristics/anecdotal evidence
-    -   Public discourse about Covid-19, migration, etc. (e.g., "50% of people in intensive care are vaccinated")
-:::
-
-. . .
-
-[![Base Rate Fallacy](images/BaseRate.jpg){fig-align="center" width="600"}](https://thedecisionlab.com/biases/base-rate-fallacy)
-
-::: notes
-example availability heuristic from book (or any other example where intuition is wrong, i.e. vaccinations/covid...)
-:::
 
 ## What can Statistics Do For Us?
 
@@ -142,57 +152,6 @@ example availability heuristic from book (or any other example where intuition i
 
 ::: notes
 describe: not useful to look at every single data point/person, but we need s.th. like tendencies/trends...
-:::
-
-## The Big Ideas
-
-::: incremental
--   **Learning from data**: Update our beliefs
-
--   **Aggregation**: How to summarize the data to draw meaningful conclusions?
-
--   **Uncertainty**: Probabilistic evidence
-
--   **Sampling from the population**: Which people etc. do we select?
-:::
-
-::: notes
-ask for every point what I could mean w/ it?
-
-Learning from data: gather new knowledge or even just hypotheses
-
-Aggregation: Can't look at all ind data points, need to find trends etc. (should not go too far! throwing out data)
-
-Uncertainty: stats = tools for making decisions under uncertainty, we can never prove anything but provide evidence, there is no 100% certainty for an outcome
-
-sampling: how do we represent the population? What is the population? how much data do we need? More is better, but payoff decreases...
-:::
-
-## Causality
-
-Correlation does not imply causation... but is a hint!
-
-. . .
-
-Example: Smoking = less risk for Parkinson's disease? (<a href="http://dx.doi.org/10.1136/jnnp.45.7.577">Godwin-Austen et al., 1982</a>; <a href="https://doi.org/10.1212/WNL.0b013e3181d55f38">Chen et al., 2010</a>)
-
-. . .
-
-→ confounding factors?
-
-. . .
-
-e.g., individual dopaminergic activity ⇒ addiction & motor function
-
-. . .
-
-Randomized Controlled Trials (RCT) as the solution?
-
-::: notes
-RCT: exp control and manipulation, removes confounds if done well\
-At least some more causal evidence!
-
-QUESTIONS so far?
 :::
 
 ## What are Data?
@@ -297,39 +256,13 @@ Group work/brainstorm:
 -   how can we minimize error?
 :::
 
-## Reliability
+## Reliability & Validity
 
-Correlation of a measurement with "itself"
+Data that we collected should be both:
 
-::: {.incremental .smaller}
--   Internal reliability (consistency)
+-   **reliable**: stable and consistent over time
 
--   Test-retest reliability (stability)
-
--   Inter-rater reliability (agreement)
-:::
-
-. . .
-
-Correlation with other variables can't be higher than reliability (cf., <a href="https://doi.org/10.1080/02643294.2012.753433">Wilmer et al., 2012, Table 1</a>)!
-
-## Validity
-
-Are we measuring the construct we're interested in?
-
-::: incremental
--   Face validity: Does it intuitively make sense? First reality check!
-
--   Construct validity
-
-    -   convergent validity: Related to similar measures that should measure the same construct
-
-    -   divergent validity: Is it unrelated to other measures?
-
--   Predictive validity: Is it predictive of other outcomes? (e.g., intelligence & job success)
-:::
-
-## Validity & Reliability
+-   **valid**: measuring the construct we're interested in
 
 ![Reliability & Validity](images/ReliabilityValidity-1.png){width="400"}
 

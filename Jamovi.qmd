@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Jamovi"
 subtitle: |
-   | Basic Statistics Workship 
+   | Basic Statistics Workshop 
    | ReTune Fall School   
    | 17th of October, 2025
 author: "Dr. Lea Hildebrandt"
@@ -16,3 +16,77 @@ format:
     height: 720
 from: markdown+emoji
 ---
+
+# Why Jamovi?
+
+Jamovi is an open point-and-click statistical software.
+
+We're using it today because:
+
+::: incremental
+-   It's easy to use
+
+-   Using statistical software is better than doing stats by hand or using excel
+
+-   It's non-proprietary
+
+-   It uses R
+:::
+
+# Install Jamovi
+
+```{css}
+code.sourceCode {
+  font-size: 1.4em;
+}
+
+div.cell-output-stdout {
+  font-size: 1.4em;
+}
+```
+
+If you haven't done so, please install Jamovi: <https://www.jamovi.org/>.
+
+# First Steps
+
+If you open Jamovi, it should look like this:
+
+# ![](images/Jamovi.png)Load a Dataset
+
+Open the file WorkshopData.csv by clicking the three stripes on the upper left, "open", "browse" and searching for and selecting the file in the file explorer.
+
+# Variables
+
+Each column in the "Data" part represents a variable, each row a "case" or participant.
+
+If you double-click on the header/name of the variable, a small menu opens where you can see the meaurement type etc. Jamovi guesses these measurement and data types, but you could also change them. Similarly, you can also change the name of the variable.
+
+![](images/clipboard-2611164865.png){width="494"}
+
+. . .
+
+**Exercise**: Please look through the variables and check whether the measurement type, the data type and the levels are correct. Discuss if you are not sure. In addition, rename "Exam_Score" to "Score".
+
+## Adding Variables
+
+You can also **add a new variable** by either clicking on the header of an empty column or by clicking "add" in the Variables or Data menu. You then have the choice between adding a new variable, compute a variable using existing variables, or transforming an existing variable. The latter can also be achieved by clicking "Compute" or "Transform" in the Variables or Data menu.
+
+. . .
+
+Computing or transforming a variable can be helpful to get a different version or e.g. a difference or average between variables.
+
+**Exercise**: Check out the different functions available for computing or transforming a variable by clicking on the little *fx.*
+
+. . .
+
+**Exercise 2**: Make a new variable which is the centered version of Score by subtracting the average score across all participants from each individual score. You may use compute or transform.
+
+# Add-ons
+
+Jamovi allows you to run basic analyses. Add-ons can increase the number of possible analyses. These are so-called modules for specific purposes that other people created and that you can add to your version of Jamovi.
+
+In the Analysis menu, you can find a `+` sign on the right. If you click on it, you can browse the Jamovi library and search for modules that might be helpful for you. The modules range from specific analyses to data transformation to visualization.
+
+# Quitting Jamovi
+
+If you quit Jamovi, you can save your dataset (preferably under a different name if you made changes) and/or the results. One advantage of Jamovi is that it is possible to save both data and (annotated) results in the same file, which makes it easier to understand later to understand the results. The output of Jamovi is also already nicely formatted.
