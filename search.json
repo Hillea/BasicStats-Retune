@@ -4,112 +4,160 @@
     "href": "StatsTestsJamovi.html#correlation",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Correlation",
-    "text": "Correlation\nCorrelations are used if you have two continuous variables and you want to check whether they have a relationship (regardless of whether one might have caused the other).\n\nRunning a correlation analysis, we test whether two variables co-vary,1 i.e. if one is high, the other variable also tends to be high (or, the opposite, low).\nThe correlation coefficient r can be between -1 (perfect negative correlation) and 1 (perfect positive correlation).\n\n\n\\[\nr = \\frac{covariance}{s_xs_y} = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{(N - 1)s_x s_y}\n\\]\nThe numerator represents the covariance between x and y, the denominator is for standardizing the measure by both SDs."
+    "text": "Correlation\nCorrelations are used if you have two continuous variables and you want to check whether they have a relationship (regardless of whether one might have caused the other).\n\nRunning a correlation analysis, we test whether two variables co-vary,1 i.e. if one is high, the other variable also tends to be high (or, the opposite, low).\nThe correlation coefficient r can be between -1 (perfect negative correlation) and 1 (perfect positive correlation).\n\n\n\\[\nr = \\frac{covariance}{s_xs_y} = \\frac{\\sum_{i=1}^n (x_i - \\bar{x})(y_i - \\bar{y})}{(N - 1)s_x s_y}\n\\]\nThe numerator represents the covariance between x and y, the denominator is for standardizing the measure by both SDs.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#correlations-in-jamovi",
     "href": "StatsTestsJamovi.html#correlations-in-jamovi",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Correlations in Jamovi",
-    "text": "Correlations in Jamovi\nLet’s have a look at how to calculate correlation analyses in Jamovi.\nClick on the Analyses tab “Regression” and then “Correlation Matrix”. You can now select two variables by adding them to the right box.\nYou can also select whether you want to include a visualization of the correlation."
+    "text": "Correlations in Jamovi\nLet’s have a look at how to calculate correlation analyses in Jamovi.\nClick on the Analyses tab “Regression” and then “Correlation Matrix”. You can now select two variables by adding them to the right box.\nYou can also select whether you want to include a visualization of the correlation.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#interpreting-correlations",
     "href": "StatsTestsJamovi.html#interpreting-correlations",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Interpreting Correlations",
-    "text": "Interpreting Correlations\nInterpreting the r statistic is a bit difficult and it depends on the field and context whether a certain correlation is strong or not. One rule of thumb is the following:"
+    "text": "Interpreting Correlations\nInterpreting the r statistic is a bit difficult and it depends on the field and context whether a certain correlation is strong or not. One rule of thumb is the following:",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#spearmans-rank-correlation",
     "href": "StatsTestsJamovi.html#spearmans-rank-correlation",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Spearman’s Rank Correlation",
-    "text": "Spearman’s Rank Correlation\nSo far, we have used the Pearson’s correlation coefficient, which is by far the most used one. However, we can only use this correlation if the relationship between variables is expected to be linear!\n\nStudy hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. In such a case (or with ordinal data), we would rather use the Spearman Rank Correlation.\n\n\nFor this analysis, Jamovi doesn’t use the raw data but ranks them in order and uses these ranks. If participant 1 was the person with the most study hours and the best exam score, they would be rank 1 for both variables. Subsequently, the ranks are correlated."
+    "text": "Spearman’s Rank Correlation\nSo far, we have used the Pearson’s correlation coefficient, which is by far the most used one. However, we can only use this correlation if the relationship between variables is expected to be linear!\n\nStudy hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. In such a case (or with ordinal data), we would rather use the Spearman Rank Correlation.\n\n\nFor this analysis, Jamovi doesn’t use the raw data but ranks them in order and uses these ranks. If participant 1 was the person with the most study hours and the best exam score, they would be rank 1 for both variables. Subsequently, the ranks are correlated.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#reporting-correlations",
     "href": "StatsTestsJamovi.html#reporting-correlations",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Reporting Correlations",
-    "text": "Reporting Correlations\nWe usually report the correlation coefficient (e.g. r) with the degrees of freedom and the p-value:\nr(98) = .673, p &lt; .001"
+    "text": "Reporting Correlations\nWe usually report the correlation coefficient (e.g. r) with the degrees of freedom and the p-value:\nr(98) = .673, p &lt; .001",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#t-tests",
     "href": "StatsTestsJamovi.html#t-tests",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "T-Tests",
-    "text": "T-Tests\ncode.sourceCode {\n  font-size: 1.4em;\n}\n\ndiv.cell-output-stdout {\n  font-size: 1.4em;\n}\nOften, we want to know whether two groups (treatment vs. control, men vs. women…) differ on some measure.\nIn other words, our outcome variables are continuous (e.g. exam scores) and we’re interested in the effect of a categorical predictor.\nIn this case, a t-test would be our statistical analysis of choice.\n\nThere are different kinds of t-tests, depending on the relationship between the two groups:\n\nIf the two groups are unrelated, e.g. men and women, we would run an independent samples t-test.\nIf the two groups are related, e.g. first and second measurement of the same participants, we would run a paired-samples t-test.\n(Sometimes we just want to compare one group to some specific value, then we’d use the one-sample t-test.)"
+    "text": "T-Tests\ncode.sourceCode {\n  font-size: 1.4em;\n}\n\ndiv.cell-output-stdout {\n  font-size: 1.4em;\n}\nOften, we want to know whether two groups (treatment vs. control, men vs. women…) differ on some measure.\nIn other words, our outcome variables are continuous (e.g. exam scores) and we’re interested in the effect of a categorical predictor.\nIn this case, a t-test would be our statistical analysis of choice.\n\nThere are different kinds of t-tests, depending on the relationship between the two groups:\n\nIf the two groups are unrelated, e.g. men and women, we would run an independent samples t-test.\nIf the two groups are related, e.g. first and second measurement of the same participants, we would run a paired-samples t-test.\n(Sometimes we just want to compare one group to some specific value, then we’d use the one-sample t-test.)",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#independent-samples-t-test",
     "href": "StatsTestsJamovi.html#independent-samples-t-test",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Independent Samples t-Test",
-    "text": "Independent Samples t-Test\nLet’s first look at the common situation where we want to compare two groups. We often have two independent groups if participants are randomly assigned to one of two conditions.\nExample Research Question: Do people who drink a lot of coffee score better on an exam than those who drink less coffee?\n\nHypotheses:\n\\(H_0\\) = High caffeine intake is related to equal or lower exam scores than low caffeine intake.\n\\(H_A\\) = High caffeine intake is related to higher exam scores than low caffeine intake."
+    "text": "Independent Samples t-Test\nLet’s first look at the common situation where we want to compare two groups. We often have two independent groups if participants are randomly assigned to one of two conditions.\nExample Research Question: Do people who drink a lot of coffee score better on an exam than those who drink less coffee?\n\nHypotheses:\n\\(H_0\\) = High caffeine intake is related to equal or lower exam scores than low caffeine intake.\n\\(H_A\\) = High caffeine intake is related to higher exam scores than low caffeine intake.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#computing-a-2-level-factor-grouping-variable",
     "href": "StatsTestsJamovi.html#computing-a-2-level-factor-grouping-variable",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Computing a 2-Level Factor (Grouping Variable)",
-    "text": "Computing a 2-Level Factor (Grouping Variable)\nIf we want to run a t-Test, we first need to define a variable with two levels. Caffeine intake, our grouping variable, has three levels. However, we could argue that “no coffee” could also fall in the “low caffeine intake” group. We thus first have to compute a new variable with only two levels, “low” (including no and low coffee intake) and “high”.\nExercise: Try to compute a new variable, recoding values to “low” if they are non-high."
+    "text": "Computing a 2-Level Factor (Grouping Variable)\nIf we want to run a t-Test, we first need to define a variable with two levels. Caffeine intake, our grouping variable, has three levels. However, we could argue that “no coffee” could also fall in the “low caffeine intake” group. We thus first have to compute a new variable with only two levels, “low” (including no and low coffee intake) and “high”.\nExercise: Try to compute a new variable, recoding values to “low” if they are non-high.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#independent-samples-t-test-in-jamovi",
     "href": "StatsTestsJamovi.html#independent-samples-t-test-in-jamovi",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Independent Samples t-Test in Jamovi",
-    "text": "Independent Samples t-Test in Jamovi\nExercise: Try to figure out how to run an Independent Samples t-Test to test the influence of caffeine intake on exam scores!\n\nAnalysis -&gt; T-Tests -&gt; Independent Samples -&gt; exam_scores as Dependent Variable -&gt; new caffeine variable as Grouping Variable.\nIt is good practice to choose Welch’s test (because it allows for the SDs of the groups to vary), as well as selecting a directed/one-sided hypothesis if possible.\nAlso, you should test your assumptions, which is really easy in Jamovi.\nFinally, it is a good idea to report the descriptives, mean difference with CI, and effect size as well."
+    "text": "Independent Samples t-Test in Jamovi\nExercise: Try to figure out how to run an Independent Samples t-Test to test the influence of caffeine intake on exam scores!\n\nAnalysis -&gt; T-Tests -&gt; Independent Samples -&gt; exam_scores as Dependent Variable -&gt; new caffeine variable as Grouping Variable.\nIt is good practice to choose Welch’s test (because it allows for the SDs of the groups to vary), as well as selecting a directed/one-sided hypothesis if possible.\nAlso, you should test your assumptions, which is really easy in Jamovi.\nFinally, it is a good idea to report the descriptives, mean difference with CI, and effect size as well.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#reporting-an-independent-samples-t-test",
     "href": "StatsTestsJamovi.html#reporting-an-independent-samples-t-test",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Reporting an Independent Samples t-Test",
-    "text": "Reporting an Independent Samples t-Test\n\nA one-sided Welch’s t-Test, testing whether high caffeine intake leads to better exam scores than low caffeine intake, revealed a significant difference (M_diff = 5.42, SE_diff = 2.31) between the two groups (t(78.0) = 2.35; p = .011, Cohen’s d = .485). High caffeine intake leads to higher exam scores (M = 70.7, SD = 11.2) than low caffeine intake (M = 65.3, SD = 11.2). All assumptions of the t-Test were met."
+    "text": "Reporting an Independent Samples t-Test\n\nA one-sided Welch’s t-Test, testing whether high caffeine intake leads to better exam scores than low caffeine intake, revealed a significant difference (M_diff = 5.42, SE_diff = 2.31) between the two groups (t(78.0) = 2.35; p = .011, Cohen’s d = .485). High caffeine intake leads to higher exam scores (M = 70.7, SD = 11.2) than low caffeine intake (M = 65.3, SD = 11.2). All assumptions of the t-Test were met.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#paired-samples-t-tests",
     "href": "StatsTestsJamovi.html#paired-samples-t-tests",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Paired-Samples t-Tests",
-    "text": "Paired-Samples t-Tests\nOften, we measure the same participants twice: E.g. once in the treatment manipulation, once in the control condition (and the order would hopefully be counterbalanced) - or before and intervention and after.\nIf each participant appears in both groups, we have to use the paired-samples t-test.\n\nExample Research Question: Do exam scores decline over time? (This could be due to e.g. a manipulation in between.)\nHypotheses:\n\\(H_0\\) = Exam scores stay the same or improve in a re-test.\n\\(H_A\\) = Exam scores are lower in a re-test than in the first exam."
+    "text": "Paired-Samples t-Tests\nOften, we measure the same participants twice: E.g. once in the treatment manipulation, once in the control condition (and the order would hopefully be counterbalanced) - or before and intervention and after.\nIf each participant appears in both groups, we have to use the paired-samples t-test.\n\nExample Research Question: Do exam scores decline over time? (This could be due to e.g. a manipulation in between.)\nHypotheses:\n\\(H_0\\) = Exam scores stay the same or improve in a re-test.\n\\(H_A\\) = Exam scores are lower in a re-test than in the first exam.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#paired-samples-t-tests-in-jamovi",
     "href": "StatsTestsJamovi.html#paired-samples-t-tests-in-jamovi",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Paired-Samples t-Tests in Jamovi",
-    "text": "Paired-Samples t-Tests in Jamovi\nObviously, we need to collect data with repeated measures for a paired-samples t-test. Please open the file WorkshopData_Wide in Jamovi.\nYou can now see that there are three columns for the exam scores: pre, mid, and post.\n\n\nExercise: Try to run a paired-samples t-test comparing pre and post exam scores. We expected post scores to be lower.\n\n\nAnalyses -&gt; T-Tests -&gt; Paired Samples T-Test -&gt; add Exam_Pre and Exam_Post to the “Paired Variables” Box.\nAlso select the assumption checks, the correct directed hypothesis, and mean difference, effect size and descriptives. What do you notice?\n\n\nThe assumption of normality seems to be violated - however, the QQ-plot looks okayish (dots fall on line).\nInstead of the Student’s t-test, you could run the non-parametric alternative, which is the Wilcoxon rank test and is independent of the assumption of normality.\nThis tests whether the median (ranked) difference between paired observations is zero.\n\n\nNote on Long vs. wide data: For a lot of analyses, you’d need the data in long format, with several rows per participant. For this t-test in Jamovi, however, you’d need it in wide format, which means one row per participant and separate columns for exam scores pre, mid, and post measurements."
+    "text": "Paired-Samples t-Tests in Jamovi\nObviously, we need to collect data with repeated measures for a paired-samples t-test. Please open the file WorkshopData_Wide in Jamovi.\nYou can now see that there are three columns for the exam scores: pre, mid, and post.\n\n\nExercise: Try to run a paired-samples t-test comparing pre and post exam scores. We expected post scores to be lower.\n\n\nAnalyses -&gt; T-Tests -&gt; Paired Samples T-Test -&gt; add Exam_Pre and Exam_Post to the “Paired Variables” Box.\nAlso select the assumption checks, the correct directed hypothesis, and mean difference, effect size and descriptives. What do you notice?\n\n\nThe assumption of normality seems to be violated - however, the QQ-plot looks okayish (dots fall on line).\nInstead of the Student’s t-test, you could run the non-parametric alternative, which is the Wilcoxon rank test and is independent of the assumption of normality.\nThis tests whether the median (ranked) difference between paired observations is zero.\n\n\nNote on Long vs. wide data: For a lot of analyses, you’d need the data in long format, with several rows per participant. For this t-test in Jamovi, however, you’d need it in wide format, which means one row per participant and separate columns for exam scores pre, mid, and post measurements.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#reporting-a-paired-samples-t-test",
     "href": "StatsTestsJamovi.html#reporting-a-paired-samples-t-test",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Reporting a Paired-Samples t-Test",
-    "text": "Reporting a Paired-Samples t-Test\nExercise: How would you report the result?\n\n\nIn contrast to what we expected, post exam scores were not lower than pre exam scores but rather higher (M_post = 73.8, SD_post = 11.7; M_pre = 67.1, SD_pre = 11.4). The one-sided paired-samples t-test was not significant (t(99) = -16.1; p = .999; M_diff = -6.66; SE_diff = 0.41, Cohen’s d = -1.61).\n\nAlternatively:\n\nIn contrast to what we expected, post exam scores were not lower than pre exam scores but rather higher (Median_post = 73.0; Median_pre = 67.7). The assumption of normality was violated, which is why a Wilcoxon rank test was conducted. This one-sided t-test was not significant (W = 25.0; p = .999; r = -.99)."
+    "text": "Reporting a Paired-Samples t-Test\nExercise: How would you report the result?\n\n\nIn contrast to what we expected, post exam scores were not lower than pre exam scores but rather higher (M_post = 73.8, SD_post = 11.7; M_pre = 67.1, SD_pre = 11.4). The one-sided paired-samples t-test was not significant (t(99) = -16.1; p = .999; M_diff = -6.66; SE_diff = 0.41, Cohen’s d = -1.61).\n\nAlternatively:\n\nIn contrast to what we expected, post exam scores were not lower than pre exam scores but rather higher (Median_post = 73.0; Median_pre = 67.7). The assumption of normality was violated, which is why a Wilcoxon rank test was conducted. This one-sided t-test was not significant (W = 25.0; p = .999; r = -.99).",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#one-way-analysis-of-variance",
     "href": "StatsTestsJamovi.html#one-way-analysis-of-variance",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "One-Way Analysis of Variance",
-    "text": "One-Way Analysis of Variance\nWith ANOVAs, we generally test whether there are differences between the groups, but not directly which groups differ from each other. (Spoiler: To do so, we need to run follow-up (t-)tests.)\nIn other words, our null hypothesis would be that e.g. caffeine has no effect on scores and all groups score the same:\n$ H_0 = mean_a == mean_b == mean_c $\nIn contrast, the alternative hypothesis would be:\n$ H_a = $not all means are equal"
+    "text": "One-Way Analysis of Variance\nWith ANOVAs, we generally test whether there are differences between the groups, but not directly which groups differ from each other. (Spoiler: To do so, we need to run follow-up (t-)tests.)\nIn other words, our null hypothesis would be that e.g. caffeine has no effect on scores and all groups score the same:\n$ H_0 = mean_a == mean_b == mean_c $\nIn contrast, the alternative hypothesis would be:\n$ H_a = $not all means are equal",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#analysis-of-variance",
     "href": "StatsTestsJamovi.html#analysis-of-variance",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Analysis of Variance?",
-    "text": "Analysis of Variance?\nAlthough we want to compare means of the groups to test the hypothesis, the variance is important for this (slightly more complex) statistical test.\nThere are different relevant variences, between-group and within-group:\n\n\n[variance –&gt; sum of squares –&gt; F]"
+    "text": "Analysis of Variance?\nAlthough we want to compare means of the groups to test the hypothesis, the variance is important for this (slightly more complex) statistical test.\nThere are different relevant variences, between-group and within-group:\n\n\n[variance –&gt; sum of squares –&gt; F]",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "StatsTestsJamovi.html#one-way-anova-in-jamovi",
     "href": "StatsTestsJamovi.html#one-way-anova-in-jamovi",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "One-Way ANOVA in Jamovi",
-    "text": "One-Way ANOVA in Jamovi"
+    "text": "One-Way ANOVA in Jamovi",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
   },
   {
     "objectID": "Jamovi.html#adding-variables",
