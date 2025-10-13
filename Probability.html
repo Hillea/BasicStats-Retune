@@ -197,7 +197,7 @@ div.cell-output-stdout {
 </section>
 <section id="frequentist-vs.-bayesian-view" class="slide level2">
 <h2>Frequentist vs.&nbsp;Bayesian View</h2>
-<p><strong>Frequentist</strong>: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain (The probability gets closer to it’s real value over time).</p>
+<p><strong>Frequentist</strong>: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain. (The probability gets closer to its real value over time).</p>
 <p><strong>Bayesian</strong>: The weather forecast predicts 60% rain for the next 100 days, which means that I expect it to rain tomorrow with 60% chance (degree of belief).</p>
 </section>
 <section id="probability-theory" class="slide level2">
@@ -444,13 +444,10 @@ or narrower (higher SD) distributions.</figcaption>
 <h2>Confidence Intervals</h2>
 <p>As we use our sample mean (and adjusted SD) as our best estimates for the population mean (and SD), it is a good idea to indicate how confident we are in these estimates.</p>
 <p>For this we calculate the confidence interval, which denotes the e.g.&nbsp;95% probability that the sample mean lies within 1.96 standard errors of the population mean.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/clipboard-1215725227.png"></p>
-<figcaption>. . .</figcaption>
-</figure>
-</div>
+<p><img data-src="images/clipboard-1215725227.png" alt=". . ."></p>
+<div class="fragment">
 <p>It does <em>not</em> mean, that the true population mean lies with 95% probability within the sample’s confidence interval!</p>
+</div>
 <div class="fragment">
 <p>If we replicated the experiment with a different sample, 95% of CIs would contain the true population mean. (Still, it is a good indicator of our uncertainty around an estimate!)</p>
 <p><img data-src="images/clipboard-268871968.png" width="582"></p>
@@ -490,9 +487,10 @@ I.e., we want to know the conditional probability: <span class="math inline">\(P
 <p><strong>Type I error</strong>: incorrectly rejecting the null hypothesis.</p>
 <p>We want to minimize this error to be below a probability of <strong>⍺ = 0.05</strong>.<br>
 This means that we accept up to 5% wrong decisions if we have extreme test statistics (e.g.&nbsp;a huge difference in exam scores between high and low caffeine intake groups).</p>
-<p><strong>. . .</strong></p>
+</div>
+<div class="fragment">
 <p><strong>Type II error</strong>: incorrectly accepting the null hypothesis to be true when it is, in fact, wrong.</p>
-<p>We also want to control this, although it is often secondary. This error rate (𝛽) is related to the power (1 - 𝛽) of the test, which can be increased with e.g.&nbsp;higher sample size.</p>
+<p>We also want to control this, although it is often secondary. This error rate (𝛽) is related to the <em>power</em> (1 - 𝛽) of the test, which can be increased with e.g.&nbsp;higher sample size.</p>
 </div>
 </section>
 <section id="test-statistic" class="slide level2">
@@ -544,7 +542,7 @@ It tells us that it is relatively unlikely to find a difference between caffeine
 </ul></li>
 <li class="fragment"><p>NOT mean that the probability that you’re making a wrong decision is 1%!</p>
 <ul>
-<li class="fragment">This would also be <span class="math inline">\(P(H_0|data)\)</span>! p-values are probabilities of data (under <span class="math inline">\(H_0\)</span>), not probabilities of hypotheses! And we cannot easily use Bayes to turn the condition because we would need additional information like the prior probability of an alternative hypothesis being true.</li>
+<li class="fragment">This would also be <span class="math inline">\(P(H_0|data)\)</span>! p-values are probabilities of data (under <span class="math inline">\(H_0\)</span>), not probabilities of hypotheses!</li>
 </ul></li>
 <li class="fragment"><p>NOT mean that you would get the same significance 99% of the time if you repeated the study.</p>
 <ul>
@@ -557,11 +555,35 @@ It tells us that it is relatively unlikely to find a difference between caffeine
 </ul>
 </div>
 </section>
-<section id="effect-sizes-power" class="slide level2">
-<h2>Effect Sizes &amp; Power</h2>
-
-
+<section id="power-effect-sizes" class="slide level2">
+<h2>Power &amp; Effect Sizes</h2>
+<p>Earlier, I mentioned the <em>Type II error</em> (𝛽, false negative: accepting <span class="math inline">\(H_0\)</span> when there is actually an effect).</p>
+<p>I also just briefly mentioned that we try to minimize that error as well, but couldn’t fix it like the <em>Type I error</em>. However, we can try to minimize it by increasing the <strong>power</strong> (𝛽 - 1) of a study. The power indicates how well your study is able to find an effect that is actually there.</p>
+<div class="fragment">
+<p>Power can be increased by:</p>
+<ul>
+<li class="fragment"><p>increasing sample size (which decreases variance, SE, of the sample distribution)</p></li>
+<li class="fragment"><p>reducing measurement error</p></li>
+<li class="fragment"><p>a high <em>effect size</em></p></li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Effect sizes</strong> give an estimate of, well, the size of the effect you found. They are important for two reasons:</p>
+<ul>
+<li class="fragment"><p><strong>Reporting effect sizes</strong>: It’s good practice to report them, so others know whether the effect is not only statistically but also <em>practically significant</em>. There are various measures of effect size (beyond the scope of these workshop); in Jamovi it is easy to simply check “effect size”.</p></li>
+<li class="fragment"><p>Calculating the (a priori) power of your study: Running a <strong>power analysis</strong> is very important while planning your study, as it allows you to either calculate the necessary sample size for attaining a certain level of power (e.g.&nbsp;80%) or calculating the power for a certain sample size.</p></li>
+</ul>
+</div>
 </section></section>
+<section id="end-of-part-4" class="title-slide slide level1 center">
+<h1>End of Part 4</h1>
+<ul>
+<li>You should have learned that probability distributions are central to statistics, why we sample and the logic behind Null Hypothesis Significance Testing.</li>
+</ul>
+<p>Next: <strong>Coffee Break</strong>, then hands-on Jamovi Practice!</p>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -599,7 +621,7 @@ It tells us that it is relatively unlikely to find a difference between caffeine
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'chalkboard': {"buttons":true,"src":"chalkboard.json"},
 'smaller': true,
  
         // Display controls in the bottom right corner

@@ -28,72 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-816793a8a4a837d14f6ea458e2f1c5cb.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -213,13 +147,17 @@ Dr.&nbsp;Lea Hildebrandt
 <section>
 <section id="descriptive-statistics" class="title-slide slide level1 center">
 <h1>Descriptive Statistics</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {css} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>code.sourceCode {</span>
-<span id="cb1-2"><a></a>  font-size: 1.4em;</span>
-<span id="cb1-3"><a></a>}</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a>div.cell-output-stdout {</span>
-<span id="cb1-6"><a></a>  font-size: 1.4em;</span>
-<span id="cb1-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<style type="text/css">
+code.sourceCode {
+  font-size: 1.4em;
+}
+
+div.cell-output-stdout {
+  font-size: 1.4em;
+}
+</style>
+</div>
 <p>What does <em>descriptive statistics</em> mean and why is it important or useful?</p>
 <div class="fragment">
 <p>Just looking at the raw data does not tell us much:</p>
@@ -272,7 +210,7 @@ Dr.&nbsp;Lea Hildebrandt
 </section>
 <section id="descriptive-statistics-in-jamovi" class="slide level2">
 <h2>Descriptive Statistics in Jamovi</h2>
-<p><strong>Exercise</strong>: Try to figure out the <em>mean, median, and mode</em> of <code>age</code> and <code>score</code>, as well as the mode of <code>coffee_intake</code>.</p>
+<p><strong>Exercise</strong>: Try to figure out the <em>mean, median, and mode</em> of <code>Age</code> and <code>Exam_Post</code>.</p>
 <div class="fragment">
 <p><strong>Exercise 2</strong>: Get the mean age for each gender separately.</p>
 </div>
@@ -297,17 +235,19 @@ Dr.&nbsp;Lea Hildebrandt
 </div>
 <div class="fragment">
 <ul>
-<li><p>25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Quartiles”.</p></li>
+<li><p>25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Percentiles”.</p></li>
 <li><p>The IQR is the range covered by the “middle half” of the data, often used together with the median.</p></li>
 </ul>
 </div>
 </section>
 <section id="variability-2" class="slide level2 scrollable">
 <h2>Variability 2</h2>
-<p><strong>Mean absolute value</strong>: the “typical deviation from the mean (or median):</p>
+<p><strong>Mean absolute value</strong>: the “typical deviation” from the mean (or median):</p>
 <ol type="1">
 <li><p>Calculate the mean of the data:</p>
-<p>$ (10+2+3+4+5)/5 = 4.8 $</p></li>
+<p><span class="math display">\[
+(10+2+3+4+5)/5 = 4.8
+\]</span></p></li>
 <li><p>Calculate each <em>absolute deviation</em> from each data point to this mean:</p>
 <p><span class="math display">\[
 10 - 4.8 = 5.2;\]</span> <span class="math display">\[
@@ -328,11 +268,11 @@ Dr.&nbsp;Lea Hildebrandt
 <p>This is called the <strong>variance</strong>:</p>
 <ol type="1">
 <li><p>Calculate the mean of the data:</p>
-<p>$ (10+2+3+4+5)/5 = 4.8 $</p></li>
+<p><span class="math display">\[ (10+2+3+4+5)/5 = 4.8 \]</span></p></li>
 <li><p>Calculate each <em>squared deviation</em> from each data point to this mean:</p>
 <p><span class="math display">\[ (10 - 4.8)^2 = 27.04;\]</span> <span class="math display">\[ (2 - 4.8)^2 = 7.84;\]</span> <span class="math display">\[ (3 - 4.8)^2 = 3.24;\]</span> <span class="math display">\[ (4 - 4.8)^2 = 0.64;\]</span> <span class="math display">\[ (5 - 4.8)^2 = 0.04 \]</span></p></li>
 <li><p>Calculate the mean of these deviation, <em>but use N-1 as the denominator</em>:</p>
-<p><span class="math display">\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/5 = 7.756 \]</span></p>
+<p><span class="math display">\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/4 = 9.695 \]</span></p>
 <p>Or, in mathematical formulation:</p>
 <p><span class="math display">\[
 VAR(X) = \frac{1}{N-1}\sum_{i=1}^{N}(X_i-\bar{X})^2
@@ -374,7 +314,6 @@ SD(X) = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(X_i-\bar{X})^2}
 <li class="fragment"><p>Avoid clutter.</p></li>
 <li class="fragment"><p>Don’t distort the data.</p></li>
 <li class="fragment"><p>Account for perceptual limitations (e.g.&nbsp;color blindness, pie charts…)</p></li>
-<li class="fragment"></li>
 </ol>
 </section>
 <section id="histograms" class="slide level2 scrollable">
@@ -391,7 +330,7 @@ SD(X) = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(X_i-\bar{X})^2}
 </section>
 <section id="boxplots" class="slide level2">
 <h2>Boxplots</h2>
-<p>Also suited for continuous data, they deptic the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).</p>
+<p>Also suited for continuous data, they depict the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).</p>
 
 <img data-src="images/clipboard-4021951708.png" width="301" class="r-stretch quarto-figure-center"><p class="caption">Thick line in the middle of the box is the median, the upper and lower sides of the box are the IQR and the end of the vertical line is the range - but max 1.5 IQR. Every data point outside of this range is shown as dot (here labelled) and may be considered an outlier.</p><div class="fragment">
 <p>In Jamovi: Exploration -&gt; Descriptives -&gt; select “Box plot” check box.</p>
@@ -412,14 +351,19 @@ SD(X) = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(X_i-\bar{X})^2}
 </section>
 <section id="bar-graphs" class="slide level2">
 <h2>Bar Graphs</h2>
-<p>A bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually count) for different groups.</p>
+<p>A bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually counts) for different groups.</p>
 <div class="fragment">
-<p>You can also generate bar charts for continuous data that are not counts - but this is not advised. in this case, it will display the mean and the error bars will be the standard error (another measure of variability).</p>
+<p>You can also generate bar charts for continuous data that are not counts - but this is not advised. In this case, it will display the mean and the error bars will be the standard error (another measure of variability).</p>
 <p><img data-src="images/clipboard-1219302266.png" width="439"></p>
-
-
 </div>
 </section></section>
+<section id="end-of-part-3" class="title-slide slide level1 center">
+<h1>End of Part 3</h1>
+<p>You should have a idea of how to get descriptive statistics and basic plots in Jamovi.</p>
+<p>Next: <strong>Probability &amp; Sampling, Hypothesis Testing</strong></p>
+
+
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -637,6 +581,82 @@ SD(X) = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(X_i-\bar{X})^2}
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

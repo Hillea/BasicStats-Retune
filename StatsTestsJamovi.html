@@ -28,72 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-816793a8a4a837d14f6ea458e2f1c5cb.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -288,13 +222,17 @@ r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y}
 </section>
 <section id="t-tests" class="slide level2">
 <h2>T-Tests</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {css} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>code.sourceCode {</span>
-<span id="cb1-2"><a></a>  font-size: 1.4em;</span>
-<span id="cb1-3"><a></a>}</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a>div.cell-output-stdout {</span>
-<span id="cb1-6"><a></a>  font-size: 1.4em;</span>
-<span id="cb1-7"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<style type="text/css">
+code.sourceCode {
+  font-size: 1.4em;
+}
+
+div.cell-output-stdout {
+  font-size: 1.4em;
+}
+</style>
+</div>
 <p>Often, we want to know whether two groups (treatment vs.&nbsp;control, men vs.&nbsp;women…) differ on some measure.</p>
 <p>In other words, our outcome variables are continuous (e.g.&nbsp;exam scores) and we’re interested in the effect of a categorical predictor.</p>
 <p>In this case, a t-test would be our statistical analysis of choice.</p>
@@ -405,9 +343,11 @@ Instead of the Student’s t-test, you could run the non-parametric alternative,
 <section id="analysis-of-variance" class="slide level2">
 <h2>Analysis of <em>Variance</em>?</h2>
 <p>Although we want to compare means of the groups to test the hypothesis, the <em>variance</em> is important for this (slightly more complex) statistical test.</p>
-<p>There are different relevant variences, <em>between-group</em> and <em>within-group:</em></p>
+<p>There are different relevant variances, <em>between-group</em> and <em>within-group:</em></p>
 
-<img data-src="images/clipboard-3164202396.png" class="r-stretch"><aside class="notes">
+<img data-src="images/clipboard-3164202396.png" class="r-stretch"><div class="fragment">
+<p>To simplify it (a lot), what we’re interested in is whether the amount that the groups differ from each other (<em>between-group variation</em>) is bigger than the variance <em>within</em> the groups.</p>
+<aside class="notes">
 <p>[variance –&gt; sum of squares –&gt; F]</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -420,12 +360,130 @@ Instead of the Student’s t-test, you could run the non-parametric alternative,
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</div>
 </section>
 <section id="one-way-anova-in-jamovi" class="slide level2">
 <h2>One-Way ANOVA in Jamovi</h2>
-
-
+<p><strong>Exercise</strong>: Try to figure out how to run a one-way ANOVA in Jamovi, testing whether the three levels of coffee intake lead to differences in exam scores.</p>
+<div class="fragment">
+<p><img data-src="images/clipboard-2157236749.png"></p>
+</div>
+</section>
+<section id="interpreting-the-anova" class="slide level2">
+<h2>Interpreting the ANOVA</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">One-Way ANOVA (Welch’s)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Exam_Score</td>
+</tr>
+</tbody>
+</table>
+<p>The <em>p</em>-value is not significant at 𝛼 = 0.05.</p>
+<div class="fragment">
+<p>Even if the result would be significant, we would not know yet how exactly the groups differ. For this aim, we could have a look at the descriptive plot and run post-hoc tests. It’s usually a good idea to correct for multiple comparisons.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/clipboard-1392460634.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/clipboard-3420688218.png"></p>
+</div></div>
+</div>
+</section>
+<section id="assumptions-of-one-way-anova" class="slide level2">
+<h2>Assumptions of One-Way ANOVA</h2>
+<p>Again, it is a very good idea to test your assumptions to see whether you can actually interpret the results well. It is easy to know which assumptions should be met for the one-way ANOVA if you use Jamovi, because these are listed under Assumption Checks. Simply select them all.</p>
+<div class="fragment">
+<p>In this case, all assumptions seem to be met: The test of normality is not significant (so no deviations from normality) and in the QQ-plot the dots also fall more or less on the line. In addition, the test of homogeneity of variances is also non-significant (which means no deviations from homogeneity).</p>
+</div>
+</section>
+<section id="reporting-the-one-way-anova" class="slide level2">
+<h2>Reporting the One-Way ANOVA</h2>
+<p>Although high caffeine intake leads to slightly higher exam scores than low or no caffeine intake (see table x), a one-way ANOVA indicated that there is no significant difference between the three groups (<em>F</em>(2, 61.3) = 2.72; <em>p</em> = .074). Assumptions of the one-way ANOVA were met.</p>
+</section>
+<section id="repeated-measures-anova" class="slide level2">
+<h2>Repeated measures ANOVA</h2>
+<p>Similar to the (independent- vs.&nbsp;paired-samples t-test), there are also different ANOVAs for independent and repeated measures. The one-way ANOVA mentioned before can only be used if the data are independent, e.g.&nbsp;from different participants. Often, you do have repeated (within-subjects) measures, e.g.&nbsp;measuring the same participant at several time points or in different conditions.</p>
+<div class="fragment">
+<p>In Jamovi, we would, again, need the <em>wide</em> data set for this with pre, mid, and post exam scores.</p>
+<p>You can then simply select ANOVA –&gt; Repeated Measures ANOVA. Specifying the variables is a bit more tricky, as you have to write down the names of the “factor levels” in the first box, and drag the respective variable to the second column.</p>
+<p><img data-src="images/clipboard-3214405174.png" width="554"></p>
+</div>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+</section>
+<section id="reporting-the-repeated-measures-anova" class="slide level2">
+<h2>Reporting the Repeated Measures ANOVA</h2>
+<p>Before we report the ANOVA, we would again check the <strong>assumptions</strong>: Sphericity tests whether the variances of the differences between the conditions are equal. It should be non-significant, but if it is significant, we could add a sphericity correction to the degrees of freedom.</p>
+<div class="fragment">
+<p>The results show that there is indeed a difference between the time points in exam scores (<em>F</em>(2, 198) = 121, <em>p</em> &lt; .001). It’s also good practice to report the effect size, partial eta squared.</p>
+<p><img data-src="images/clipboard-1754979398.png"></p>
+</div>
+</section>
+<section id="post-hoc-tests" class="slide level2">
+<h2>Post-Hoc Tests</h2>
+<p>Again, we still don’t know which time points differ from each other, for which we would run post-hoc tests (e.g.&nbsp;Tukey-corrected for multiple comparisons):</p>
+<p><img data-src="images/clipboard-3460970609.png" width="594"></p>
+<p>We can see that all time points significantly differ from each other, e.g.&nbsp;pre vs.&nbsp;mid (<em>t</em>(99) = -6.84; <em>p</em> &lt; .001).</p>
+<div class="fragment">
+<p>Under <em>estimated marginal means</em> you can get a plot of the results:</p>
+<p><img data-src="images/clipboard-2882609735.png"></p>
+</div>
+</section>
+<section id="adding-several-factors" class="slide level2">
+<h2>Adding several factors</h2>
+<p>One big advantage of ANOVAs (compared to t-tests) is that you can add several variables in it together to analyze their main effects as well as interactions between variables. For example, you might be interested in whether there are differences in caffeine intake (between-measures!) over time in the exam scores (within-variable!).</p>
+<div class="fragment">
+<p>To do so in Jamovi, you would simply add “caffeine intake” to the “Between Subject Factor” box.</p>
+<p>If you then check out the output, you will see that there is a main effect for between-subjects and the interaction added (which are both non-significant).</p>
+<p><img data-src="images/clipboard-1063358161.png"></p>
+</div>
+</section>
+<section id="factorial-anova" class="slide level2">
+<h2>Factorial ANOVA</h2>
+<p>Similary, we might be interested in the effects (and interaction) of two (or more) <em>between-subjects</em> variables on some outcome, such as whether caffeine intake and gender have an effect on exam scores.</p>
+<p>E.g.: We could imagine that coffee has a stronger effect for men on exam scores than for women.</p>
+<div class="fragment">
+<p>To analyze this, we don’t need to run a <em>repeated measures</em> ANOVA, but can rather use a normal or factorial ANOVA. In Jamovi, we specify the dependent or outcome variable and the predictors as fixed factors.</p>
+<p>As with previous tests, we can test the assumptions, specify the precise model, run post-hoc tests and get plots (estimated marginal means).</p>
+<p>In this example, none of the effects reach significance.</p>
+<p><img data-src="images/clipboard-2350995676.png"></p>
+</div>
+</section>
+<section id="regressionlinear-model" class="slide level2">
+<h2>Regression/Linear Model</h2>
+<p>So far, we have mainly looked into using grouping variables (or categorical factors) as predictors. Only in correlation, we had two continuous variables. Sometimes we are interested in the effects (and interactions) of several (<em>between-subjects</em>) continuous and/or categorical variables on a (continuous) predictor. In this case, we can use an analysis that is actually like a swiss army knife: The <strong>regression analysis</strong> or linear model.</p>
+<div class="fragment">
+<p><img data-src="images/clipboard-1384170196.png" width="578"></p>
+</div>
+</section>
+<section id="interpreting-regression-output" class="slide level2">
+<h2>Interpreting Regression Output</h2>
+<p>While discussing the details of regression models is beyond the scope of this workshop, just note that the output looks a bit different than what we’re used from the ANOVAs. You get a t-value and a p-value for each effect, including comparisons of groups (one group to a reference level, e.g.&nbsp;“none” coffee intake). You can usually interpret this outcomes, but check out <a href="https://davidfoxcroft.github.io/lsj-book/12-Correlation-and-linear-regression.html#multiple-linear-regression">this chapter</a> for details.</p>
 </section></section>
+<section id="take-away" class="title-slide slide level1 center">
+<h1>Take Away</h1>
+<p>We’ve reached the end of this workshop!</p>
+<p>Thank you for participating.<br>
+You should now have had the opportunity to practice different statistical tests using Jamovi:</p>
+<ul>
+<li><p>t-tests</p></li>
+<li><p>one-way, repeated measures and factorial ANOVA</p></li>
+<li><p>regression</p></li>
+<li><p>testing assumptions</p></li>
+</ul>
+
+
+</section>
+
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
@@ -644,6 +702,82 @@ Instead of the Student’s t-test, you could run the non-parametric alternative,
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

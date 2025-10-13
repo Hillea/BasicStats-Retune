@@ -54,7 +54,7 @@
     "href": "StatsTestsJamovi.html#t-tests",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "T-Tests",
-    "text": "T-Tests\ncode.sourceCode {\n  font-size: 1.4em;\n}\n\ndiv.cell-output-stdout {\n  font-size: 1.4em;\n}\nOften, we want to know whether two groups (treatment vs. control, men vs. women…) differ on some measure.\nIn other words, our outcome variables are continuous (e.g. exam scores) and we’re interested in the effect of a categorical predictor.\nIn this case, a t-test would be our statistical analysis of choice.\n\nThere are different kinds of t-tests, depending on the relationship between the two groups:\n\nIf the two groups are unrelated, e.g. men and women, we would run an independent samples t-test.\nIf the two groups are related, e.g. first and second measurement of the same participants, we would run a paired-samples t-test.\n(Sometimes we just want to compare one group to some specific value, then we’d use the one-sample t-test.)",
+    "text": "T-Tests\n\n\n\nOften, we want to know whether two groups (treatment vs. control, men vs. women…) differ on some measure.\nIn other words, our outcome variables are continuous (e.g. exam scores) and we’re interested in the effect of a categorical predictor.\nIn this case, a t-test would be our statistical analysis of choice.\n\nThere are different kinds of t-tests, depending on the relationship between the two groups:\n\nIf the two groups are unrelated, e.g. men and women, we would run an independent samples t-test.\nIf the two groups are related, e.g. first and second measurement of the same participants, we would run a paired-samples t-test.\n(Sometimes we just want to compare one group to some specific value, then we’d use the one-sample t-test.)",
     "crumbs": [
       "Correlation, T-Tests & ANOVA in Jamovi"
     ]
@@ -144,7 +144,7 @@
     "href": "StatsTestsJamovi.html#analysis-of-variance",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "Analysis of Variance?",
-    "text": "Analysis of Variance?\nAlthough we want to compare means of the groups to test the hypothesis, the variance is important for this (slightly more complex) statistical test.\nThere are different relevant variences, between-group and within-group:\n\n\n[variance –&gt; sum of squares –&gt; F]",
+    "text": "Analysis of Variance?\nAlthough we want to compare means of the groups to test the hypothesis, the variance is important for this (slightly more complex) statistical test.\nThere are different relevant variances, between-group and within-group:\n\n\nTo simplify it (a lot), what we’re interested in is whether the amount that the groups differ from each other (between-group variation) is bigger than the variance within the groups.\n\n[variance –&gt; sum of squares –&gt; F]",
     "crumbs": [
       "Correlation, T-Tests & ANOVA in Jamovi"
     ]
@@ -154,9 +154,149 @@
     "href": "StatsTestsJamovi.html#one-way-anova-in-jamovi",
     "title": "Correlation, T-Tests & ANOVA in Jamovi",
     "section": "One-Way ANOVA in Jamovi",
-    "text": "One-Way ANOVA in Jamovi",
+    "text": "One-Way ANOVA in Jamovi\nExercise: Try to figure out how to run a one-way ANOVA in Jamovi, testing whether the three levels of coffee intake lead to differences in exam scores.",
     "crumbs": [
       "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#interpreting-the-anova",
+    "href": "StatsTestsJamovi.html#interpreting-the-anova",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Interpreting the ANOVA",
+    "text": "Interpreting the ANOVA\n\n\n\nOne-Way ANOVA (Welch’s)\n\n\n\n\n \n\n\nExam_Score\n\n\n\nThe p-value is not significant at 𝛼 = 0.05.\n\nEven if the result would be significant, we would not know yet how exactly the groups differ. For this aim, we could have a look at the descriptive plot and run post-hoc tests. It’s usually a good idea to correct for multiple comparisons.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#assumptions-of-one-way-anova",
+    "href": "StatsTestsJamovi.html#assumptions-of-one-way-anova",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Assumptions of One-Way ANOVA",
+    "text": "Assumptions of One-Way ANOVA\nAgain, it is a very good idea to test your assumptions to see whether you can actually interpret the results well. It is easy to know which assumptions should be met for the one-way ANOVA if you use Jamovi, because these are listed under Assumption Checks. Simply select them all.\n\nIn this case, all assumptions seem to be met: The test of normality is not significant (so no deviations from normality) and in the QQ-plot the dots also fall more or less on the line. In addition, the test of homogeneity of variances is also non-significant (which means no deviations from homogeneity).",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#reporting-the-one-way-anova",
+    "href": "StatsTestsJamovi.html#reporting-the-one-way-anova",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Reporting the One-Way ANOVA",
+    "text": "Reporting the One-Way ANOVA\nAlthough high caffeine intake leads to slightly higher exam scores than low or no caffeine intake (see table x), a one-way ANOVA indicated that there is no significant difference between the three groups (F(2, 61.3) = 2.72; p = .074). Assumptions of the one-way ANOVA were met.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#repeated-measures-anova",
+    "href": "StatsTestsJamovi.html#repeated-measures-anova",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Repeated measures ANOVA",
+    "text": "Repeated measures ANOVA\nSimilar to the (independent- vs. paired-samples t-test), there are also different ANOVAs for independent and repeated measures. The one-way ANOVA mentioned before can only be used if the data are independent, e.g. from different participants. Often, you do have repeated (within-subjects) measures, e.g. measuring the same participant at several time points or in different conditions.\n\nIn Jamovi, we would, again, need the wide data set for this with pre, mid, and post exam scores.\nYou can then simply select ANOVA –&gt; Repeated Measures ANOVA. Specifying the variables is a bit more tricky, as you have to write down the names of the “factor levels” in the first box, and drag the respective variable to the second column.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#reporting-the-repeated-measures-anova",
+    "href": "StatsTestsJamovi.html#reporting-the-repeated-measures-anova",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Reporting the Repeated Measures ANOVA",
+    "text": "Reporting the Repeated Measures ANOVA\nBefore we report the ANOVA, we would again check the assumptions: Sphericity tests whether the variances of the differences between the conditions are equal. It should be non-significant, but if it is significant, we could add a sphericity correction to the degrees of freedom.\n\nThe results show that there is indeed a difference between the time points in exam scores (F(2, 198) = 121, p &lt; .001). It’s also good practice to report the effect size, partial eta squared.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#post-hoc-tests",
+    "href": "StatsTestsJamovi.html#post-hoc-tests",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Post-Hoc Tests",
+    "text": "Post-Hoc Tests\nAgain, we still don’t know which time points differ from each other, for which we would run post-hoc tests (e.g. Tukey-corrected for multiple comparisons):\n\nWe can see that all time points significantly differ from each other, e.g. pre vs. mid (t(99) = -6.84; p &lt; .001).\n\nUnder estimated marginal means you can get a plot of the results:",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#adding-several-factors",
+    "href": "StatsTestsJamovi.html#adding-several-factors",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Adding several factors",
+    "text": "Adding several factors\nOne big advantage of ANOVAs (compared to t-tests) is that you can add several variables in it together to analyze their main effects as well as interactions between variables. For example, you might be interested in whether there are differences in caffeine intake (between-measures!) over time in the exam scores (within-variable!).\n\nTo do so in Jamovi, you would simply add “caffeine intake” to the “Between Subject Factor” box.\nIf you then check out the output, you will see that there is a main effect for between-subjects and the interaction added (which are both non-significant).",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#factorial-anova",
+    "href": "StatsTestsJamovi.html#factorial-anova",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Factorial ANOVA",
+    "text": "Factorial ANOVA\nSimilary, we might be interested in the effects (and interaction) of two (or more) between-subjects variables on some outcome, such as whether caffeine intake and gender have an effect on exam scores.\nE.g.: We could imagine that coffee has a stronger effect for men on exam scores than for women.\n\nTo analyze this, we don’t need to run a repeated measures ANOVA, but can rather use a normal or factorial ANOVA. In Jamovi, we specify the dependent or outcome variable and the predictors as fixed factors.\nAs with previous tests, we can test the assumptions, specify the precise model, run post-hoc tests and get plots (estimated marginal means).\nIn this example, none of the effects reach significance.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#regressionlinear-model",
+    "href": "StatsTestsJamovi.html#regressionlinear-model",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Regression/Linear Model",
+    "text": "Regression/Linear Model\nSo far, we have mainly looked into using grouping variables (or categorical factors) as predictors. Only in correlation, we had two continuous variables. Sometimes we are interested in the effects (and interactions) of several (between-subjects) continuous and/or categorical variables on a (continuous) predictor. In this case, we can use an analysis that is actually like a swiss army knife: The regression analysis or linear model.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#interpreting-regression-output",
+    "href": "StatsTestsJamovi.html#interpreting-regression-output",
+    "title": "Correlation, T-Tests & ANOVA in Jamovi",
+    "section": "Interpreting Regression Output",
+    "text": "Interpreting Regression Output\nWhile discussing the details of regression models is beyond the scope of this workshop, just note that the output looks a bit different than what we’re used from the ANOVAs. You get a t-value and a p-value for each effect, including comparisons of groups (one group to a reference level, e.g. “none” coffee intake). You can usually interpret this outcomes, but check out this chapter for details.",
+    "crumbs": [
+      "Correlation, T-Tests & ANOVA in Jamovi"
+    ]
+  },
+  {
+    "objectID": "Jamovi.html#install-jamovi",
+    "href": "Jamovi.html#install-jamovi",
+    "title": "Getting Started with Jamovi",
+    "section": "Install Jamovi",
+    "text": "Install Jamovi\n\n\n\nIf you haven’t done so, please install Jamovi: https://www.jamovi.org/.",
+    "crumbs": [
+      "Getting Started with Jamovi"
+    ]
+  },
+  {
+    "objectID": "Jamovi.html#first-steps",
+    "href": "Jamovi.html#first-steps",
+    "title": "Getting Started with Jamovi",
+    "section": "First Steps",
+    "text": "First Steps\nIf you open Jamovi, it should look like this:",
+    "crumbs": [
+      "Getting Started with Jamovi"
+    ]
+  },
+  {
+    "objectID": "Jamovi.html#load-a-dataset",
+    "href": "Jamovi.html#load-a-dataset",
+    "title": "Getting Started with Jamovi",
+    "section": "Load a Dataset",
+    "text": "Load a Dataset\nOpen the file WorkshopData_Wide.csv by clicking the three stripes on the upper left, “open”, “browse” and searching for and selecting the file in the file explorer.",
+    "crumbs": [
+      "Getting Started with Jamovi"
+    ]
+  },
+  {
+    "objectID": "Jamovi.html#variables",
+    "href": "Jamovi.html#variables",
+    "title": "Getting Started with Jamovi",
+    "section": "Variables",
+    "text": "Variables\nEach column in the “Data” part represents a variable, each row a “case” or participant.\nIf you double-click on the header/name of the variable, a small menu opens where you can see the meaurement type etc. Jamovi guesses these measurement and data types, but you could also change them. Similarly, you can also change the name of the variable.\n\n\nExercise: Please look through the variables and check whether the measurement type, the data type and the levels are correct. Discuss if you are not sure.",
+    "crumbs": [
+      "Getting Started with Jamovi"
     ]
   },
   {
@@ -164,7 +304,27 @@
     "href": "Jamovi.html#adding-variables",
     "title": "Getting Started with Jamovi",
     "section": "Adding Variables",
-    "text": "Adding Variables\nYou can also add a new variable by either clicking on the header of an empty column or by clicking “add” in the Variables or Data menu. You then have the choice between adding a new variable, compute a variable using existing variables, or transforming an existing variable. The latter can also be achieved by clicking “Compute” or “Transform” in the Variables or Data menu.\n\nComputing or transforming a variable can be helpful to get a different version or e.g. a difference or average between variables.\nExercise: Check out the different functions available for computing or transforming a variable by clicking on the little fx.\n\n\nExercise 2: Make a new variable which is the centered version of Score by subtracting the average score across all participants from each individual score. You may use compute or transform.",
+    "text": "Adding Variables\nYou can also add a new variable by either clicking on the header of an empty column or by clicking “add” in the Variables or Data menu. You then have the choice between adding a new variable, compute a variable using existing variables, or transforming an existing variable. The latter can also be achieved by clicking “Compute” or “Transform” in the Variables or Data menu.\n\nComputing or transforming a variable can be helpful to get a different version or e.g. a difference or average between variables.\nExercise: Check out the different functions available for computing or transforming a variable by clicking on the little fx.\n\n\nExercise 2: Make a new variable which is the centered version of Exam_Post by subtracting the average score across all participants from each individual score. You may use compute or transform.",
+    "crumbs": [
+      "Getting Started with Jamovi"
+    ]
+  },
+  {
+    "objectID": "Jamovi.html#add-ons",
+    "href": "Jamovi.html#add-ons",
+    "title": "Getting Started with Jamovi",
+    "section": "Add-ons",
+    "text": "Add-ons\nJamovi allows you to run basic analyses. Add-ons can increase the number of possible analyses. These are so-called modules for specific purposes that other people created and that you can add to your version of Jamovi.\nIn the Analysis menu, you can find a + sign on the right. If you click on it, you can browse the Jamovi library and search for modules that might be helpful for you. The modules range from specific analyses to data transformation to visualization.",
+    "crumbs": [
+      "Getting Started with Jamovi"
+    ]
+  },
+  {
+    "objectID": "Jamovi.html#quitting-jamovi",
+    "href": "Jamovi.html#quitting-jamovi",
+    "title": "Getting Started with Jamovi",
+    "section": "Quitting Jamovi",
+    "text": "Quitting Jamovi\nIf you quit Jamovi, you can save your dataset (preferably under a different name if you made changes) and/or the results. One advantage of Jamovi is that it is possible to save both data and (annotated) results in the same file, which makes it easier to later understand the results. The output of Jamovi is also already nicely formatted.",
     "crumbs": [
       "Getting Started with Jamovi"
     ]
@@ -174,7 +334,14 @@
     "href": "index.html",
     "title": "Basic Statistics Workshop Fall 2025",
     "section": "",
-    "text": "Welcome to the website of the workshop “Basic statistics” conducted during the Fall School 2025 of the TRR ReTune.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\nBefore the day of the workshop, please download and install Jamovi: https://www.jamovi.org/."
+    "text": "Welcome to the website of the workshop “Basic statistics” conducted during the Fall School 2025 of the TRR ReTune.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\nBefore the day of the workshop, please download and install Jamovi: https://www.jamovi.org/.\nYou can download the dataset we’ll use here. Click on the little download button on the top right:"
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Basic Statistics Workshop Fall 2025",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nTopic\n\n\n\n\n9:00 - 9:20\nIntro: Why Statistics?\n\n\n9:20 - 9:40\nGetting started with Jamovi\n\n\n9:40 - 10:00\nDescriptive Statistics & Data Visualization\n\n\n10:00 - 10:45\nProbability & Sampling, Hypothesis Testing\n\n\n10:45 - 11:00\nCoffee Break\n\n\n11:00 - 12:45\nStatistical Tests in Jamovi"
   },
   {
     "objectID": "about.html",
@@ -198,7 +365,7 @@
     "href": "DescViz.html#descriptive-statistics-in-jamovi",
     "title": "Describing and Visualizing Data",
     "section": "Descriptive Statistics in Jamovi",
-    "text": "Descriptive Statistics in Jamovi\nExercise: Try to figure out the mean, median, and mode of age and score, as well as the mode of coffee_intake.\n\nExercise 2: Get the mean age for each gender separately.",
+    "text": "Descriptive Statistics in Jamovi\nExercise: Try to figure out the mean, median, and mode of Age and Exam_Post.\n\nExercise 2: Get the mean age for each gender separately.",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -208,7 +375,7 @@
     "href": "DescViz.html#variability",
     "title": "Describing and Visualizing Data",
     "section": "Variability",
-    "text": "Variability\nIn addition to a value for “the middle of the data”, another measure of central tendency would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Quartiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median.",
+    "text": "Variability\nIn addition to a value for “the middle of the data”, another measure of central tendency would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Percentiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median.",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -218,7 +385,7 @@
     "href": "DescViz.html#variability-2",
     "title": "Describing and Visualizing Data",
     "section": "Variability 2",
-    "text": "Variability 2\nMean absolute value: the “typical deviation from the mean (or median):\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = -2.8 = 2.8;\\] \\[\n3 - 4.8 = -1.8 = 1.8;\\] \\[\n4 - 4.8 = -0.8 = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]",
+    "text": "Variability 2\nMean absolute value: the “typical deviation” from the mean (or median):\n\nCalculate the mean of the data:\n\\[\n(10+2+3+4+5)/5 = 4.8\n\\]\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = -2.8 = 2.8;\\] \\[\n3 - 4.8 = -1.8 = 1.8;\\] \\[\n4 - 4.8 = -0.8 = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -228,7 +395,7 @@
     "href": "DescViz.html#variability-3",
     "title": "Describing and Visualizing Data",
     "section": "Variability 3",
-    "text": "Variability 3\nIt is often better (for mathematical reasons) to use the squared deviation instead of the absolute deviation from the mean.\nThis is called the variance:\n\nCalculate the mean of the data:\n$ (10+2+3+4+5)/5 = 4.8 $\nCalculate each squared deviation from each data point to this mean:\n\\[ (10 - 4.8)^2 = 27.04;\\] \\[ (2 - 4.8)^2 = 7.84;\\] \\[ (3 - 4.8)^2 = 3.24;\\] \\[ (4 - 4.8)^2 = 0.64;\\] \\[ (5 - 4.8)^2 = 0.04 \\]\nCalculate the mean of these deviation, but use N-1 as the denominator:\n\\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/5 = 7.756 \\]\nOr, in mathematical formulation:\n\\[\nVAR(X) = \\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2\n\\]",
+    "text": "Variability 3\nIt is often better (for mathematical reasons) to use the squared deviation instead of the absolute deviation from the mean.\nThis is called the variance:\n\nCalculate the mean of the data:\n\\[ (10+2+3+4+5)/5 = 4.8 \\]\nCalculate each squared deviation from each data point to this mean:\n\\[ (10 - 4.8)^2 = 27.04;\\] \\[ (2 - 4.8)^2 = 7.84;\\] \\[ (3 - 4.8)^2 = 3.24;\\] \\[ (4 - 4.8)^2 = 0.64;\\] \\[ (5 - 4.8)^2 = 0.04 \\]\nCalculate the mean of these deviation, but use N-1 as the denominator:\n\\[ (27.04 + 7.84 + 3.24 + 0.64 +0.02)/4 = 9.695 \\]\nOr, in mathematical formulation:\n\\[\nVAR(X) = \\frac{1}{N-1}\\sum_{i=1}^{N}(X_i-\\bar{X})^2\n\\]",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -278,7 +445,7 @@
     "href": "DescViz.html#boxplots",
     "title": "Describing and Visualizing Data",
     "section": "Boxplots",
-    "text": "Boxplots\nAlso suited for continuous data, they deptic the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).\n\nThick line in the middle of the box is the median, the upper and lower sides of the box are the IQR and the end of the vertical line is the range - but max 1.5 IQR. Every data point outside of this range is shown as dot (here labelled) and may be considered an outlier.\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “Box plot” check box.",
+    "text": "Boxplots\nAlso suited for continuous data, they depict the median, IQR, and range of the data in a compact way (and several variables can be easily plotted next to each other and thus compared).\n\nThick line in the middle of the box is the median, the upper and lower sides of the box are the IQR and the end of the vertical line is the range - but max 1.5 IQR. Every data point outside of this range is shown as dot (here labelled) and may be considered an outlier.\nIn Jamovi: Exploration -&gt; Descriptives -&gt; select “Box plot” check box.",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -308,7 +475,7 @@
     "href": "DescViz.html#bar-graphs",
     "title": "Describing and Visualizing Data",
     "section": "Bar Graphs",
-    "text": "Bar Graphs\nA bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually count) for different groups.\n\nYou can also generate bar charts for continuous data that are not counts - but this is not advised. in this case, it will display the mean and the error bars will be the standard error (another measure of variability).",
+    "text": "Bar Graphs\nA bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually counts) for different groups.\n\nYou can also generate bar charts for continuous data that are not counts - but this is not advised. In this case, it will display the mean and the error bars will be the standard error (another measure of variability).",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -316,111 +483,111 @@
   {
     "objectID": "Intro.html#hello",
     "href": "Intro.html#hello",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "Hello!",
     "text": "Hello!\n\n\nWho are you?\n\nWhat is your background?\nDo you have experience with data analysis?\nWhat’s your attitude towards statistics? Statistical confessions?",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#what-to-expect-today",
     "href": "Intro.html#what-to-expect-today",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "What to expect today?",
-    "text": "What to expect today?\n\nSlides can be found here: https://hillea.github.io/BasicStats-Retune/\nTextbooks this workshop is based on/that can be used to read up:\n\nLearning Statistics with Jamovi\nStatistical Thinking for the 21st Century\nStatistics Done Wrong",
+    "text": "What to expect today?\n\nIf you haven’t done so, please download Jamovi (www.jamovi.org).\nSlides can be found here: https://hillea.github.io/BasicStats-Retune/\nTextbooks this workshop is based on/that can be used to read up:\n\nLearning Statistics with Jamovi\nStatistical Thinking for the 21st Century\n\nRather brief overview!",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#schedule",
     "href": "Intro.html#schedule",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nTime\nTopic\n\n\n\n\n9:00 - 9:20\nIntro: Why Statistics?\n\n\n9:20 - 9:40\nGetting started with Jamovi\n\n\n10\nDescriptive Statistics & Data Visualization\n\n\n\nProbability & Sampling\n\n\n\nHypothesis Testing",
+    "text": "Schedule\n\n\n\nTime\nTopic\n\n\n\n\n9:00 - 9:20\nIntro: Why Statistics?\n\n\n9:20 - 9:40\nGetting started with Jamovi\n\n\n9:40 - 10:00\nDescriptive Statistics & Data Visualization\n\n\n10:00 - 10:45\nProbability & Sampling, Hypothesis Testing\n\n\n10:45 - 11:00\nCoffee Break\n\n\n11:00 - 12:45\nStatistical Tests in Jamovi",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#why-is-it-important-that-you-know-statistics",
     "href": "Intro.html#why-is-it-important-that-you-know-statistics",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "Why is it important that YOU know statistics?",
-    "text": "Why is it important that YOU know statistics?\n\n\nYou’re doing a PhD!\nWe live in an increasingly data-centric world\nFacts & data literacy matter more than ever!\n\nYou should be able to call bullshit (https://www.callingbullshit.org/)\n\n\n\n\n\nYou’re doing a PhD!\n\nResearch = Reading & understanding papers (esp. the analyses)\nDesigning your own experiments, analyze data, interpret results\n\nWe live in an increasingly data-centric world\n\nKnowing how to wrangle and analyze data is a valuable skill\n\nFacts & data literacy matter more than ever!\n\nFake News, “Lying with stats”, Reproducibility Crisis\nBeing able to call bullshit (https://www.callingbullshit.org/)\n\n“I only believe in statistics that I doctored myself” ― Winston S. Churchill\n\nHowever: “It is easy to lie with statistics, but easier to lie without them” ― Frederick Mosteller\n\n\n\n\n\n\n\n\n\nhttps://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21\n\n\n\nhttps://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study",
+    "text": "Why is it important that YOU know statistics?\n\n\nYou’re doing a PhD!\nWe live in an increasingly data-centric world\nFacts & data literacy matter more than ever!\n\nYou should be able to call bullshit (https://www.callingbullshit.org/)\n\n\n\n\n\nYou’re doing a PhD!\n\nResearch = Reading & understanding papers (esp. the analyses)\nDesigning your own experiments, analyze data, interpret results\n\nWe live in an increasingly data-centric world\n\nKnowing how to wrangle and analyze data is a valuable skill\n\nFacts & data literacy matter more than ever!\n\nFake News, “Lying with stats”, Reproducibility Crisis\nBeing able to call bullshit (https://www.callingbullshit.org/)\n\n“I only believe in statistics that I doctored myself” ― Winston S. Churchill\n\nHowever: “It is easy to lie with statistics, but easier to lie without them” ― Frederick Mosteller\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21\n\n\n\nhttps://en.wikipedia.org/wiki/John_Bohannon#Intentionally_misleading_chocolate_study",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#what-can-statistics-do-for-us",
     "href": "Intro.html#what-can-statistics-do-for-us",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "What can Statistics Do For Us?",
     "text": "What can Statistics Do For Us?\n\nDescribe patterns by summarizing/breaking down data (“descriptive statistics”)\nDecide whether one thing is better than another, given the uncertainty (“inferential statistics”)\nPredict how other people would “behave” (generalize to new observations)\n\n\ndescribe: not useful to look at every single data point/person, but we need s.th. like tendencies/trends…",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#what-are-data",
     "href": "Intro.html#what-are-data",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "What are Data?",
     "text": "What are Data?\n\nWhat do you think are data?\n\n\n\nqualitative vs. quantitative\n\nqualitative?\n\nopen questions, descriptions… can potentially be coded into categories\n\nquantitative?\n\nnumeric, can be averaged etc.\n\n\n\n\n\nChat → after showing slide! Come up with examples for “Data”\nCollect: Do you have ideas? What are data you encounter in your lives/work etc? What are differences between these data?",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#what-are-data-2",
     "href": "Intro.html#what-are-data-2",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "What are Data? (2)",
     "text": "What are Data? (2)\n\n\nData types\n\ncharacter/string: text (qualitative)\nfactors/categories\ntypes of numbers (quantitative)\n\nbinary: 0 or 1, TRUE or FALSE (logical)\nintegers: whole numbers\nreal numbers: decimals/fractions\n\n\ndiscrete vs. continuous\n\ndiscrete: finite set of particular values (0 or 1, scale from 1 to 10)\ncontinuous: real numbers that fall into particular range (e.g., brain activity, visual analoge scale)\n\nWhat data type is eye color?\n\n\n\neye color can be categorical (e.g., “brown”, “blue”, “green”) or numerical (wave length in nm)",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#what-is-a-data-set",
     "href": "Intro.html#what-is-a-data-set",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "What is a Data Set?",
-    "text": "What is a Data Set?\n\na collection of data\nusually organized into rows and columns (like an excel spreadsheet)\n\nrows: participants/animals/cells…\ncolumns: variables!\n\neach variable contains one type of measurement\n\ntable cells = unique observations of variables per participant etc.\n\n\n\nNHANES dataset\npossibly go through columns and ask for data types?",
+    "text": "What is a Data Set?\n\na collection of data\nusually organized into rows and columns (like an excel spreadsheet)\n\nrows: participants/animals/cells…\ncolumns: variables!\n\neach variable contains one data type\n\ntable cells = unique observations of variables per participant etc.\n\n\n\n\npossibly go through columns and ask for data types?",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#what-makes-a-good-measurement",
     "href": "Intro.html#what-makes-a-good-measurement",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "What Makes a Good Measurement?",
-    "text": "What Makes a Good Measurement?\n\n\n\nWhat is being measured?\n\nconstructs vs. proxies: need to be well-defined! (Difficult)\nmeasurement error\n\nrandom: e.g., variation in reaction times of same participant across trials\nsystematic: e.g., miscalibrated eye-tracking device\n\n\nDo we have a “gold standard” to compare the measurement to?\n\n\n\nBreak-Out session: Brainstorm what makes a good vs. bad measurement!\nGroup work/brainstorm:\n\nWhat are problems?\nWhich kind of errors/when is data NOT good\nhow can we minimize error?",
+    "text": "What Makes a Good Measurement?\n\n\n\nWhat is being measured?\n\nconstructs vs. proxies: need to be well-defined! (Difficult)\nmeasurement error\n\nrandom: e.g., variation in reaction times of same participant across trials\nsystematic: e.g., miscalibrated eye-tracking device\n\n\nDo we have a “gold standard” to compare the measurement to?\n\n\n\nGroup work/brainstorm:\n\nWhat are problems?\nWhich kind of errors/when is data NOT good\nhow can we minimize error?",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#reliability-validity",
     "href": "Intro.html#reliability-validity",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "Reliability & Validity",
     "text": "Reliability & Validity\nData that we collected should be both:\n\nreliable: stable and consistent over time\nvalid: measuring the construct we’re interested in\n\n\nReliability & Validity",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
     "objectID": "Intro.html#summarizing-data",
     "href": "Intro.html#summarizing-data",
-    "title": "Why Statistics?",
+    "title": "Basic Statistics",
     "section": "Summarizing Data",
     "text": "Summarizing Data\n\n\nThrowing away (some of the) information!\n\nextract the quintessence of the data (important for forming models)\nmake predictions\n\nCounts, frequencies, percentages, averages",
     "crumbs": [
-      "Why Statistics?"
+      "Basic Statistics"
     ]
   },
   {
@@ -428,7 +595,7 @@
     "href": "Probability.html#frequentist-vs.-bayesian-view",
     "title": "Statistical Theory",
     "section": "Frequentist vs. Bayesian View",
-    "text": "Frequentist vs. Bayesian View\nFrequentist: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain (The probability gets closer to it’s real value over time).\nBayesian: The weather forecast predicts 60% rain for the next 100 days, which means that I expect it to rain tomorrow with 60% chance (degree of belief).",
+    "text": "Frequentist vs. Bayesian View\nFrequentist: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain. (The probability gets closer to its real value over time).\nBayesian: The weather forecast predicts 60% rain for the next 100 days, which means that I expect it to rain tomorrow with 60% chance (degree of belief).",
     "crumbs": [
       "Statistical Theory"
     ]
@@ -548,7 +715,7 @@
     "href": "Probability.html#confidence-intervals",
     "title": "Statistical Theory",
     "section": "Confidence Intervals",
-    "text": "Confidence Intervals\nAs we use our sample mean (and adjusted SD) as our best estimates for the population mean (and SD), it is a good idea to indicate how confident we are in these estimates.\nFor this we calculate the confidence interval, which denotes the e.g. 95% probability that the sample mean lies within 1.96 standard errors of the population mean.\n\n\n\n. . .\n\n\nIt does not mean, that the true population mean lies with 95% probability within the sample’s confidence interval!\n\nIf we replicated the experiment with a different sample, 95% of CIs would contain the true population mean. (Still, it is a good indicator of our uncertainty around an estimate!)",
+    "text": "Confidence Intervals\nAs we use our sample mean (and adjusted SD) as our best estimates for the population mean (and SD), it is a good idea to indicate how confident we are in these estimates.\nFor this we calculate the confidence interval, which denotes the e.g. 95% probability that the sample mean lies within 1.96 standard errors of the population mean.\n\n\nIt does not mean, that the true population mean lies with 95% probability within the sample’s confidence interval!\n\n\nIf we replicated the experiment with a different sample, 95% of CIs would contain the true population mean. (Still, it is a good indicator of our uncertainty around an estimate!)",
     "crumbs": [
       "Statistical Theory"
     ]
@@ -558,7 +725,7 @@
     "href": "Probability.html#errors-in-decision-making",
     "title": "Statistical Theory",
     "section": "Errors in Decision Making",
-    "text": "Errors in Decision Making\nStatistical testing means making decisions under uncertainty in a messy world –&gt; mistakes can happen.\nThe goal is to minimize these errors.\n\n\nType I error: incorrectly rejecting the null hypothesis.\nWe want to minimize this error to be below a probability of ⍺ = 0.05.\nThis means that we accept up to 5% wrong decisions if we have extreme test statistics (e.g. a huge difference in exam scores between high and low caffeine intake groups).\n. . .\nType II error: incorrectly accepting the null hypothesis to be true when it is, in fact, wrong.\nWe also want to control this, although it is often secondary. This error rate (𝛽) is related to the power (1 - 𝛽) of the test, which can be increased with e.g. higher sample size.",
+    "text": "Errors in Decision Making\nStatistical testing means making decisions under uncertainty in a messy world –&gt; mistakes can happen.\nThe goal is to minimize these errors.\n\n\nType I error: incorrectly rejecting the null hypothesis.\nWe want to minimize this error to be below a probability of ⍺ = 0.05.\nThis means that we accept up to 5% wrong decisions if we have extreme test statistics (e.g. a huge difference in exam scores between high and low caffeine intake groups).\n\n\nType II error: incorrectly accepting the null hypothesis to be true when it is, in fact, wrong.\nWe also want to control this, although it is often secondary. This error rate (𝛽) is related to the power (1 - 𝛽) of the test, which can be increased with e.g. higher sample size.",
     "crumbs": [
       "Statistical Theory"
     ]
@@ -618,17 +785,17 @@
     "href": "Probability.html#what-does-a-significant-result-not-mean",
     "title": "Statistical Theory",
     "section": "What does a significant result (not) mean?",
-    "text": "What does a significant result (not) mean?\nThere is a lot of discussion about the usefulness of using \\(\\alpha = .05\\) as well as about the interpretation of a significant result/certain p-value!\n\nA p-value of .01 does….\n\nNOT mean that the probability that \\(H_0\\) is true is 1%!\n\nWe tested \\(P(data|H_0)\\) not \\(P(H_0|data)\\)!\n\nNOT mean that the probability that you’re making a wrong decision is 1%!\n\nThis would also be \\(P(H_0|data)\\)! p-values are probabilities of data (under \\(H_0\\)), not probabilities of hypotheses! And we cannot easily use Bayes to turn the condition because we would need additional information like the prior probability of an alternative hypothesis being true.\n\nNOT mean that you would get the same significance 99% of the time if you repeated the study.\n\nThe p-value is a statement about the likelihood of one particular dataset under the null.\n\nNOT mean that you found a practically important effect.\n\nDifference between statistical significance and practical significance! Effect sizes are important here. (Statistical significance depends on sample size!)",
+    "text": "What does a significant result (not) mean?\nThere is a lot of discussion about the usefulness of using \\(\\alpha = .05\\) as well as about the interpretation of a significant result/certain p-value!\n\nA p-value of .01 does….\n\nNOT mean that the probability that \\(H_0\\) is true is 1%!\n\nWe tested \\(P(data|H_0)\\) not \\(P(H_0|data)\\)!\n\nNOT mean that the probability that you’re making a wrong decision is 1%!\n\nThis would also be \\(P(H_0|data)\\)! p-values are probabilities of data (under \\(H_0\\)), not probabilities of hypotheses!\n\nNOT mean that you would get the same significance 99% of the time if you repeated the study.\n\nThe p-value is a statement about the likelihood of one particular dataset under the null.\n\nNOT mean that you found a practically important effect.\n\nDifference between statistical significance and practical significance! Effect sizes are important here. (Statistical significance depends on sample size!)",
     "crumbs": [
       "Statistical Theory"
     ]
   },
   {
-    "objectID": "Probability.html#effect-sizes-power",
-    "href": "Probability.html#effect-sizes-power",
+    "objectID": "Probability.html#power-effect-sizes",
+    "href": "Probability.html#power-effect-sizes",
     "title": "Statistical Theory",
-    "section": "Effect Sizes & Power",
-    "text": "Effect Sizes & Power",
+    "section": "Power & Effect Sizes",
+    "text": "Power & Effect Sizes\nEarlier, I mentioned the Type II error (𝛽, false negative: accepting \\(H_0\\) when there is actually an effect).\nI also just briefly mentioned that we try to minimize that error as well, but couldn’t fix it like the Type I error. However, we can try to minimize it by increasing the power (𝛽 - 1) of a study. The power indicates how well your study is able to find an effect that is actually there.\n\nPower can be increased by:\n\nincreasing sample size (which decreases variance, SE, of the sample distribution)\nreducing measurement error\na high effect size\n\n\n\nEffect sizes give an estimate of, well, the size of the effect you found. They are important for two reasons:\n\nReporting effect sizes: It’s good practice to report them, so others know whether the effect is not only statistically but also practically significant. There are various measures of effect size (beyond the scope of these workshop); in Jamovi it is easy to simply check “effect size”.\nCalculating the (a priori) power of your study: Running a power analysis is very important while planning your study, as it allows you to either calculate the necessary sample size for attaining a certain level of power (e.g. 80%) or calculating the power for a certain sample size.",
     "crumbs": [
       "Statistical Theory"
     ]
