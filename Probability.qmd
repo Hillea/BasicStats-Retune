@@ -381,7 +381,7 @@ This means that we accept up to 5% wrong decisions if we have extreme test stati
 
 **Type II error**: incorrectly accepting the null hypothesis to be true when it is, in fact, wrong.
 
-We also want to control this, although it is often secondary. This error rate (𝛽) is related to the power (1 - 𝛽) of the test, which can be increased with e.g. higher sample size.
+We also want to control this, although it is often secondary. This error rate (𝛽) is related to the *power* (1 - 𝛽) of the test, which can be increased with e.g. higher sample size.
 
 ## Test Statistic
 
@@ -486,4 +486,30 @@ A *p*-value of .01 does....
     -   Difference between *statistical significance* and *practical significance*! Effect sizes are important here. (Statistical significance depends on sample size!)
 :::
 
-## Effect Sizes & Power
+## Power & Effect Sizes
+
+Earlier, I mentioned the *Type II error* (𝛽, false negative: accepting $H_0$ when there is actually an effect).
+
+I also just briefly mentioned that we try to minimize that error as well, but couldn't fix it like the *Type I error*. However, we can try to minimize it by increasing the **power** (𝛽 - 1) of a study. The power indicates how well your study is able to find an effect that is actually there.
+
+. . .
+
+Power can be increased by:
+
+::: incremental
+-   increasing sample size (which decreases variance, SE, of the sample distribution)
+
+-   reducing measurement error
+
+-   a high *effect size*
+:::
+
+. . .
+
+**Effect sizes** give an estimate of, well, the size of the effect you found. They are important for two reasons:
+
+::: incremental
+-   **Reporting effect sizes**: It's good practice to report them, so others know whether the effect is not only statistically but also *practically significant*. There are various measures of effect size (beyond the scope of these workshop); in Jamovi it is easy to simply check "effect size".
+
+-   Calculating the (a priori) power of your study: Running a **power analysis** is very important while planning your study, as it allows you to either calculate the necessary sample size for attaining a certain level of power (e.g. 80%) or calculating the power for a certain sample size.
+:::

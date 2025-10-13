@@ -15,6 +15,7 @@ format:
     width: 1280
     height: 720
 from: markdown+emoji
+engine: knitr
 ---
 
 # Statistical Analyses
@@ -37,7 +38,9 @@ Correlations are used if you have two continuous variables and you want to check
 
 Running a correlation analysis, we test whether two variables co-vary,[^1] i.e. if one is high, the other variable also tends to be high (or, the opposite, low).
 
-[^1]: $$
+[^1]: 
+
+    $$
     r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{(N - 1)s_x s_y}
     $$
 
@@ -234,12 +237,150 @@ $not all means are equal
 
 Although we want to compare means of the groups to test the hypothesis, the *variance* is important for this (slightly more complex) statistical test.
 
-There are different relevant variences, *between-group* and *within-group:*
+There are different relevant variances, *between-group* and *within-group:*
 
 ![](images/clipboard-3164202396.png)
+
+. . .
+
+To simplify it (a lot), what we're interested in is whether the amount that the groups differ from each other (*between-group variation*) is bigger than the variance *within* the groups.
 
 ::: notes
 \[variance –\> sum of squares –\> F\]
 :::
 
 ## One-Way ANOVA in Jamovi
+
+**Exercise**: Try to figure out how to run a one-way ANOVA in Jamovi, testing whether the three levels of coffee intake lead to differences in exam scores.
+
+. . .
+
+![](images/clipboard-2157236749.png)
+
+## Interpreting the ANOVA
+
+| One-Way ANOVA (Welch's) |
+|:------------------------|
+|                         |
+| Exam_Score              |
+
+The *p*-value is not significant at 𝛼 = 0.05.
+
+. . .
+
+Even if the result would be significant, we would not know yet how exactly the groups differ. For this aim, we could have a look at the descriptive plot and run post-hoc tests. It's usually a good idea to correct for multiple comparisons.
+
+::::: columns
+::: {.column width="50%"}
+![](images/clipboard-1392460634.png)
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-3420688218.png)
+:::
+:::::
+
+## Assumptions of One-Way ANOVA
+
+Again, it is a very good idea to test your assumptions to see whether you can actually interpret the results well. It is easy to know which assumptions should be met for the one-way ANOVA if you use Jamovi, because these are listed under Assumption Checks. Simply select them all.
+
+. . .
+
+In this case, all assumptions seem to be met: The test of normality is not significant (so no deviations from normality) and in the QQ-plot the dots also fall more or less on the line. In addition, the test of homogeneity of variances is also non-significant (which means no deviations from homogeneity).
+
+## Reporting the One-Way ANOVA
+
+Although high caffeine intake leads to slightly higher exam scores than low or no caffeine intake (see table x), a one-way ANOVA indicated that there is no significant difference between the three groups (*F*(2, 61.3) = 2.72; *p* = .074). Assumptions of the one-way ANOVA were met.
+
+## Repeated measures ANOVA
+
+Similar to the (independent- vs. paired-samples t-test), there are also different ANOVAs for independent and repeated measures. The one-way ANOVA mentioned before can only be used if the data are independent, e.g. from different participants. Often, you do have repeated (within-subjects) measures, e.g. measuring the same participant at several time points or in different conditions.
+
+. . .
+
+In Jamovi, we would, again, need the *wide* data set for this with pre, mid, and post exam scores.
+
+You can then simply select ANOVA –\> Repeated Measures ANOVA. Specifying the variables is a bit more tricky, as you have to write down the names of the "factor levels" in the first box, and drag the respective variable to the second column.
+
+![](images/clipboard-3214405174.png){width="554"}
+
+## 
+
+## Reporting the Repeated Measures ANOVA
+
+Before we report the ANOVA, we would again check the **assumptions**: Sphericity tests whether the variances of the differences between the conditions are equal. It should be non-significant, but if it is significant, we could add a sphericity correction to the degrees of freedom.
+
+. . .
+
+The results show that there is indeed a difference between the time points in exam scores (*F*(2, 198) = 121, *p* \< .001). It's also good practice to report the effect size, partial eta squared.
+
+![](images/clipboard-1754979398.png)
+
+## Post-Hoc Tests
+
+Again, we still don't know which time points differ from each other, for which we would run post-hoc tests (e.g. Tukey-corrected for multiple comparisons):
+
+![](images/clipboard-3460970609.png){width="594"}
+
+We can see that all time points significantly differ from each other, e.g. pre vs. mid (*t*(99) = -6.84; *p* \< .001).
+
+. . .
+
+Under *estimated marginal means* you can get a plot of the results:
+
+![](images/clipboard-2882609735.png)
+
+## Adding several factors
+
+One big advantage of ANOVAs (compared to t-tests) is that you can add several variables in it together to analyze their main effects as well as interactions between variables. For example, you might be interested in whether there are differences in caffeine intake (between-measures!) over time in the exam scores (within-variable!).
+
+. . .
+
+To do so in Jamovi, you would simply add "caffeine intake" to the "Between Subject Factor" box.
+
+If you then check out the output, you will see that there is a main effect for between-subjects and the interaction added (which are both non-significant).
+
+![](images/clipboard-1063358161.png)
+
+## Factorial ANOVA
+
+Similary, we might be interested in the effects (and interaction) of two (or more) *between-subjects* variables on some outcome, such as whether caffeine intake and gender have an effect on exam scores.
+
+E.g.: We could imagine that coffee has a stronger effect for men on exam scores than for women.
+
+. . .
+
+To analyze this, we don't need to run a *repeated measures* ANOVA, but can rather use a normal or factorial ANOVA. In Jamovi, we specify the dependent or outcome variable and the predictors as fixed factors.
+
+As with previous tests, we can test the assumptions, specify the precise model, run post-hoc tests and get plots (estimated marginal means).
+
+In this example, none of the effects reach significance.
+
+![](images/clipboard-2350995676.png)
+
+## Regression/Linear Model
+
+So far, we have mainly looked into using grouping variables (or categorical factors) as predictors. Only in correlation, we had two continuous variables. Sometimes we are interested in the effects (and interactions) of several (*between-subjects*) continuous and/or categorical variables on a (continuous) predictor. In this case, we can use an analysis that is actually like a swiss army knife: The **regression analysis** or linear model.
+
+. . .
+
+![](images/clipboard-1384170196.png){width="578"}
+
+## Interpreting Regression Output
+
+While discussing the details of regression models is beyond the scope of this workshop, just note that the output looks a bit different than what we're used from the ANOVAs. You get a t-value and a p-value for each effect, including comparisons of groups (one group to a reference level, e.g. "none" coffee intake). You can usually interpret this outcomes, but check out [this chapter](https://davidfoxcroft.github.io/lsj-book/12-Correlation-and-linear-regression.html#multiple-linear-regression) for details.
+
+# Take Away
+
+We've reached the end of this workshop!
+
+Thank you for participating. \
+You should now have had the opportunity to practice different statistical tests using Jamovi:
+
+-   t-tests
+
+-   one-way, repeated measures and factorial ANOVA
+
+-   regression
+
+-   testing assumptions
