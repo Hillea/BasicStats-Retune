@@ -334,7 +334,7 @@
     "href": "index.html",
     "title": "Basic Statistics Workshop Fall 2025",
     "section": "",
-    "text": "Welcome to the website of the workshop “Basic statistics” conducted during the Fall School 2025 of the TRR ReTune.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\nBefore the day of the workshop, please download and install Jamovi: https://www.jamovi.org/.\nYou can download the dataset we’ll use here. Click on the little download button on the top right:"
+    "text": "Welcome to the website of the workshop “Basic statistics” conducted during the Fall School 2025 of the TRR ReTune. The workshop will be given by Dr. Lea Hildebrandt.\nPlease use the navigation on the left to select the slides for each session (recommendation: Open in new tab).\nBefore the day of the workshop, please download and install Jamovi: https://www.jamovi.org/.\nYou can download the dataset we’ll use here. Click on the little download button on the top right:"
   },
   {
     "objectID": "index.html#schedule",
@@ -375,7 +375,7 @@
     "href": "DescViz.html#variability",
     "title": "Describing and Visualizing Data",
     "section": "Variability",
-    "text": "Variability\nIn addition to a value for “the middle of the data”, another measure of central tendency would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Percentiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median.",
+    "text": "Variability\nIn addition to a value for “the middle of the data”, another important measure would be the “spread” or variability.\nThere are different measures for variability:\n\nRange: Biggest value minus smallest value:\n\\[\n-100, 2,3,4,5,6,7,8,9,10 =&gt; 110\n\\]\n\n\n\nnot very robust!\n\n\n\nInterquartile range (IQR): Difference between 25th and 75th percentile. Percentiles are the smallest number such that e.g. 25% of the data are less than that number. The median is the 50th percentile!\n\n\n\n25th and 75th percentile can be easily calculated in Jamovi: Exploration -&gt; Descriptives -&gt; Statistics -&gt; click “Percentiles”.\nThe IQR is the range covered by the “middle half” of the data, often used together with the median.",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -425,7 +425,7 @@
     "href": "DescViz.html#principles-of-plotting",
     "title": "Describing and Visualizing Data",
     "section": "Principles of Plotting",
-    "text": "Principles of Plotting\n\nAnatomy of a plot: We have an x-axis (horizontal) and a y-axis (vertical).\nIt’s always a good idea to show the data.\nAvoid clutter.\nDon’t distort the data.\nAccount for perceptual limitations (e.g. color blindness, pie charts…)",
+    "text": "Principles of Plotting\n\nAnatomy of a plot: We have an x-axis (horizontal) and a y-axis (vertical).\nIt’s always a good idea to show the data.\nAvoid clutter.\nDon’t distort the data.\nAccount for perceptual limitations (e.g. color blindness, pie charts…)\n\n\nGo through plots in Jamovi",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -476,6 +476,16 @@
     "title": "Describing and Visualizing Data",
     "section": "Bar Graphs",
     "text": "Bar Graphs\nA bar graph looks on first sight similar to a histogram, but it does not show the distribution but rather one value (usually counts) for different groups.\n\nYou can also generate bar charts for continuous data that are not counts - but this is not advised. In this case, it will display the mean and the error bars will be the standard error (another measure of variability).",
+    "crumbs": [
+      "Describing and Visualizing Data"
+    ]
+  },
+  {
+    "objectID": "DescViz.html#scatterplots",
+    "href": "DescViz.html#scatterplots",
+    "title": "Describing and Visualizing Data",
+    "section": "Scatterplots",
+    "text": "Scatterplots\nIf you have two continuous variables, you may want to make a scatter plot. This can be achieved via the correlation analysis (more to follow) or using the Scatr module.",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -601,41 +611,21 @@
     ]
   },
   {
-    "objectID": "Probability.html#probability-theory",
-    "href": "Probability.html#probability-theory",
-    "title": "Statistical Theory",
-    "section": "Probability Theory",
-    "text": "Probability Theory\nDefinitions:\n\nExperiment: Activity that produces outcome\nSample space: Set of possible outcomes for an experiment\nEvent: Subset of the sample space, an outcome\n\n\n\nExperiment: e.g. roll a die\nSample space: six-sided die: {1,2,3,4,5,6}\nEvent: e.g. 3",
-    "crumbs": [
-      "Statistical Theory"
-    ]
-  },
-  {
-    "objectID": "Probability.html#probability-theory-2",
-    "href": "Probability.html#probability-theory-2",
-    "title": "Statistical Theory",
-    "section": "Probability Theory 2",
-    "text": "Probability Theory 2\nLet’s say we have a variable \\(X\\) that contains \\(N\\) independent events:\n\\[ X = E_1, E_2, …, E_n \\]\nThe probability of a certain event (event \\(i\\)) is then formally written as:\n\\[ P(X = E_i) \\]\n\nFormal features of probability theory:\n\nProbability can’t be negative.\nThe total probability of outcomes in the sample space is 1.\nThe probability of any individual event can’t be greater than 1.",
-    "crumbs": [
-      "Statistical Theory"
-    ]
-  },
-  {
     "objectID": "Probability.html#probability-distributions",
     "href": "Probability.html#probability-distributions",
     "title": "Statistical Theory",
     "section": "Probability Distributions",
-    "text": "Probability Distributions\nIf we assign a certain probability to each event, we have a probability distribution!\n\n\nProbability distributions are central to determine how likely an observed outcome is given a certain model (i.e. that specific probability distribution).\nThere are different probability distributions that are often used.",
+    "text": "Probability Distributions\nIf we assign a certain probability to each possible outcome, we have a probability distribution!\n\n\nProbability distributions are central to determine how likely an observed outcome is given a certain model (i.e. that specific probability distribution).\nThere are different probability distributions that are often used.",
     "crumbs": [
       "Statistical Theory"
     ]
   },
   {
-    "objectID": "Probability.html#the-binomial-distribution",
-    "href": "Probability.html#the-binomial-distribution",
+    "objectID": "Probability.html#probability-distributions-1",
+    "href": "Probability.html#probability-distributions-1",
     "title": "Statistical Theory",
-    "section": "The Binomial Distribution",
-    "text": "The Binomial Distribution\nThe binomial (“two categories”) distribution is used for discrete data with two possible outcomes (e.g., flipping a coin). It models the number of successes being observed (e.g., heads), given the probability of success (0.5 for fair coins) and the number of observations (flips of a coin, e.g., 10).\n\nHow many heads (successes) should we expect and with what probability?\nWe can simulate 10 coin flips (or dice) each 10.000 times and count the number of heads (out of the 10). We can use this distribution to work out the probability of different outcomes, e.g., getting at least 3 heads (or 6s) out of 10 tosses (dice rolls).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsuccess: whatever you want, also an “artificial” dichotomization like “roll a 6” vs. “roll no 6”\nadd up probabilities &gt;=3 or 1 - P(X &lt;= 2)",
+    "section": "Probability Distributions",
+    "text": "Probability Distributions\nThere are a number of different probability distributions, such as the binomial distribution, the normal or gaussian distribution, poisson distribution etc.\n\nFor some specific analysis, you might need specific knowledge about these different distributions. For today, we will limit it to understanding the normal distribution, because it (or very similar distributions) are central to statistics.",
     "crumbs": [
       "Statistical Theory"
     ]
@@ -645,7 +635,7 @@
     "href": "Probability.html#the-normal-distribution",
     "title": "Statistical Theory",
     "section": "The Normal Distribution",
-    "text": "The Normal Distribution\nThe normal distribution is very common in statistics (i.e., in the real world). It (roughly) reflects the probability of any value occurring for a continuous variable, such as height.\n\n\n\nNormal distribution of height\n\n\n\nThe normal distribution is always symmetrical\n=&gt; equal probability of observations above and below the mean.\n=&gt; the mean, median, and mode are all equal!\n\n\n\n\n\n\n\nDifferent means shift the normal\ndistribution along the x-axis.\n\n\n\n\n\n\nDifferent SDs lead to wider (lower SD)\nor narrower (higher SD) distributions.",
+    "text": "The Normal Distribution\nThe normal distribution is very common in statistics (i.e., in the real world). It (roughly) reflects the probability of any value occurring for a continuous variable, such as height.\n\n\n\nNormal distribution of height\n\n\n\nThe normal distribution is always symmetrical\n=&gt; equal probability of observations above and below the mean.\n=&gt; the mean, median, and mode are all equal!\n\n\n\n\n\n\n\nDifferent means shift the normal\ndistribution along the x-axis.\n\n\n\n\n\n\nDifferent SDs lead to wider (higher SD)\nor narrower (lower SD) distributions.",
     "crumbs": [
       "Statistical Theory"
     ]
@@ -655,7 +645,7 @@
     "href": "Probability.html#the-normal-distribution-1",
     "title": "Statistical Theory",
     "section": "The Normal Distribution",
-    "text": "The Normal Distribution",
+    "text": "The Normal Distribution\nAs discussed earlier (see SD), in the normal distribution, we know well how much of the probability falls in certain regions of the “normal curve”. This is very helpful when we later talk about Hypothesis Testing.",
     "crumbs": [
       "Statistical Theory"
     ]
