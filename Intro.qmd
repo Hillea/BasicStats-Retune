@@ -1,7 +1,6 @@
 ---
-title: "Why Statistics?"
+title: "Basic Statistics"
 subtitle: |
-   | Basic Statistics Workshop 
    | ReTune Fall School   
    | 17th of October, 2025
 author: "Dr. Lea Hildebrandt"
@@ -59,6 +58,8 @@ Today, I'm feeling...
 
 ## What to expect today?
 
+-   If you haven't done so, please download Jamovi ([www.jamovi.org](www.jamovi.org)).
+
 -   Slides can be found here: <https://hillea.github.io/BasicStats-Retune/>
 
 -   Textbooks this workshop is based on/that can be used to read up:
@@ -67,33 +68,18 @@ Today, I'm feeling...
 
     -   [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/)
 
-    -   [Statistics Done Wrong](https://www.statisticsdonewrong.com/data-analysis.html)
+-   Rather brief overview!
 
 ## Schedule {.scrollable .smaller}
 
-| Time        | Topic                                       |
-|-------------|---------------------------------------------|
-| 9:00 - 9:20 | Intro: Why Statistics?                      |
-| 9:20 - 9:40 | Getting started with Jamovi                 |
-| 10          | Descriptive Statistics & Data Visualization |
-|             | Probability & Sampling                      |
-|             | Hypothesis Testing                          |
-
-# True or False?
-
-::: {.incremental .smaller}
--   "People who write with their left hand live on average 9 years less than right-handers."
-
-    -   False!
-
--   “Shark attacks kill more people each year than lightning strikes.”
-
-    -   False
-
--   "Chocolate accelerates weight loss"
-
-    -   Well... false
-:::
+| Time          | Topic                                       |
+|---------------|---------------------------------------------|
+| 9:00 - 9:20   | Intro: Why Statistics?                      |
+| 9:20 - 9:40   | Getting started with Jamovi                 |
+| 9:40 - 10:00  | Descriptive Statistics & Data Visualization |
+| 10:00 - 10:45 | Probability & Sampling, Hypothesis Testing  |
+| 10:45 - 11:00 | Coffee Break                                |
+| 11:00 - 12:45 | Statistical Tests in Jamovi                 |
 
 # Why Statistics?
 
@@ -132,9 +118,16 @@ Today, I'm feeling...
 
 . . .
 
-![](images/clipboard-3793899018.png){width="163"}
+::::: columns
+::: {.column width="50%"}
+![](images/clipboard-1641481056.png)
+:::
 
-![](images/clipboard-1641481056.png){width="429"}
+::: {.column width="50%"}
+
+![](images/clipboard-3793899018.png)
+:::
+:::::
 
 ![[https://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21](https://www.reuters.com/fact-check/misleading-data-used-claim-covid-vaccines-do-more-harm-than-good-2024-03-21/?utm_source=chatgpt.com)](images/clipboard-8509855.png)
 
@@ -216,11 +209,11 @@ eye color can be categorical (e.g., "brown", "blue", "green") or numerical (wave
 
     -   columns: **variables**!
 
-        -   each variable contains one type of measurement
+        -   each variable contains one data type
 
     -   table cells = unique observations of variables per participant etc.
 
-![NHANES dataset](images/Dataset.jpg)
+![](images/NHANES.png)
 
 ::: notes
 possibly go through columns and ask for data types?
@@ -245,8 +238,6 @@ possibly go through columns and ask for data types?
 :::
 
 ::: notes
-Break-Out session: Brainstorm what makes a good vs. bad measurement!
-
 Group work/brainstorm:
 
 -   What are problems?
