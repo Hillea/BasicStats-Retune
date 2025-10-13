@@ -13,6 +13,7 @@ format:
     theme: serif
     chalkboard: 
           src: chalkboard.json
+          storage: chalkboard.json
     width: 1280
     height: 720
 from: markdown+emoji
@@ -44,8 +45,6 @@ div.cell-output-stdout {
 -   We use models, simplifications, of the world.
 
 ::: incremental
--   "a systematic way of thinking about how we describe the world and **use data \[to\] make decisions and predictions**, all in the context of the inherent **uncertainty** that exists in the real world." (Poldrack, Preface of ST21)
-
 -   "Statistical thinking is a way of **understanding** a complex world by describing it in relatively **simple terms** that nonetheless capture **essential aspects** of its structure or function, and that also provide us some idea of how **uncertain** we are about that knowledge." (Poldrack, Chapter 1)
 :::
 
@@ -77,49 +76,9 @@ Probability provides a model of the world (e.g. the coin is fair and we have a 5
 
 **Bayesian**: The weather forecast predicts 60% rain for the next 100 days, which means that I expect it to rain tomorrow with 60% chance (degree of belief).
 
-## Probability Theory
-
-Definitions:
-
--   **Experiment**: Activity that produces outcome
-
--   **Sample space**: Set of possible outcomes for an experiment
-
--   **Event**: Subset of the sample space, an outcome
-
-. . .
-
--   **Experiment**: e.g. roll a die
-
--   **Sample space**: six-sided die: {1,2,3,4,5,6}
-
--   **Event**: e.g. 3
-
-## Probability Theory 2
-
-Let's say we have a variable $X$ that contains $N$ independent events:
-
-$$ X = E_1, E_2, …, E_n $$
-
-The probability of a certain event (event $i$) is then formally written as:
-
-$$ P(X = E_i) $$
-
-. . .
-
-Formal features of probability theory:
-
-::: incremental
-1.  Probability can't be negative.
-
-2.  The total probability of outcomes in the sample space is 1.
-
-3.  The probability of any individual event can't be greater than 1.
-:::
-
 ## Probability Distributions
 
-If we assign a certain probability to each event, we have a probability distribution!
+If we assign a certain probability to each possible outcome, we have a probability distribution!
 
 ![](images/clipboard-1027135618.png){width="429"}
 
@@ -129,55 +88,13 @@ Probability distributions are central to *determine how likely an observed outco
 
 There are different probability distributions that are often used.
 
-## The Binomial Distribution
+## Probability Distributions
 
-The **binomial** ("two categories") **distribution** is used for *discrete* data with *two* possible outcomes (e.g., flipping a coin). It models the number of *successes* being observed (e.g., heads), given the probability of success (0.5 for fair coins) and the number of observations (flips of a coin, e.g., 10).
+There are a number of different probability distributions, such as the binomial distribution, the normal or gaussian distribution, poisson distribution etc.
 
 . . .
 
-How many heads (successes) should we expect and with what probability?
-
-We can simulate 10 coin flips (or dice) each 10.000 times and count the number of heads (out of the 10). We can use this distribution to work out the probability of different outcomes, e.g., getting at least 3 heads (or 6s) out of 10 tosses (dice rolls).
-
-:::::: columns
-::: column
-```{r fig.height=3, fig.width=4}
-heads10000 <- replicate(n = 10000,                          
-                        expr = sample(0:1, 10, TRUE) %>% sum()) 
-data10000 <- tibble(heads = heads10000) %>%   # convert to a tibble     
-  group_by(heads) %>% # group by number of possibilities                  
-  summarise(n = n(), # count occurrences of each possibility,  
-            p=n/10000) # & calculate probability (p) of each 
-ggplot(data10000, aes(x = heads,y = p)) +    
-  geom_bar(stat = "identity") +    
-  labs(x = "Number of Heads",        
-       y = "Relative Frequency") +   
-  theme_bw() +   
-  scale_x_continuous(breaks = 0:10)
-```
-:::
-
-:::: column
-::: fragment
-```{r fig.height=3, fig.width=4}
-dice10000 <- replicate(n = 10000,                         
-                       expr = sample(0:1, 10, TRUE, prob = (c(5/6, 1/6))) %>% 
-                         sum()) 
-tibble(heads = dice10000) %>%   # convert to a tibble   
-  group_by(heads) %>% # group by number of possibilities    
-  summarise(n = n(), # count occurrences of each possibility,             
-            p=n/10000) %>%  # & calculate probability (p) of each   
-  ggplot(aes(x = heads,y = p)) +    geom_bar(stat = "identity") +    labs(x = "Number of 6s in 10 dice rolls",         y = "Relative Frequency") +   theme_bw() +   scale_x_continuous(breaks = 0:10)
-```
-:::
-::::
-::::::
-
-::: notes
-success: whatever you want, also an "artificial" dichotomization like "roll a 6" vs. "roll no 6"
-
-add up probabilities \>=3 or 1 - P(X \<= 2)
-:::
+For some specific analysis, you might need specific knowledge about these different distributions. For today, we will limit it to understanding the normal distribution, because it (or very similar distributions) are central to statistics.
 
 ## The Normal Distribution
 
@@ -201,12 +118,14 @@ distribution along the x-axis.](images/clipboard-2994289069.png){alt="Different 
 :::
 
 ::: {.column width="50%"}
-![Different SDs lead to wider (lower SD) \
-or narrower (higher SD) distributions.](images/clipboard-2033562421.png){alt="Different SDs lead to wider (lower SD) or narrower (higher SD) distributions." width="221"}
+![Different SDs lead to wider (higher SD) \
+or narrower (lower SD) distributions.](images/clipboard-2033562421.png){alt="Different SDs lead to wider (lower SD) or narrower (higher SD) distributions." width="221"}
 :::
 :::::
 
 ## The Normal Distribution
+
+As discussed earlier (see SD), in the normal distribution, we know well how much of the probability falls in certain regions of the "normal curve". This is very helpful when we later talk about Hypothesis Testing.
 
 ::::: columns
 ::: {.column width="50%"}
@@ -341,9 +260,9 @@ If we replicated the experiment with a different sample, 95% of CIs would contai
 
 Research hypothesis vs. statistical hypothesis:
 
--   RH: Caffeine boosts cognitive performance.
+-   Research Hypothesis: Caffeine boosts cognitive performance.
 
--   SH: The group with a high caffeine intake will score higher on the exam than the group with low intake (high \> low intake).
+-   Statistical Hypothesis: The group with a high caffeine intake will score higher on the exam than the group with low intake (high \> low intake).
 
 . . .
 

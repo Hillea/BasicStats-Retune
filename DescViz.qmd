@@ -91,7 +91,7 @@ $$
 
 ## Variability
 
-In addition to a value for "the middle of the data", another measure of central tendency would be the "spread" or *variability*.
+In addition to a value for "the middle of the data", another important measure would be the "spread" or *variability*.
 
 There are different measures for variability:
 
@@ -215,6 +215,10 @@ Unfortunately, Jamovi only has limited plotting or editing options, but for most
 5.  Account for perceptual limitations (e.g. color blindness, pie charts...)
 :::
 
+::: notes
+Go through plots in Jamovi
+:::
+
 ## Histograms
 
 Histograms help you to get an impression of how your data of a variable is distributed. They are used for *continuous* data (interval or ratio scale).
@@ -263,6 +267,12 @@ A bar graph looks on first sight similar to a histogram, but it does not show th
 You can also generate bar charts for continuous data that are not counts - but this is not advised. In this case, it will display the mean and the error bars will be the standard error (another measure of variability).
 
 ![](images/clipboard-1219302266.png){width="439"}
+
+## Scatterplots
+
+If you have two continuous variables, you may want to make a scatter plot. This can be achieved via the correlation analysis (more to follow) or using the Scatr module.
+
+![](images/clipboard-3547674544.png){width="709"}
 
 # End of Part 3
 

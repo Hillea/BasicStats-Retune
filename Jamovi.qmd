@@ -55,7 +55,7 @@ If you open Jamovi, it should look like this:![](images/Jamovi.png)
 
 ## Load a Dataset
 
-Open the file `WorkshopData_Wide.csv` by clicking the three stripes on the upper left, "open", "browse" and searching for and selecting the file in the file explorer.
+Open the file [`WorkshopData_Wide.csv`](https://github.com/Hillea/BasicStats-Retune/blob/main/Data/WorkshopData_Wide.csv) by clicking the three stripes on the upper left, "open", "browse" and searching for and selecting the file in the file explorer.
 
 ## Variables
 
