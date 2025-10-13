@@ -11,7 +11,8 @@ format:
     scrollable: true
     slide-number: true
     theme: serif
-    chalkboard: true
+    chalkboard: 
+          src: chalkboard.json
     width: 1280
     height: 720
 from: markdown+emoji
@@ -72,7 +73,7 @@ Probability provides a model of the world (e.g. the coin is fair and we have a 5
 
 ## Frequentist vs. Bayesian View
 
-**Frequentist**: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain (The probability gets closer to it's real value over time).
+**Frequentist**: For the next 100 days, the weather forecast predicts 60% rain, which means that on 60 days, it will rain. (The probability gets closer to its real value over time).
 
 **Bayesian**: The weather forecast predicts 60% rain for the next 100 days, which means that I expect it to rain tomorrow with 60% chance (degree of belief).
 
@@ -324,7 +325,9 @@ As we use our sample mean (and adjusted SD) as our best estimates for the popula
 
 For this we calculate the confidence interval, which denotes the e.g. 95% probability that the sample mean lies within 1.96 standard errors of the population mean.
 
-![. . .](images/clipboard-1215725227.png){alt=". . ."}
+![](images/clipboard-1215725227.png){alt=". . ."}
+
+. . .
 
 It does *not* mean, that the true population mean lies with 95% probability within the sample's confidence interval!
 
@@ -379,7 +382,7 @@ The goal is to minimize these errors.
 We want to minimize this error to be below a probability of **⍺ = 0.05**. \
 This means that we accept up to 5% wrong decisions if we have extreme test statistics (e.g. a huge difference in exam scores between high and low caffeine intake groups).
 
-**. . .**
+. . .
 
 **Type II error**: incorrectly accepting the null hypothesis to be true when it is, in fact, wrong.
 
@@ -477,7 +480,7 @@ A *p*-value of .01 does....
 
 -   NOT mean that the probability that you're making a wrong decision is 1%!
 
-    -   This would also be $P(H_0|data)$! p-values are probabilities of data (under $H_0$), not probabilities of hypotheses! And we cannot easily use Bayes to turn the condition because we would need additional information like the prior probability of an alternative hypothesis being true.
+    -   This would also be $P(H_0|data)$! p-values are probabilities of data (under $H_0$), not probabilities of hypotheses!
 
 -   NOT mean that you would get the same significance 99% of the time if you repeated the study.
 
@@ -515,3 +518,9 @@ Power can be increased by:
 
 -   Calculating the (a priori) power of your study: Running a **power analysis** is very important while planning your study, as it allows you to either calculate the necessary sample size for attaining a certain level of power (e.g. 80%) or calculating the power for a certain sample size.
 :::
+
+# End of Part 4
+
+-   You should have learned that probability distributions are central to statistics, why we sample and the logic behind Null Hypothesis Significance Testing.
+
+Next: **Coffee Break**, then hands-on Jamovi Practice!

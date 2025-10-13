@@ -35,7 +35,7 @@ We're using it today because:
 -   It uses R
 :::
 
-# Install Jamovi
+## Install Jamovi
 
 ```{css}
 code.sourceCode {
@@ -49,15 +49,15 @@ div.cell-output-stdout {
 
 If you haven't done so, please install Jamovi: <https://www.jamovi.org/>.
 
-# First Steps
+## First Steps
 
-If you open Jamovi, it should look like this:
+If you open Jamovi, it should look like this:![](images/Jamovi.png)
 
-# ![](images/Jamovi.png)Load a Dataset
+## Load a Dataset
 
-Open the file WorkshopData.csv by clicking the three stripes on the upper left, "open", "browse" and searching for and selecting the file in the file explorer.
+Open the file `WorkshopData_Wide.csv` by clicking the three stripes on the upper left, "open", "browse" and searching for and selecting the file in the file explorer.
 
-# Variables
+## Variables
 
 Each column in the "Data" part represents a variable, each row a "case" or participant.
 
@@ -67,7 +67,7 @@ If you double-click on the header/name of the variable, a small menu opens where
 
 . . .
 
-**Exercise**: Please look through the variables and check whether the measurement type, the data type and the levels are correct. Discuss if you are not sure. In addition, rename "Exam_Score" to "Score".
+**Exercise**: Please look through the variables and check whether the measurement type, the data type and the levels are correct. Discuss if you are not sure.
 
 ## Adding Variables
 
@@ -81,14 +81,20 @@ Computing or transforming a variable can be helpful to get a different version o
 
 . . .
 
-**Exercise 2**: Make a new variable which is the centered version of Score by subtracting the average score across all participants from each individual score. You may use compute or transform.
+**Exercise 2**: Make a new variable which is the centered version of `Exam_Post` by subtracting the average score across all participants from each individual score. You may use compute or transform.
 
-# Add-ons
+## Add-ons
 
 Jamovi allows you to run basic analyses. Add-ons can increase the number of possible analyses. These are so-called modules for specific purposes that other people created and that you can add to your version of Jamovi.
 
 In the Analysis menu, you can find a `+` sign on the right. If you click on it, you can browse the Jamovi library and search for modules that might be helpful for you. The modules range from specific analyses to data transformation to visualization.
 
-# Quitting Jamovi
+## Quitting Jamovi
 
-If you quit Jamovi, you can save your dataset (preferably under a different name if you made changes) and/or the results. One advantage of Jamovi is that it is possible to save both data and (annotated) results in the same file, which makes it easier to understand later to understand the results. The output of Jamovi is also already nicely formatted.
+If you quit Jamovi, you can save your dataset (preferably under a different name if you made changes) and/or the results. One advantage of Jamovi is that it is possible to save both data and (annotated) results in the same file, which makes it easier to later understand the results. The output of Jamovi is also already nicely formatted.
+
+# End of Part 2
+
+Next:
+
+**Descriptive Statistics & Data Visualization**

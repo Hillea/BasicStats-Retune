@@ -7,3 +7,18 @@ Welcome to the website of the workshop "Basic statistics" conducted during the F
 Please use the navigation on the left to select the slides for each session (recommendation: Open in new tab).
 
 Before the day of the workshop, please download and install Jamovi: <https://www.jamovi.org/>.
+
+You can download the dataset we'll use [here](https://github.com/Hillea/BasicStats-Retune/blob/main/Data/WorkshopData_Wide.csv). Click on the little download button on the top right:
+
+![](images/clipboard-49263035.png){width="376"}
+
+## Schedule
+
+| Time          | Topic                                       |
+|---------------|---------------------------------------------|
+| 9:00 - 9:20   | Intro: Why Statistics?                      |
+| 9:20 - 9:40   | Getting started with Jamovi                 |
+| 9:40 - 10:00  | Descriptive Statistics & Data Visualization |
+| 10:00 - 10:45 | Probability & Sampling, Hypothesis Testing  |
+| 10:45 - 11:00 | Coffee Break                                |
+| 11:00 - 12:45 | Statistical Tests in Jamovi                 |
