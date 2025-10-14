@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.7.32">
 
   <meta name="author" content="Dr.&nbsp;Lea Hildebrandt">
-  <title>Basic Statistics Workshop – Correlation, T-Tests &amp; ANOVA in Jamovi</title>
+  <title>Basic Statistics Workshop – Statistical Analyses in Jamovi</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -130,7 +130,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Correlation, T-Tests &amp; ANOVA in Jamovi</h1>
+  <h1 class="title">Statistical Analyses in Jamovi</h1>
   <p class="subtitle"></p><div class="line-block">Basic Statistics Workshop<br>
 ReTune Fall School<br>
 17th of October, 2025</div><p></p>
@@ -179,7 +179,18 @@ Dr.&nbsp;Lea Hildebrandt
 </tr>
 </tbody>
 </table>
-<p>Due to time constraints, we will focus on the tests often used in published papers (printed in bold).</p>
+<p>Due to time constraints, we will focus on the most common tests, often used in published papers (printed in bold).</p>
+</section>
+<section id="research-questions-statistical-hypotheses" class="slide level2 scrollable">
+<h2>Research Questions &amp; Statistical Hypotheses</h2>
+<p>Given our small dataset, what could be questions that you would find interesting to answer?</p>
+<p>Let’s collect possible Research Questions and Hypotheses!<sup>1</sup></p>
+<p><img data-src="images/clipboard-3663127193.png">If you haven’t done so yet, please open the <code>WorkshopData.csv</code> file in Jamovi.</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Of course, usually you would come up with these before you collect data and not based on the dataset!</p></li></ol></aside></section></section>
+<section>
+<section id="different-statistical-analyses-in-jamovi" class="title-slide slide level1 center">
+<h1>Different Statistical Analyses in Jamovi</h1>
+
 </section>
 <section id="correlation" class="slide level2 scrollable">
 <h2>Correlation</h2>
@@ -189,7 +200,7 @@ Dr.&nbsp;Lea Hildebrandt
 <p>The correlation coefficient <em>r</em> can be between -1 (perfect negative correlation) and 1 (perfect positive correlation).</p>
 <p><img data-src="images/clipboard-2024951202.png" width="541"></p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><span class="math display">\[
+<aside><ol class="aside-footnotes"><li id="fn2"><p><span class="math display">\[
 r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{(N - 1)s_x s_y}
 \]</span></p>
 <p>The numerator represents the covariance between x and y, the denominator is for standardizing the measure by both SDs.</p></li></ol></aside></section>
@@ -199,7 +210,7 @@ r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y}
 <p>Click on the Analyses tab “Regression” and then “Correlation Matrix”. You can now select two variables by adding them to the right box.</p>
 <p>You can also select whether you want to include a visualization of the correlation.</p>
 
-<img data-src="images/clipboard-3741192376.png" width="626" class="r-stretch"></section>
+<img data-src="images/clipboard-1083831718.png" width="540" class="r-stretch"></section>
 <section id="interpreting-correlations" class="slide level2">
 <h2>Interpreting Correlations</h2>
 <p>Interpreting the r statistic is a bit difficult and it depends on the field and context whether a certain correlation is strong or not. One rule of thumb is the following:</p>
@@ -209,7 +220,7 @@ r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y}
 <h2>Spearman’s Rank Correlation</h2>
 <p>So far, we have used the Pearson’s correlation coefficient, which is by far the most used one. However, we can only use this correlation if the relationship between variables is expected to be linear!</p>
 <div class="fragment">
-<p>Study hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. In such a case (or with ordinal data), we would rather use the <strong>Spearman Rank Correlation</strong>.</p>
+<p>Study hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. Or we might be interested in the correlation involving an ordinal variable like motivation level. In such a case (or with ordinal data), we would rather use the <strong>Spearman Rank Correlation</strong>.</p>
 </div>
 <div class="fragment">
 <p>For this analysis, Jamovi doesn’t use the raw data but ranks them in order and uses these ranks. If participant 1 was the person with the most study hours and the best exam score, they would be rank 1 for both variables. Subsequently, the ranks are correlated.</p>
@@ -267,7 +278,7 @@ div.cell-output-stdout {
 <h2>Independent Samples t-Test in Jamovi</h2>
 <p><strong>Exercise</strong>: Try to figure out how to run an Independent Samples t-Test to test the influence of caffeine intake on exam scores!</p>
 <div class="fragment">
-<p>Analysis -&gt; T-Tests -&gt; Independent Samples -&gt; exam_scores as Dependent Variable -&gt; new caffeine variable as Grouping Variable.</p>
+<p>Analysis -&gt; T-Tests -&gt; Independent Samples -&gt; Exam_Post as Dependent Variable -&gt; new caffeine variable as Grouping Variable.</p>
 <p>It is good practice to choose Welch’s test (because it allows for the SDs of the groups to vary), as well as selecting a directed/one-sided hypothesis if possible.</p>
 <p>Also, you should test your assumptions, which is really easy in Jamovi.</p>
 <p>Finally, it is a good idea to report the descriptives, mean difference with CI, and effect size as well.</p>
@@ -292,8 +303,7 @@ div.cell-output-stdout {
 </section>
 <section id="paired-samples-t-tests-in-jamovi" class="slide level2">
 <h2>Paired-Samples t-Tests in Jamovi</h2>
-<p>Obviously, we need to collect data with repeated measures for a paired-samples t-test. Please open the file <em>WorkshopData_Wide</em> in Jamovi.</p>
-<p>You can now see that there are three columns for the exam scores: pre, mid, and post.</p>
+<p>Obviously, we need to collect data with repeated measures for a paired-samples t-test. Fortunately, we already have Pre (Mid,) and Post measures of the exam scores (in a <em>wide format</em>).</p>
 
 <div class="fragment">
 <p><strong>Exercise</strong>: Try to run a paired-samples t-test comparing pre and post exam scores. We expected post scores to be lower.</p>
@@ -304,11 +314,13 @@ div.cell-output-stdout {
 </div>
 <div class="fragment">
 <p>The <strong>assumption of normality</strong> seems to be violated - however, the QQ-plot looks okayish (dots fall on line).<br>
-Instead of the Student’s t-test, you could run the non-parametric alternative, which is the <strong>Wilcoxon rank test</strong> and is independent of the assumption of normality.</p>
-<p>This tests whether the median (ranked) difference between paired observations is zero.</p>
+</p>
 </div>
 <aside><div>
 <p>Note on <strong>Long vs.&nbsp;wide data:</strong> For a lot of analyses, you’d need the data in <em>long</em> format, with several rows per participant. For this t-test in Jamovi, however, you’d need it in <em>wide</em> format, which means one row per participant and separate columns for exam scores pre, mid, and post measurements.</p>
+<p>___</p>
+<p>Instead of the Student’s t-test, you could run the non-parametric alternative, which is the <strong>Wilcoxon rank test</strong> and is independent of the assumption of normality.</p>
+<p>This tests whether the median (ranked) difference between paired observations is zero.</p>
 </div></aside></section>
 <section id="reporting-a-paired-samples-t-test" class="slide level2">
 <h2>Reporting a Paired-Samples t-Test</h2>
@@ -336,9 +348,9 @@ Instead of the Student’s t-test, you could run the non-parametric alternative,
 <h2>One-Way Analysis of Variance</h2>
 <p>With ANOVAs, we generally test whether there are differences between the groups, but not directly which groups differ from each other. (Spoiler: To do so, we need to run follow-up (t-)tests.)</p>
 <p>In other words, our null hypothesis would be that e.g.&nbsp;caffeine has no effect on scores and all groups score the same:</p>
-<p>$ H_0 = mean_a == mean_b == mean_c $</p>
+<p><span class="math display">\[H_0 = mean_n == mean_l == mean_h \]</span></p>
 <p>In contrast, the alternative hypothesis would be:</p>
-<p>$ H_a = $not all means are equal</p>
+<p><span class="math display">\[H_a = \text{not all means are equal}\]</span></p>
 </section>
 <section id="analysis-of-variance" class="slide level2">
 <h2>Analysis of <em>Variance</em>?</h2>
@@ -366,34 +378,20 @@ Instead of the Student’s t-test, you could run the non-parametric alternative,
 <h2>One-Way ANOVA in Jamovi</h2>
 <p><strong>Exercise</strong>: Try to figure out how to run a one-way ANOVA in Jamovi, testing whether the three levels of coffee intake lead to differences in exam scores.</p>
 <div class="fragment">
-<p><img data-src="images/clipboard-2157236749.png"></p>
+<p><img data-src="images/clipboard-1114275454.png" width="675"></p>
 </div>
 </section>
 <section id="interpreting-the-anova" class="slide level2">
 <h2>Interpreting the ANOVA</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">One-Way ANOVA (Welch’s)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">&nbsp;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Exam_Score</td>
-</tr>
-</tbody>
-</table>
+<p><img data-src="images/clipboard-1307524572.png"></p>
 <p>The <em>p</em>-value is not significant at 𝛼 = 0.05.</p>
 <div class="fragment">
 <p>Even if the result would be significant, we would not know yet how exactly the groups differ. For this aim, we could have a look at the descriptive plot and run post-hoc tests. It’s usually a good idea to correct for multiple comparisons.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/clipboard-1392460634.png"></p>
+<p><img data-src="images/clipboard-2198405225.png"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/clipboard-3420688218.png"></p>
+<p><img data-src="images/clipboard-2199394222.png"></p>
 </div></div>
 </div>
 </section>
@@ -414,25 +412,21 @@ Instead of the Student’s t-test, you could run the non-parametric alternative,
 <div class="fragment">
 <p>In Jamovi, we would, again, need the <em>wide</em> data set for this with pre, mid, and post exam scores.</p>
 <p>You can then simply select ANOVA –&gt; Repeated Measures ANOVA. Specifying the variables is a bit more tricky, as you have to write down the names of the “factor levels” in the first box, and drag the respective variable to the second column.</p>
-<p><img data-src="images/clipboard-3214405174.png" width="554"></p>
+<p><img data-src="images/clipboard-3331638741.png" width="558"></p>
 </div>
-</section>
-<section id="section" class="slide level2">
-<h2></h2>
 </section>
 <section id="reporting-the-repeated-measures-anova" class="slide level2">
 <h2>Reporting the Repeated Measures ANOVA</h2>
 <p>Before we report the ANOVA, we would again check the <strong>assumptions</strong>: Sphericity tests whether the variances of the differences between the conditions are equal. It should be non-significant, but if it is significant, we could add a sphericity correction to the degrees of freedom.</p>
 <div class="fragment">
-<p>The results show that there is indeed a difference between the time points in exam scores (<em>F</em>(2, 198) = 121, <em>p</em> &lt; .001). It’s also good practice to report the effect size, partial eta squared.</p>
-<p><img data-src="images/clipboard-1754979398.png"></p>
+<p>The results show that there is indeed a difference between the time points in exam scores (<em>F</em>(2, 198) = 143, <em>p</em> &lt; .001). It’s also good practice to report the effect size, (partial) eta squared.</p>
 </div>
 </section>
 <section id="post-hoc-tests" class="slide level2">
-<h2>Post-Hoc Tests</h2>
+<h2><img data-src="images/clipboard-2786782958.png">Post-Hoc Tests</h2>
 <p>Again, we still don’t know which time points differ from each other, for which we would run post-hoc tests (e.g.&nbsp;Tukey-corrected for multiple comparisons):</p>
-<p><img data-src="images/clipboard-3460970609.png" width="594"></p>
-<p>We can see that all time points significantly differ from each other, e.g.&nbsp;pre vs.&nbsp;mid (<em>t</em>(99) = -6.84; <em>p</em> &lt; .001).</p>
+<p><img data-src="images/clipboard-1658077368.png"></p>
+<p>We can see that all time points significantly differ from each other, e.g.&nbsp;pre vs.&nbsp;mid (<em>t</em>(99) = -9.43; <em>p</em> &lt; .001).</p>
 <div class="fragment">
 <p>Under <em>estimated marginal means</em> you can get a plot of the results:</p>
 <p><img data-src="images/clipboard-2882609735.png"></p>
@@ -522,7 +516,7 @@ You should now have had the opportunity to practice different statistical tests 
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'chalkboard': {"buttons":true,"src":"chalkboard2.json","storage":"chalkboard2.json"},
 'smaller': true,
  
         // Display controls in the bottom right corner
