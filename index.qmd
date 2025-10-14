@@ -8,7 +8,7 @@ Please use the navigation on the left to select the slides for each session (rec
 
 Before the day of the workshop, please download and install Jamovi: <https://www.jamovi.org/>.
 
-You can download the dataset we'll use [here](https://github.com/Hillea/BasicStats-Retune/blob/main/Data/WorkshopData_Wide.csv). Click on the little download button on the top right:
+You can download the dataset we'll use [here](https://github.com/Hillea/BasicStats-Retune/blob/main/Data/WorkshopData.csv). Click on the little download button on the top right:
 
 ![](images/clipboard-49263035.png){width="376"}
 
