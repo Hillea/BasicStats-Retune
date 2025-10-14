@@ -1,5 +1,5 @@
 ---
-title: "Correlation, T-Tests & ANOVA in Jamovi"
+title: "Statistical Analyses in Jamovi"
 subtitle: |
    | Basic Statistics Workshop 
    | ReTune Fall School   
@@ -11,7 +11,9 @@ format:
     scrollable: true
     slide-number: true
     theme: serif
-    chalkboard: true
+    chalkboard: 
+      src: chalkboard2.json
+      storage: chalkboard2.json
     width: 1280
     height: 720
 from: markdown+emoji
@@ -28,7 +30,19 @@ There are a variety of different statistical tests. The choice depends on the na
 | *continuous* | e.g. **correlation**, linear model/regression | e.g. generalized linear model/logistic regression |
 | *categorical* | e.g. **t-test, ANOVA**, linear model | e.g. Chi\^2-test |
 
-Due to time constraints, we will focus on the tests often used in published papers (printed in bold).
+Due to time constraints, we will focus on the most common tests, often used in published papers (printed in bold).
+
+## Research Questions & Statistical Hypotheses
+
+Given our small dataset, what could be questions that you would find interesting to answer?
+
+Let's collect possible Research Questions and Hypotheses![^1]
+
+[^1]: Of course, usually you would come up with these before you collect data and not based on the dataset!
+
+![](images/clipboard-3663127193.png)If you haven't done so yet, please open the `WorkshopData.csv` file in Jamovi.
+
+# Different Statistical Analyses in Jamovi
 
 ## Correlation
 
@@ -36,11 +50,9 @@ Correlations are used if you have two continuous variables and you want to check
 
 . . .
 
-Running a correlation analysis, we test whether two variables co-vary,[^1] i.e. if one is high, the other variable also tends to be high (or, the opposite, low).
+Running a correlation analysis, we test whether two variables co-vary,[^2] i.e. if one is high, the other variable also tends to be high (or, the opposite, low).
 
-[^1]: 
-
-    $$
+[^2]: $$
     r = \frac{covariance}{s_xs_y} = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{(N - 1)s_x s_y}
     $$
 
@@ -58,7 +70,7 @@ Click on the Analyses tab "Regression" and then "Correlation Matrix". You can no
 
 You can also select whether you want to include a visualization of the correlation.
 
-![](images/clipboard-3741192376.png){width="626"}
+![](images/clipboard-1083831718.png){width="540"}
 
 ## Interpreting Correlations
 
@@ -72,7 +84,7 @@ So far, we have used the Pearson's correlation coefficient, which is by far the 
 
 . . .
 
-Study hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. In such a case (or with ordinal data), we would rather use the **Spearman Rank Correlation**.
+Study hours, for example, could also be related to exam score non-linearly: The first hours studied help a lot in increasing your grade, but to get from 99% to 100% might take a lot more work. Or we might be interested in the correlation involving an ordinal variable like motivation level. In such a case (or with ordinal data), we would rather use the **Spearman Rank Correlation**.
 
 . . .
 
@@ -141,7 +153,7 @@ If we want to run a t-Test, we first need to define a variable with two levels. 
 
 . . .
 
-Analysis -\> T-Tests -\> Independent Samples -\> exam_scores as Dependent Variable -\> new caffeine variable as Grouping Variable.
+Analysis -\> T-Tests -\> Independent Samples -\> Exam_Post as Dependent Variable -\> new caffeine variable as Grouping Variable.
 
 It is good practice to choose Welch's test (because it allows for the SDs of the groups to vary), as well as selecting a directed/one-sided hypothesis if possible.
 
@@ -170,12 +182,16 @@ $H_A$ = Exam scores are lower in a re-test than in the first exam.
 
 ## Paired-Samples t-Tests in Jamovi
 
-Obviously, we need to collect data with repeated measures for a paired-samples t-test. Please open the file *WorkshopData_Wide* in Jamovi.
-
-You can now see that there are three columns for the exam scores: pre, mid, and post.
+Obviously, we need to collect data with repeated measures for a paired-samples t-test. Fortunately, we already have Pre (Mid,) and Post measures of the exam scores (in a *wide format*).
 
 ::: aside
 Note on **Long vs. wide data:** For a lot of analyses, you'd need the data in *long* format, with several rows per participant. For this t-test in Jamovi, however, you'd need it in *wide* format, which means one row per participant and separate columns for exam scores pre, mid, and post measurements.
+
+\_\_\_
+
+Instead of the Student's t-test, you could run the non-parametric alternative, which is the **Wilcoxon rank test** and is independent of the assumption of normality.
+
+This tests whether the median (ranked) difference between paired observations is zero.
 :::
 
 . . .
@@ -191,9 +207,6 @@ Also select the assumption checks, the correct directed hypothesis, and mean dif
 . . .
 
 The **assumption of normality** seems to be violated - however, the QQ-plot looks okayish (dots fall on line).\
-Instead of the Student's t-test, you could run the non-parametric alternative, which is the **Wilcoxon rank test** and is independent of the assumption of normality.
-
-This tests whether the median (ranked) difference between paired observations is zero.
 
 ## Reporting a Paired-Samples t-Test
 
@@ -223,15 +236,11 @@ With ANOVAs, we generally test whether there are differences between the groups,
 
 In other words, our null hypothesis would be that e.g. caffeine has no effect on scores and all groups score the same:
 
-$
-H_0 = mean_a == mean_b == mean_c 
-$
+$$H_0 = mean_n == mean_l == mean_h $$
 
 In contrast, the alternative hypothesis would be:
 
-$
-H_a = 
-$not all means are equal
+$$H_a = \text{not all means are equal}$$
 
 ## Analysis of *Variance*?
 
@@ -255,14 +264,11 @@ To simplify it (a lot), what we're interested in is whether the amount that the 
 
 . . .
 
-![](images/clipboard-2157236749.png)
+![](images/clipboard-1114275454.png){width="675"}
 
 ## Interpreting the ANOVA
 
-| One-Way ANOVA (Welch's) |
-|:------------------------|
-|                         |
-| Exam_Score              |
+![](images/clipboard-1307524572.png)
 
 The *p*-value is not significant at 𝛼 = 0.05.
 
@@ -272,11 +278,11 @@ Even if the result would be significant, we would not know yet how exactly the g
 
 ::::: columns
 ::: {.column width="50%"}
-![](images/clipboard-1392460634.png)
+![](images/clipboard-2198405225.png)
 :::
 
 ::: {.column width="50%"}
-![](images/clipboard-3420688218.png)
+![](images/clipboard-2199394222.png)
 :::
 :::::
 
@@ -302,9 +308,7 @@ In Jamovi, we would, again, need the *wide* data set for this with pre, mid, and
 
 You can then simply select ANOVA –\> Repeated Measures ANOVA. Specifying the variables is a bit more tricky, as you have to write down the names of the "factor levels" in the first box, and drag the respective variable to the second column.
 
-![](images/clipboard-3214405174.png){width="554"}
-
-## 
+![](images/clipboard-3331638741.png){width="558"}
 
 ## Reporting the Repeated Measures ANOVA
 
@@ -312,17 +316,15 @@ Before we report the ANOVA, we would again check the **assumptions**: Sphericity
 
 . . .
 
-The results show that there is indeed a difference between the time points in exam scores (*F*(2, 198) = 121, *p* \< .001). It's also good practice to report the effect size, partial eta squared.
+The results show that there is indeed a difference between the time points in exam scores (*F*(2, 198) = 143, *p* \< .001). It's also good practice to report the effect size, (partial) eta squared.
 
-![](images/clipboard-1754979398.png)
-
-## Post-Hoc Tests
+## ![](images/clipboard-2786782958.png)Post-Hoc Tests
 
 Again, we still don't know which time points differ from each other, for which we would run post-hoc tests (e.g. Tukey-corrected for multiple comparisons):
 
-![](images/clipboard-3460970609.png){width="594"}
+![](images/clipboard-1658077368.png)
 
-We can see that all time points significantly differ from each other, e.g. pre vs. mid (*t*(99) = -6.84; *p* \< .001).
+We can see that all time points significantly differ from each other, e.g. pre vs. mid (*t*(99) = -9.43; *p* \< .001).
 
 . . .
 
@@ -374,7 +376,7 @@ While discussing the details of regression models is beyond the scope of this wo
 
 We've reached the end of this workshop!
 
-Thank you for participating. \
+Thank you for participating.\
 You should now have had the opportunity to practice different statistical tests using Jamovi:
 
 -   t-tests

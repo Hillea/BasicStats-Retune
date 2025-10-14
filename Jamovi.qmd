@@ -81,7 +81,7 @@ Computing or transforming a variable can be helpful to get a different version o
 
 . . .
 
-**Exercise 2**: Make a new variable which is the centered version of `Exam_Post` by subtracting the average score across all participants from each individual score. You may use compute or transform.
+**Exercise 2**: Make a new variable which is the difference between `Exam_Pre` and `Exam_Post`.
 
 ## Add-ons
 
