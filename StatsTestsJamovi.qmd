@@ -32,6 +32,10 @@ There are a variety of different statistical tests. The choice depends on the na
 
 Due to time constraints, we will focus on the most common tests, often used in published papers (printed in bold).
 
+::: notes
+define predictor (IV) and outcome (DV)
+:::
+
 ## Research Questions & Statistical Hypotheses
 
 Given our small dataset, what could be questions that you would find interesting to answer?
@@ -40,7 +44,21 @@ Let's collect possible Research Questions and Hypotheses![^1]
 
 [^1]: Of course, usually you would come up with these before you collect data and not based on the dataset!
 
-![](images/clipboard-3663127193.png)If you haven't done so yet, please open the `WorkshopData.csv` file in Jamovi.
+![](images/clipboard-3663127193.png)
+
+If you haven't done so yet, please open the `WorkshopData.csv` file in Jamovi.
+
+::: notes
+collect RQs/Hyps on Flipchart, cluster them possibly in order corr-t-anova...
+
+Let them work in teams of two on different RQs, trying to figure out how it works - 10 min.
+
+Present their solutions on main pc, talk about unclear things etc.
+:::
+
+## Conduct Analyses
+
+**Exercise**: In teams of two, please conduct an analysis that would answer a research question. You have 10 min. to try to figure it out - don't worry about things that remain unclear for now, we will discuss them!
 
 # Different Statistical Analyses in Jamovi
 
@@ -318,7 +336,9 @@ Before we report the ANOVA, we would again check the **assumptions**: Sphericity
 
 The results show that there is indeed a difference between the time points in exam scores (*F*(2, 198) = 143, *p* \< .001). It's also good practice to report the effect size, (partial) eta squared.
 
-## ![](images/clipboard-2786782958.png)Post-Hoc Tests
+## ![](images/clipboard-2786782958.png)
+
+## Post-Hoc Tests
 
 Again, we still don't know which time points differ from each other, for which we would run post-hoc tests (e.g. Tukey-corrected for multiple comparisons):
 

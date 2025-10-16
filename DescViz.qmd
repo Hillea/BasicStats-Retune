@@ -89,6 +89,10 @@ $$
 
 **Exercise 2**: Get the mean age for each gender separately.
 
+. . .
+
+![](images/clipboard-3411056614.png){width="633"}
+
 ## Variability
 
 In addition to a value for "the middle of the data", another important measure would be the "spread" or *variability*.
@@ -131,9 +135,9 @@ $$
 
     $$
     10 - 4.8 = 5.2;$$ $$
-    2 - 4.8 = -2.8 = 2.8;$$ $$
-    3 - 4.8 = -1.8 = 1.8;$$ $$
-    4 - 4.8 = -0.8 = 0.8;$$ $$
+    2 - 4.8 = |-2.8| = 2.8;$$ $$
+    3 - 4.8 = |-1.8| = 1.8;$$ $$
+    4 - 4.8 = |-0.8| = 0.8;$$ $$
     5 - 4.8 = 0.2
     $$
 
@@ -184,6 +188,8 @@ $$
 Rule of thumb: 68% of the data fall within 1 SD of the mean, 95% within 2 SD, 99,7% within 3 SD.
 
 The SD is often used, especially in combination with the mean.
+
+![](images/norm_dist_height.PNG){width="479"}
 
 ## Standard Scores
 

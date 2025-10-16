@@ -264,9 +264,7 @@ Research hypothesis vs. statistical hypothesis:
 
 -   Statistical Hypothesis: The group with a high caffeine intake will score higher on the exam than the group with low intake (high \> low intake).
 
-. . .
-
-**Null-hypothesis significance testing (NHST)**:
+## Null-hypothesis significance testing (NHST)
 
 Instead of testing how likely our statistical hypothesis is, \
 we take the exact *opposite* of what we're expecting and test how *unlikely* it is:
