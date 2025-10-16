@@ -14,11 +14,11 @@ You can download the dataset we'll use [here](https://github.com/Hillea/BasicSta
 
 ## Schedule
 
-| Time          | Topic                                       |
-|---------------|---------------------------------------------|
-| 9:00 - 9:20   | Intro: Why Statistics?                      |
-| 9:20 - 9:40   | Getting started with Jamovi                 |
-| 9:40 - 10:00  | Descriptive Statistics & Data Visualization |
-| 10:00 - 10:45 | Probability & Sampling, Hypothesis Testing  |
-| 10:45 - 11:00 | Coffee Break                                |
-| 11:00 - 12:45 | Statistical Tests in Jamovi                 |
+| Time | Topic |
+|------------------|------------------------------------------------------|
+| 9:00 - 9:20 | [Intro: Why Statistics?](https://hillea.github.io/BasicStats-Retune/Intro.html#/title-slide) |
+| 9:20 - 9:40 | [Getting started with Jamovi](https://hillea.github.io/BasicStats-Retune/Jamovi.html#/title-slide) |
+| 9:40 - 10:00 | [Descriptive Statistics & Data Visualization](https://hillea.github.io/BasicStats-Retune/DescViz.html#/title-slide) |
+| 10:00 - 10:45 | [Probability & Sampling, Hypothesis Testing](https://hillea.github.io/BasicStats-Retune/Probability.html#/title-slide) |
+| 10:45 - 11:00 | Coffee Break |
+| 11:00 - 12:45 | [Statistical Tests in Jamovi](https://hillea.github.io/BasicStats-Retune/StatsTestsJamovi.html) |
