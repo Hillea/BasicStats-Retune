@@ -4,7 +4,17 @@
     "href": "StatsTestsJamovi.html#research-questions-statistical-hypotheses",
     "title": "Statistical Analyses in Jamovi",
     "section": "Research Questions & Statistical Hypotheses",
-    "text": "Research Questions & Statistical Hypotheses\nGiven our small dataset, what could be questions that you would find interesting to answer?\nLet’s collect possible Research Questions and Hypotheses!1\nIf you haven’t done so yet, please open the WorkshopData.csv file in Jamovi.\nOf course, usually you would come up with these before you collect data and not based on the dataset!",
+    "text": "Research Questions & Statistical Hypotheses\nGiven our small dataset, what could be questions that you would find interesting to answer?\nLet’s collect possible Research Questions and Hypotheses!1\n\nIf you haven’t done so yet, please open the WorkshopData.csv file in Jamovi.\n\ncollect RQs/Hyps on Flipchart, cluster them possibly in order corr-t-anova…\nLet them work in teams of two on different RQs, trying to figure out how it works - 10 min.\nPresent their solutions on main pc, talk about unclear things etc.\n\nOf course, usually you would come up with these before you collect data and not based on the dataset!",
+    "crumbs": [
+      "Statistical Analyses in Jamovi"
+    ]
+  },
+  {
+    "objectID": "StatsTestsJamovi.html#conduct-analyses",
+    "href": "StatsTestsJamovi.html#conduct-analyses",
+    "title": "Statistical Analyses in Jamovi",
+    "section": "Conduct Analyses",
+    "text": "Conduct Analyses\nExercise: In teams of two, please conduct an analysis that would answer a research question. You have 10 min. to try to figure it out - don’t worry about things that remain unclear for now, we will discuss them!",
     "crumbs": [
       "Statistical Analyses in Jamovi"
     ]
@@ -395,7 +405,7 @@
     "href": "DescViz.html#variability-2",
     "title": "Describing and Visualizing Data",
     "section": "Variability 2",
-    "text": "Variability 2\nMean absolute value: the “typical deviation” from the mean (or median):\n\nCalculate the mean of the data:\n\\[\n(10+2+3+4+5)/5 = 4.8\n\\]\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = -2.8 = 2.8;\\] \\[\n3 - 4.8 = -1.8 = 1.8;\\] \\[\n4 - 4.8 = -0.8 = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]",
+    "text": "Variability 2\nMean absolute value: the “typical deviation” from the mean (or median):\n\nCalculate the mean of the data:\n\\[\n(10+2+3+4+5)/5 = 4.8\n\\]\nCalculate each absolute deviation from each data point to this mean:\n\\[\n10 - 4.8 = 5.2;\\] \\[\n2 - 4.8 = |-2.8| = 2.8;\\] \\[\n3 - 4.8 = |-1.8| = 1.8;\\] \\[\n4 - 4.8 = |-0.8| = 0.8;\\] \\[\n5 - 4.8 = 0.2\n\\]\nCalculate the mean of these deviation:\n\\[\n(5.2 + 2.8 + 1.8 + 0.8 +0.2)/5 = 2.16\n\\]",
     "crumbs": [
       "Describing and Visualizing Data"
     ]
@@ -716,6 +726,16 @@
     "title": "Statistical Theory",
     "section": "Confidence Intervals",
     "text": "Confidence Intervals\nAs we use our sample mean (and adjusted SD) as our best estimates for the population mean (and SD), it is a good idea to indicate how confident we are in these estimates.\nFor this we calculate the confidence interval, which denotes the e.g. 95% probability that the sample mean lies within 1.96 standard errors of the population mean.\n\n\nIt does not mean, that the true population mean lies with 95% probability within the sample’s confidence interval!\n\n\nIf we replicated the experiment with a different sample, 95% of CIs would contain the true population mean. (Still, it is a good indicator of our uncertainty around an estimate!)",
+    "crumbs": [
+      "Statistical Theory"
+    ]
+  },
+  {
+    "objectID": "Probability.html#null-hypothesis-significance-testing-nhst",
+    "href": "Probability.html#null-hypothesis-significance-testing-nhst",
+    "title": "Statistical Theory",
+    "section": "Null-hypothesis significance testing (NHST)",
+    "text": "Null-hypothesis significance testing (NHST)\nInstead of testing how likely our statistical hypothesis is,\nwe take the exact opposite of what we’re expecting and test how unlikely it is:\n\nHigh ≦ low caffeine intake (null hypothesis).\n\nSteps of NHST:\n\nWe take the hypothesis (treatment = lower X than control) and negate it (Treatment not lower/equal X compared to control). This is our null hypothesis, \\(H_0\\).\nThen we look at the data and determine how likely they would be if the null hypothesis were true.\nI.e., we want to know the conditional probability: \\(P(Data|H_0)\\)\nIf the data are very unlikely we reject the null hypothesis in favor of the alternative hypothesis \\(H_a\\) (our hypothesis).\n(If the data are not very unlikely, we stick with - or fail to reject - the null hypothesis.)",
     "crumbs": [
       "Statistical Theory"
     ]
